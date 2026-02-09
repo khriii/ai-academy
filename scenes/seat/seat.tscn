@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://nquh2pgx6voy"]
+
+[ext_resource type="Script" uid="uid://ycktibn7rg26" path="res://scenes/seat/seat.gd" id="1_pokdl"]
+
+[node name="Seat" type="Node2D" unique_id=198443767 node_paths=PackedStringArray("marker")]
+script = ExtResource("1_pokdl")
+marker = NodePath("Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=350904429]

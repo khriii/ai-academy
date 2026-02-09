@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://fjeqjjoox3tc"]
+
+[ext_resource type="PackedScene" uid="uid://cyiouyu36no3s" path="res://scenes/entities/npc/npc.tscn" id="1_dt5nx"]
+[ext_resource type="Script" uid="uid://bdvrfey5w3bos" path="res://scenes/testing/npc/npc_test.gd" id="1_sdrvq"]
+
+[node name="NpcTest" type="Node2D" unique_id=499274335 node_paths=PackedStringArray("markers", "npc")]
+script = ExtResource("1_sdrvq")
+markers = [NodePath("Markers/Marker1"), NodePath("Markers/Marker2"), NodePath("Markers/Marker3"), NodePath("Markers/Marker4")]
+npc = NodePath("Npc")
+
+[node name="Npc" parent="." unique_id=478677992 instance=ExtResource("1_dt5nx")]
+
+[node name="Markers" type="Node2D" parent="." unique_id=522097252]
+
+[node name="Marker1" type="Marker2D" parent="Markers" unique_id=108081452]
+position = Vector2(47, 68)
+
+[node name="Marker2" type="Marker2D" parent="Markers" unique_id=373911896]
+position = Vector2(147, 68)
+
+[node name="Marker3" type="Marker2D" parent="Markers" unique_id=1078175881]
+position = Vector2(147, 168)
+
+[node name="Marker4" type="Marker2D" parent="Markers" unique_id=1824693444]
+position = Vector2(47, 18)

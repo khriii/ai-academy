@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bp860ddprrt4y"]
+
+[ext_resource type="PackedScene" uid="uid://cyiouyu36no3s" path="res://scenes/entities/npc/npc.tscn" id="1_wmqt6"]
+[ext_resource type="PackedScene" uid="uid://nquh2pgx6voy" path="res://scenes/seat/seat.tscn" id="2_8g01u"]
+[ext_resource type="Script" uid="uid://crpbsodix3en4" path="res://scripts/ai/customer_ai.gd" id="2_iw057"]
+
+[node name="NpcTables" type="Node2D" unique_id=1531779212]
+
+[node name="Npc" parent="." unique_id=478677992 instance=ExtResource("1_wmqt6")]
+position = Vector2(154, 7)
+
+[node name="Seats" type="Node2D" parent="." unique_id=2069643007]
+
+[node name="Seat1" parent="Seats" unique_id=198443767 instance=ExtResource("2_8g01u")]
+position = Vector2(67, 100)
+
+[node name="Seat2" parent="Seats" unique_id=1877044317 instance=ExtResource("2_8g01u")]
+position = Vector2(112, 100)
+
+[node name="Seat3" parent="Seats" unique_id=437402967 instance=ExtResource("2_8g01u")]
+position = Vector2(163, 100)
+
+[node name="Seat4" parent="Seats" unique_id=1784806546 instance=ExtResource("2_8g01u")]
+position = Vector2(214, 100)
+
+[node name="Seat5" parent="Seats" unique_id=370218075 instance=ExtResource("2_8g01u")]
+position = Vector2(258, 100)
+
+[node name="CustomerAI" type="Node" parent="." unique_id=774098016 node_paths=PackedStringArray("seats_node")]
+script = ExtResource("2_iw057")
+seats_node = NodePath("../Seats")
+metadata/_custom_type_script = "uid://crpbsodix3en4"
