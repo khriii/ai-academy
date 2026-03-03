@@ -1,6 +1,8 @@
 class_name Player
 extends Entity
 
+@export var inventory: InventoryComponent
+
 func _ready() -> void:
 	pass
 
