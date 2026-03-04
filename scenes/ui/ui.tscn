@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://8y2umwl3jird"]
+
+[ext_resource type="Script" uid="uid://d0eeicqns57fi" path="res://scenes/ui/ui.gd" id="1_u7n8c"]
+
+[node name="UI" type="Control" unique_id=198059914 node_paths=PackedStringArray("collectibles_counter")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_u7n8c")
+collectibles_counter = NodePath("CollectiblesCounter")
+
+[node name="CollectiblesCounter" type="Label" parent="." unique_id=1596732724]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"

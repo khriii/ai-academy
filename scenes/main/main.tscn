@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://kuismdy5n58m" path="res://scenes/entities/player/player.tscn" id="1_hyk8p"]
 [ext_resource type="Script" uid="uid://vsi8326ynpr2" path="res://scenes/main/main.gd" id="1_k2fmo"]
 [ext_resource type="PackedScene" uid="uid://0dhqbdv8mth2" path="res://scenes/collectibles/coin.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://8y2umwl3jird" path="res://scenes/ui/ui.tscn" id="4_l3cfh"]
 
 [node name="Main" type="Node2D" unique_id=1611986789 node_paths=PackedStringArray("player")]
 script = ExtResource("1_k2fmo")
@@ -14,3 +15,5 @@ position = Vector2(147, 97)
 
 [node name="Coin" parent="." unique_id=1100059931 instance=ExtResource("2_iuonh")]
 position = Vector2(90, 46)
+
+[node name="UI" parent="." unique_id=198059914 instance=ExtResource("4_l3cfh")]

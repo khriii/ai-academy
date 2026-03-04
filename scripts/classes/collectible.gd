@@ -5,4 +5,5 @@ extends Item
 
 
 func collect():
+	Global.collected_collectibles += 1
 	queue_free()
