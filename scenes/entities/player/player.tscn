@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://0qrk1t87q8l5" path="res://assets/sprites/player/16x16 Walk-Sheet.png" id="4_bjvvg"]
 [ext_resource type="Script" uid="uid://wh76efxtjfia" path="res://components/animation/animation_component.gd" id="5_p47bc"]
 [ext_resource type="Script" uid="uid://bbxx5wm23qiu1" path="res://components/inventory/inventory_component.gd" id="6_8akj5"]
+[ext_resource type="Script" uid="uid://cytog0q8uda8b" path="res://scripts/classes/interaction_component.gd" id="7_bj7e2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
 size = Vector2(8, 6)
@@ -231,6 +232,8 @@ func isInteractKeyPressed()->bool:
 	return Input.is_action_pressed(\"interact\")
 "
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1murt"]
+
 [node name="Player" type="CharacterBody2D" unique_id=1023106120 node_paths=PackedStringArray("inventory", "movement_component", "animation_component") groups=["player"]]
 script = ExtResource("1_gmlin")
 inventory = NodePath("InventoryComponent")
@@ -266,3 +269,10 @@ metadata/_custom_type_script = "uid://wh76efxtjfia"
 [node name="InventoryComponent" type="Node" parent="." unique_id=236304684]
 script = ExtResource("6_8akj5")
 metadata/_custom_type_script = "uid://bbxx5wm23qiu1"
+
+[node name="InteractionComponent" type="Area2D" parent="." unique_id=108567500]
+script = ExtResource("7_bj7e2")
+metadata/_custom_type_script = "uid://cytog0q8uda8b"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionComponent" unique_id=89808187]
+shape = SubResource("CircleShape2D_1murt")

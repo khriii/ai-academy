@@ -8,6 +8,7 @@
 [node name="Coin" type="Node2D" unique_id=1100059931 node_paths=PackedStringArray("collection_area")]
 script = ExtResource("1_ais5i")
 collection_area = NodePath("Area2D")
+item_name = "Coin"
 metadata/_custom_type_script = "uid://cex062jmurxxg"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=424456546]
