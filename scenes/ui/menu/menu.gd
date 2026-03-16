@@ -1,8 +1,10 @@
 extends Control
 
-@export var start_message_label: Label
+@export var lang_component: LangComponent
 
-var start_message: String = "Premi un tasto per iniziare..."
+@export var start_message_label: Label
+@export var quit_button: Button
 
 func _ready() -> void:
-	start_message_label.text = start_message
+	start_message_label.text = lang_component.get_lang_text("start_message_label")
+	quit_button.text = lang_component.get_lang_text("quit_button")

@@ -4,8 +4,9 @@
 [ext_resource type="Script" uid="uid://cahgu2fcc5e06" path="res://scenes/ui/menu/menu_handler.gd" id="2_q18yf"]
 [ext_resource type="Script" uid="uid://dc2o5ljgvjscy" path="res://scripts/classes/scene_changer.gd" id="3_r4xos"]
 [ext_resource type="PackedScene" uid="uid://dby1qkve0afmi" path="res://scenes/main/main.tscn" id="4_05f3o"]
+[ext_resource type="Script" uid="uid://2p554g1othq4" path="res://components/lang/lang_component.gd" id="5_05f3o"]
 
-[node name="Menu" type="Control" unique_id=1125525901 node_paths=PackedStringArray("start_message_label")]
+[node name="Menu" type="Control" unique_id=1125525901 node_paths=PackedStringArray("lang_component", "start_message_label", "quit_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +14,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h1w4e")
+lang_component = NodePath("LangComponent")
 start_message_label = NodePath("StartMessageLabel")
+quit_button = NodePath("QuitButton")
 
 [node name="StartMessageLabel" type="Label" parent="." unique_id=742300132]
 layout_mode = 1
@@ -30,6 +33,21 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Press a key to start..."
 
+[node name="QuitButton" type="Button" parent="." unique_id=362965616]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -36.0
+offset_right = -4.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Quit"
+
 [node name="MenuHandler" type="Node2D" parent="." unique_id=1073118471 node_paths=PackedStringArray("scene_changer")]
 script = ExtResource("2_q18yf")
 scene_changer = NodePath("../SceneChanger")
@@ -38,3 +56,7 @@ scene_changer = NodePath("../SceneChanger")
 script = ExtResource("3_r4xos")
 next_scene = ExtResource("4_05f3o")
 metadata/_custom_type_script = "uid://dc2o5ljgvjscy"
+
+[node name="LangComponent" type="Node2D" parent="." unique_id=1575984559]
+script = ExtResource("5_05f3o")
+metadata/_custom_type_script = "uid://2p554g1othq4"
