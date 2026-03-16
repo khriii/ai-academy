@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cxy4xojvhmdil"]
+
+[ext_resource type="Script" uid="uid://18nl5p7af3wv" path="res://scenes/ui/menu/menu.gd" id="1_h1w4e"]
+[ext_resource type="Script" uid="uid://cahgu2fcc5e06" path="res://scenes/ui/menu/menu_handler.gd" id="2_q18yf"]
+[ext_resource type="Script" uid="uid://dc2o5ljgvjscy" path="res://scripts/classes/scene_changer.gd" id="3_r4xos"]
+[ext_resource type="PackedScene" uid="uid://dby1qkve0afmi" path="res://scenes/main/main.tscn" id="4_05f3o"]
+
+[node name="Menu" type="Control" unique_id=1125525901 node_paths=PackedStringArray("start_message_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h1w4e")
+start_message_label = NodePath("StartMessageLabel")
+
+[node name="StartMessageLabel" type="Label" parent="." unique_id=742300132]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.5
+offset_top = -61.0
+offset_right = 80.5
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press a key to start..."
+
+[node name="MenuHandler" type="Node2D" parent="." unique_id=1073118471 node_paths=PackedStringArray("scene_changer")]
+script = ExtResource("2_q18yf")
+scene_changer = NodePath("../SceneChanger")
+
+[node name="SceneChanger" type="Node2D" parent="." unique_id=1509841649]
+script = ExtResource("3_r4xos")
+next_scene = ExtResource("4_05f3o")
+metadata/_custom_type_script = "uid://dc2o5ljgvjscy"
