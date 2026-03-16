@@ -1,4 +1,16 @@
 {
 	"start_message_label": "Premi un tasto per iniziare...",
-	"quit_button": "Esci"
+	"quit_button": "Esci",
+	"dialogues": {
+		"test_1": [
+			{
+				"speaker": "Neura",
+				"text": "Ciao, mi chiamo Neura"
+			},
+			{
+				"speaker": "Doc. Epoch",
+				"text": "Ciao Neura"
+			}
+		]
+	}
 }

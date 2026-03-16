@@ -13,3 +13,6 @@ func _ready() -> void:
 
 func get_lang_text(key: String):
 	return data[key]
+
+func get_dialogue(dialogue_name: String):
+	return data.dialogues[dialogue_name]
