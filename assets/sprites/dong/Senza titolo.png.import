@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kyolhpgcyhrd"
-path="res://.godot/imported/pxArt.png-0a39fe3e01452b4aea5cdc2f4e2d37fd.ctex"
+uid="uid://ctuvwp00j4h63"
+path="res://.godot/imported/Senza titolo.png-264c12c88d0620970a2222b31a0fefcd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pxArt.png"
-dest_files=["res://.godot/imported/pxArt.png-0a39fe3e01452b4aea5cdc2f4e2d37fd.ctex"]
+source_file="res://assets/sprites/dong/Senza titolo.png"
+dest_files=["res://.godot/imported/Senza titolo.png-264c12c88d0620970a2222b31a0fefcd.ctex"]
 
 [params]
 
