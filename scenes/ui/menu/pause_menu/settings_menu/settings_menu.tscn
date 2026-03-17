@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://1yi6eqx3s8c3"]
+
+[ext_resource type="Script" uid="uid://b42n5so2jw3is" path="res://scenes/ui/menu/pause_menu/settings_menu/settings_menu.gd" id="1_x1qsb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7mpl"]
+bg_color = Color(0.18000486, 0.1800049, 0.18000478, 1)
+
+[node name="SettingsMenu" type="Panel" unique_id=790654355 node_paths=PackedStringArray("fullscreen_checkbox", "volume_slider", "exit_button")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -67.0
+offset_right = 85.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d7mpl")
+script = ExtResource("1_x1qsb")
+fullscreen_checkbox = NodePath("FullscreenCheckBox")
+volume_slider = NodePath("VolumeSlider")
+exit_button = NodePath("ExitButton")
+
+[node name="FullscreenCheckBox" type="CheckBox" parent="." unique_id=157001575]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 31.5
+offset_top = 51.5
+offset_right = -31.5
+offset_bottom = -51.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fullscreen"
+
+[node name="VolumeSlider" type="HSlider" parent="." unique_id=293232993]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 23.0
+offset_right = -23.0
+offset_bottom = -95.0
+grow_horizontal = 2
+
+[node name="ExitButton" type="Button" parent="." unique_id=1979248891]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_top = -40.0
+offset_right = 22.5
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Exit"
