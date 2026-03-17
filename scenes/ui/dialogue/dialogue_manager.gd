@@ -2,6 +2,8 @@ extends Control
 
 @export var left_character: Sprite2D
 @export var right_character: Sprite2D
+@export var left_character_size: Vector2 = Vector2(3, 3)
+@export var right_character_size: Vector2 = Vector2(3, 3)
 @export var left_character_marker: Marker2D
 @export var right_character_marker: Marker2D
 @export var dialogue_label: Label
@@ -10,8 +12,12 @@ extends Control
 @export var lang_component: LangComponent
 
 var file_name: String = "dialogue_manager.gd"
+var current_dialogue: Array
+var current_line: int = 0
+var waiting_for_input: bool = false
 
 func _ready() -> void:
+	
 	if not left_character:
 		print(file_name + ": left_character missing")
 	if not right_character:
@@ -22,14 +28,54 @@ func _ready() -> void:
 		print(file_name + ": right_character_marker missing")
 	if not dialogue_label:
 		print(file_name + ": dialogue_label missing")
-		
+	
+	set_sprite_sizes()
+	
 	play()
+
+
+func set_sprite_sizes():
+	left_character.scale = left_character_size
+	right_character.scale = right_character_size
+
+func _process(_delta: float) -> void:
+	if waiting_for_input and Input.is_action_just_pressed("continue_dialogue"):
+		show_next_line()
+
+func play() -> void:
+	current_dialogue = lang_component.get_dialogue(dialogue_name)
+	current_line = 0
+	show_next_line()
+
+func show_next_line() -> void:
+	if current_line >= current_dialogue.size():
+		queue_free()
+		return
 	
-func play():
-	var dialogue = lang_component.get_dialogue(dialogue_name)
+	var line = current_dialogue[current_line]
+	current_line += 1
 	
-	for d in dialogue:
-		var speaker = d.speaker
-		var text = d.text
-		
-		print(speaker, ": ", text)
+	# Show the text
+	print(line.speaker + ": " + line.text)
+	dialogue_label.text = line.text
+	
+	# Position characters (simple version)
+	_update_character_position(line.position)
+	
+	# Wait for input
+	waiting_for_input = true
+
+func _update_character_position(speaker_position: String) -> void:
+	if speaker_position.to_lower() == "left":
+		left_character.global_position = left_character_marker.global_position
+		left_character.show()
+		right_character.hide()
+	elif speaker_position.to_lower() == "right":
+		right_character.global_position = right_character_marker.global_position
+		right_character.show()
+		left_character.hide()
+	else:
+		left_character.global_position = left_character_marker.global_position
+		right_character.global_position = right_character_marker.global_position
+		left_character.show()
+		right_character.show()

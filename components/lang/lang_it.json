@@ -5,11 +5,13 @@
 		"test_1": [
 			{
 				"speaker": "Neura",
-				"text": "Ciao, mi chiamo Neura"
+				"text": "Ciao, mi chiamo Neura",
+				"position": "left"
 			},
 			{
 				"speaker": "Doc. Epoch",
-				"text": "Ciao Neura"
+				"text": "Ciao Neura",
+				"position": "right"
 			}
 		]
 	}

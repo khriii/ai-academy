@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://3r1xgbb0w4xw" path="res://scenes/ui/dialogue/dialogue_manager.gd" id="1_j26l4"]
 [ext_resource type="Script" uid="uid://2p554g1othq4" path="res://components/lang/lang_component.gd" id="2_sck70"]
+[ext_resource type="Texture2D" uid="uid://cjnghhm3lprw1" path="res://assets/sprites/player/16x16 Idle-Sheet.png" id="3_diyup"]
+[ext_resource type="Texture2D" uid="uid://ycbupeq78wha" path="res://assets/sprites/player/16x16 Rotate-Sheet.png" id="4_0256c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g7b4d"]
 font_size = 10
@@ -14,8 +16,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j26l4")
-left_character = NodePath("")
-right_character = NodePath("")
+left_character = NodePath("LeftSprite")
+right_character = NodePath("RightSprite")
 left_character_marker = NodePath("LeftCharacterMarker")
 right_character_marker = NodePath("RightCharacterMarker")
 dialogue_label = NodePath("DialogueLabel")
@@ -40,9 +42,22 @@ label_settings = SubResource("LabelSettings_g7b4d")
 autowrap_mode = 3
 
 [node name="LeftCharacterMarker" type="Marker2D" parent="." unique_id=311072651]
+position = Vector2(26, 140)
 
 [node name="RightCharacterMarker" type="Marker2D" parent="." unique_id=409396596]
+position = Vector2(294, 140)
 
 [node name="LangComponent" type="Node2D" parent="." unique_id=2112722499]
 script = ExtResource("2_sck70")
 metadata/_custom_type_script = "uid://2p554g1othq4"
+
+[node name="LeftSprite" type="Sprite2D" parent="." unique_id=1795631411]
+texture = ExtResource("3_diyup")
+hframes = 4
+vframes = 5
+
+[node name="RightSprite" type="Sprite2D" parent="." unique_id=338386601]
+texture = ExtResource("4_0256c")
+hframes = 3
+vframes = 3
+frame = 5
