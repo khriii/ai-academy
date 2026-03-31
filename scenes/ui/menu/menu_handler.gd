@@ -28,6 +28,7 @@ func check_nodes():
 func _ready() -> void:
 	check_nodes()
 	load_language()
+	load_click_handlers()
 
 func load_language():
 	if start_message_label:
@@ -42,6 +43,39 @@ func load_language():
 		achievements_button.text = Lang.get_lang_text("achievements_button")
 	if exit_button:
 		exit_button.text = Lang.get_lang_text("exit_button")
+
+func load_click_handlers():
+	if new_game_button:
+		new_game_button.pressed.connect(on_new_game_pressed)
+	if continue_button:
+		continue_button.pressed.connect(on_continue_pressed)
+	if options_button:
+		options_button.pressed.connect(on_options_pressed)
+	if achievements_button:
+		achievements_button.pressed.connect(on_achievements_pressed)
+	if exit_button:
+		exit_button.pressed.connect(on_exit_pressed)
+
+# Method run when a new game should be created
+func on_new_game_pressed():
+	pass
+
+# Method run when a game should be resumed
+func on_continue_pressed():
+	pass
+
+# Method run when user wants to open options menu (settings)
+func on_options_pressed():
+	pass
+
+# Method run when user wants to open achievements menu
+func on_achievements_pressed():
+	pass
+
+# Method run when user wants to exit the game
+func on_exit_pressed():
+	get_tree().quit()
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
