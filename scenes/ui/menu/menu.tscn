@@ -5,6 +5,126 @@
 [ext_resource type="Script" uid="uid://dc2o5ljgvjscy" path="res://scripts/classes/scene_changer.gd" id="3_r4xos"]
 [ext_resource type="PackedScene" uid="uid://dby1qkve0afmi" path="res://scenes/main/main.tscn" id="4_05f3o"]
 [ext_resource type="Script" uid="uid://2p554g1othq4" path="res://components/lang/lang_component.gd" id="5_05f3o"]
+[ext_resource type="Texture2D" uid="uid://chaqddooiduww" path="res://assets/sprites/ui/background.png" id="6_047m5"]
+[ext_resource type="Texture2D" uid="uid://bfgoxqpgxqos6" path="res://assets/sprites/ui/title.png" id="7_1316l"]
+[ext_resource type="FontFile" uid="uid://brf58hjte31in" path="res://assets/fonts/PressStart2P-Regular.ttf" id="8_1316l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1316l"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2nsh4"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+
+[sub_resource type="Animation" id="Animation_1316l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameTitle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(110, 61)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StartMessageLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-37.99994, 146)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ButtonsContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ButtonsContainer:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_2nsh4"]
+resource_name = "menu_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameTitle:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(110, 61), Vector2(110, 30)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StartMessageLabel:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-37.99994, 146), Vector2(-38, 180)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ButtonsContainer:visible")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ButtonsContainer:modulate:a")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.7, 1.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_afxhl"]
+_data = {
+&"RESET": SubResource("Animation_1316l"),
+&"menu_in": SubResource("Animation_2nsh4")
+}
 
 [node name="Menu" type="Control" unique_id=1125525901 node_paths=PackedStringArray("lang_component", "start_message_label", "quit_button")]
 layout_mode = 3
@@ -18,20 +138,34 @@ lang_component = NodePath("LangComponent")
 start_message_label = NodePath("StartMessageLabel")
 quit_button = NodePath("QuitButton")
 
-[node name="StartMessageLabel" type="Label" parent="." unique_id=742300132]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -80.5
-offset_top = -61.0
-offset_right = 80.5
-offset_bottom = -38.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Press a key to start..."
+[node name="MenuHandler" type="Node2D" parent="." unique_id=1073118471 node_paths=PackedStringArray("scene_changer", "animation_player")]
+script = ExtResource("2_q18yf")
+scene_changer = NodePath("../SceneChanger")
+animation_player = NodePath("../AnimationPlayer")
+
+[node name="SceneChanger" type="Node2D" parent="." unique_id=1509841649]
+script = ExtResource("3_r4xos")
+next_scene = ExtResource("4_05f3o")
+metadata/_custom_type_script = "uid://dc2o5ljgvjscy"
+
+[node name="LangComponent" type="Node2D" parent="." unique_id=1575984559]
+script = ExtResource("5_05f3o")
+metadata/_custom_type_script = "uid://2p554g1othq4"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2127054234]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="TextureRect" parent="." unique_id=221872612]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 320.57245
+offset_bottom = 177.0
+texture = ExtResource("6_047m5")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="QuitButton" type="Button" parent="." unique_id=362965616]
 layout_mode = 1
@@ -48,15 +182,93 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "Quit"
 
-[node name="MenuHandler" type="Node2D" parent="." unique_id=1073118471 node_paths=PackedStringArray("scene_changer")]
-script = ExtResource("2_q18yf")
-scene_changer = NodePath("../SceneChanger")
+[node name="GameTitle" type="TextureRect" parent="." unique_id=1080360780]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -29.0
+offset_right = 50.00009
+offset_bottom = 29.000938
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_1316l")
 
-[node name="SceneChanger" type="Node2D" parent="." unique_id=1509841649]
-script = ExtResource("3_r4xos")
-next_scene = ExtResource("4_05f3o")
-metadata/_custom_type_script = "uid://dc2o5ljgvjscy"
+[node name="StartMessageLabel" type="Label" parent="." unique_id=649532106]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -197.99994
+offset_top = -34.0
+offset_right = 369.99994
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(112, 11.5)
+theme_override_fonts/font = ExtResource("8_1316l")
+text = "Press Any Key."
+horizontal_alignment = 1
+uppercase = true
 
-[node name="LangComponent" type="Node2D" parent="." unique_id=1575984559]
-script = ExtResource("5_05f3o")
-metadata/_custom_type_script = "uid://2p554g1othq4"
+[node name="ButtonsContainer" type="VBoxContainer" parent="." unique_id=441452919]
+visible = false
+self_modulate = Color(1, 1, 1, 0.54999995)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -53.000008
+offset_right = 115.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(115, 100)
+
+[node name="NewGameButton" type="Button" parent="ButtonsContainer" unique_id=535630826]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1316l")
+text = "NEW GAME"
+
+[node name="ContinueButton" type="Button" parent="ButtonsContainer" unique_id=689784608]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
+text = "CONTINUE"
+
+[node name="OptionsButton" type="Button" parent="ButtonsContainer" unique_id=432543561]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
+text = "OPTIONS"
+
+[node name="AchievementsButton" type="Button" parent="ButtonsContainer" unique_id=427757495]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
+text = "ACHIEVEMENTS"
+
+[node name="ExitButton" type="Button" parent="ButtonsContainer" unique_id=726883405]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
+text = "EXIT"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1772491313]
+libraries/ = SubResource("AnimationLibrary_afxhl")
