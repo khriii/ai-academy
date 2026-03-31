@@ -1,6 +1,11 @@
 {
 	"start_message_label": "Premi un tasto.",
 	"quit_button": "Esci",
+	"new_game_button": "NUOVA PARTITA",
+	"continue_button": "CONTINUA",
+	"options_button": "OPZIONI",
+	"achievements_button": "OBBIETTIVI",
+	"exit_button": "ESCI",
 	"dialogues": {
 		"test_1": [
 			{

@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cxy4xojvhmdil"]
 
-[ext_resource type="Script" uid="uid://18nl5p7af3wv" path="res://scenes/ui/menu/menu.gd" id="1_h1w4e"]
 [ext_resource type="Script" uid="uid://cahgu2fcc5e06" path="res://scenes/ui/menu/menu_handler.gd" id="2_q18yf"]
 [ext_resource type="Script" uid="uid://dc2o5ljgvjscy" path="res://scripts/classes/scene_changer.gd" id="3_r4xos"]
 [ext_resource type="PackedScene" uid="uid://dby1qkve0afmi" path="res://scenes/main/main.tscn" id="4_05f3o"]
@@ -126,22 +125,24 @@ _data = {
 &"menu_in": SubResource("Animation_2nsh4")
 }
 
-[node name="Menu" type="Control" unique_id=1125525901 node_paths=PackedStringArray("lang_component", "start_message_label", "quit_button")]
+[node name="Menu" type="Control" unique_id=1125525901]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_h1w4e")
-lang_component = NodePath("LangComponent")
-start_message_label = NodePath("StartMessageLabel")
-quit_button = NodePath("QuitButton")
 
-[node name="MenuHandler" type="Node2D" parent="." unique_id=1073118471 node_paths=PackedStringArray("scene_changer", "animation_player")]
+[node name="MenuHandler" type="Node2D" parent="." unique_id=1073118471 node_paths=PackedStringArray("scene_changer", "animation_player", "start_message_label", "new_game_button", "continue_button", "options_button", "achievements_button", "exit_button")]
 script = ExtResource("2_q18yf")
 scene_changer = NodePath("../SceneChanger")
 animation_player = NodePath("../AnimationPlayer")
+start_message_label = NodePath("../StartMessageLabel")
+new_game_button = NodePath("../ButtonsContainer/NewGameButton")
+continue_button = NodePath("../ButtonsContainer/ContinueButton")
+options_button = NodePath("../ButtonsContainer/OptionsButton")
+achievements_button = NodePath("../ButtonsContainer/AchievementsButton")
+exit_button = NodePath("../ButtonsContainer/ExitButton")
 
 [node name="SceneChanger" type="Node2D" parent="." unique_id=1509841649]
 script = ExtResource("3_r4xos")
@@ -166,21 +167,6 @@ offset_bottom = 177.0
 texture = ExtResource("6_047m5")
 expand_mode = 1
 stretch_mode = 4
-
-[node name="QuitButton" type="Button" parent="." unique_id=362965616]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -46.0
-offset_top = -36.0
-offset_right = -4.0
-offset_bottom = -5.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Quit"
 
 [node name="GameTitle" type="TextureRect" parent="." unique_id=1080360780]
 layout_mode = 1
