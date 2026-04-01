@@ -1,32 +1,39 @@
-extends Control
+class_name PauseMenu
+extends CanvasLayer
 
-@export var resume_button: Button
-@export var settings_button: Button
-@export var settings_menu: SettingsMenu
+@export var continue_button: Button
+@export var options_button: Button
+@export var options_menu: OptionsMenu
 
 var filename = "pause_menu.gd"
 
 func _ready() -> void:
 	check_nodes()
 	
-	if resume_button:
-		resume_button.pressed.connect(_on_resume_button_pressed)
-	if settings_button:
-		settings_button.pressed.connect(_on_settings_button_pressed)
+	if continue_button:
+		continue_button.pressed.connect(on_continue_button_pressed)
+	if options_button:
+		options_button.pressed.connect(on_options_button_pressed)
+	if options_menu:
+		options_menu._hide()
 
 func print_error(error_message):
 	print(filename + ": " + error_message)
 
 func check_nodes():
-	if not resume_button: print_error("resume_button missing")
-	if not settings_button: print_error("settings_button missing")
-	if not settings_menu: print_error("settings_menu missing")
+	if not continue_button: print_error("continue_button missing")
+	if not options_button: print_error("options_button missing")
+	if not options_menu: print_error("options_menu missing")
 
-func _on_resume_button_pressed():
-	queue_free()
+func _show():
+	self.visible = true
 
-func _on_settings_button_pressed():
-	print("open settings")
-	
-	if settings_menu:
-		settings_menu.visible = true
+func _hide():
+	self.visible = false
+	get_tree().paused = false
+
+func on_continue_button_pressed():
+	self._hide()
+
+func on_options_button_pressed():
+	if options_menu: options_menu._show()

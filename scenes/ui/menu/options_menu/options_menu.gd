@@ -1,11 +1,11 @@
-class_name SettingsMenu
+class_name OptionsMenu
 extends CanvasLayer
 
 @export var fullscreen_check_button: CheckButton
 @export var volume_slider: HSlider
 @export var exit_button: Button
 
-var filename: String = "settings_menu.gd"
+var filename: String = "options_menu.gd"
 
 func _ready() -> void:
 	check_nodes()
@@ -25,6 +25,11 @@ func check_nodes():
 	if not volume_slider: print_error("volume_slider missing")
 	if not exit_button: print_error("exit_button missing")
 
+func _show():
+	self.visible = true
+
+func _hide():
+	self.visible = false
 
 func _on_fullscreen_checkbox_toggled(button_pressed: bool):
 	if button_pressed:
@@ -36,4 +41,4 @@ func _on_volume_slider_dragged():
 	pass
 
 func _on_exit_button_pressed():
-	visible = false
+	self._hide()

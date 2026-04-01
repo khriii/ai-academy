@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://cxy4xojvhmdil"]
 
-[ext_resource type="Script" uid="uid://cahgu2fcc5e06" path="res://scenes/ui/menu/menu_handler.gd" id="2_q18yf"]
-[ext_resource type="Script" uid="uid://dc2o5ljgvjscy" path="res://scripts/classes/scene_changer.gd" id="3_r4xos"]
-[ext_resource type="PackedScene" uid="uid://dby1qkve0afmi" path="res://scenes/main/main.tscn" id="4_05f3o"]
-[ext_resource type="Texture2D" uid="uid://chaqddooiduww" path="res://assets/sprites/ui/backgrounds/background.png" id="6_047m5"]
-[ext_resource type="Theme" uid="uid://g1ocbg82y04t" path="res://assets/themes/ui/menu/menu.tres" id="7_047m5"]
-[ext_resource type="Texture2D" uid="uid://bfgoxqpgxqos6" path="res://assets/sprites/ui/titles/title.png" id="7_1316l"]
-[ext_resource type="FontFile" uid="uid://brf58hjte31in" path="res://assets/fonts/PressStart2P-Regular.ttf" id="8_1316l"]
+[ext_resource type="Script" uid="uid://bnp0rcldny1cs" path="res://scenes/ui/menu/main_menu/main_menu.gd" id="1_3xn5e"]
+[ext_resource type="Script" uid="uid://dc2o5ljgvjscy" path="res://scripts/classes/scene_changer.gd" id="2_3wc3c"]
+[ext_resource type="PackedScene" uid="uid://dby1qkve0afmi" path="res://scenes/main/main.tscn" id="3_w55h4"]
+[ext_resource type="Texture2D" uid="uid://chaqddooiduww" path="res://assets/sprites/ui/backgrounds/background.png" id="4_e72yv"]
+[ext_resource type="Texture2D" uid="uid://bfgoxqpgxqos6" path="res://assets/sprites/ui/titles/title.png" id="5_va6oq"]
+[ext_resource type="FontFile" uid="uid://brf58hjte31in" path="res://assets/fonts/PressStart2P-Regular.ttf" id="6_mud7k"]
+[ext_resource type="Theme" uid="uid://g1ocbg82y04t" path="res://assets/themes/ui/menu/menu.tres" id="7_qchlq"]
+[ext_resource type="PackedScene" uid="uid://1yi6eqx3s8c3" path="res://scenes/ui/menu/options_menu/options_menu.tscn" id="8_rok12"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1316l"]
 content_margin_top = 6.0
@@ -125,28 +126,27 @@ _data = {
 &"menu_in": SubResource("Animation_2nsh4")
 }
 
-[node name="Menu" type="Control" unique_id=1125525901]
+[node name="MainMenu" type="Control" unique_id=1125525901 node_paths=PackedStringArray("scene_changer", "animation_player", "options_menu", "start_message_label", "new_game_button", "continue_button", "options_button", "achievements_button", "exit_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="MenuHandler" type="Node2D" parent="." unique_id=1073118471 node_paths=PackedStringArray("scene_changer", "animation_player", "start_message_label", "new_game_button", "continue_button", "options_button", "achievements_button", "exit_button")]
-script = ExtResource("2_q18yf")
-scene_changer = NodePath("../SceneChanger")
-animation_player = NodePath("../AnimationPlayer")
-start_message_label = NodePath("../StartMessageLabel")
-new_game_button = NodePath("../ButtonsContainer/NewGameButton")
-continue_button = NodePath("../ButtonsContainer/ContinueButton")
-options_button = NodePath("../ButtonsContainer/OptionsButton")
-achievements_button = NodePath("../ButtonsContainer/AchievementsButton")
-exit_button = NodePath("../ButtonsContainer/ExitButton")
+script = ExtResource("1_3xn5e")
+scene_changer = NodePath("SceneChanger")
+animation_player = NodePath("AnimationPlayer")
+options_menu = NodePath("OptionsMenu")
+start_message_label = NodePath("StartMessageLabel")
+new_game_button = NodePath("ButtonsContainer/NewGameButton")
+continue_button = NodePath("ButtonsContainer/ContinueButton")
+options_button = NodePath("ButtonsContainer/OptionsButton")
+achievements_button = NodePath("ButtonsContainer/AchievementsButton")
+exit_button = NodePath("ButtonsContainer/ExitButton")
 
 [node name="SceneChanger" type="Node2D" parent="." unique_id=1509841649]
-script = ExtResource("3_r4xos")
-next_scene = ExtResource("4_05f3o")
+script = ExtResource("2_3wc3c")
+next_scene = ExtResource("3_w55h4")
 metadata/_custom_type_script = "uid://dc2o5ljgvjscy"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2127054234]
@@ -160,7 +160,7 @@ layout_mode = 0
 offset_top = 2.0
 offset_right = 320.57245
 offset_bottom = 177.0
-texture = ExtResource("6_047m5")
+texture = ExtResource("4_e72yv")
 expand_mode = 1
 stretch_mode = 4
 
@@ -177,7 +177,7 @@ offset_right = 50.00009
 offset_bottom = 29.000938
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_1316l")
+texture = ExtResource("5_va6oq")
 
 [node name="StartMessageLabel" type="Label" parent="." unique_id=649532106]
 layout_mode = 1
@@ -194,7 +194,7 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.5, 0.5)
 pivot_offset = Vector2(112, 11.5)
-theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_fonts/font = ExtResource("6_mud7k")
 text = "Press Any Key."
 horizontal_alignment = 1
 uppercase = true
@@ -216,13 +216,13 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.4, 0.4)
 pivot_offset = Vector2(115, 100)
-theme = ExtResource("7_047m5")
+theme = ExtResource("7_qchlq")
 
 [node name="NewGameButton" type="Button" parent="ButtonsContainer" unique_id=535630826]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_fonts/font = ExtResource("6_mud7k")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1316l")
 text = "NEW GAME"
 
@@ -230,7 +230,7 @@ text = "NEW GAME"
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_fonts/font = ExtResource("6_mud7k")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
 text = "CONTINUE"
 
@@ -238,7 +238,7 @@ text = "CONTINUE"
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_fonts/font = ExtResource("6_mud7k")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
 text = "OPTIONS"
 
@@ -246,7 +246,7 @@ text = "OPTIONS"
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_fonts/font = ExtResource("6_mud7k")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
 text = "ACHIEVEMENTS"
 
@@ -254,9 +254,12 @@ text = "ACHIEVEMENTS"
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("8_1316l")
+theme_override_fonts/font = ExtResource("6_mud7k")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
 text = "EXIT"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1772491313]
 libraries/ = SubResource("AnimationLibrary_afxhl")
+
+[node name="OptionsMenu" parent="." unique_id=2104268155 instance=ExtResource("8_rok12")]
+visible = false

@@ -1,7 +1,8 @@
-extends Node2D
+extends Control
 
 @export var scene_changer: SceneChanger
 @export var animation_player: AnimationPlayer
+@export var options_menu: OptionsMenu
 
 # Labels and Buttons
 @export var start_message_label: Label
@@ -10,8 +11,6 @@ extends Node2D
 @export var options_button: Button
 @export var achievements_button: Button
 @export var exit_button: Button
-
-@export var options_menu_scene: PackedScene = preload("res://scenes/ui/menu/pause_menu/settings_menu/settings_menu.tscn")
 
 var first_input: bool = true
 
@@ -24,6 +23,7 @@ func check_nodes():
 	if not start_message_label: print_error("start_message_label missing")
 	if not animation_player: print_error("animation_player missing")
 	if not new_game_button: print_error("new_game_button missing")
+	if not options_menu: print_error("options_menu missing")
 	if not continue_button: print_error("continue_button missing")
 	if not options_button: print_error("options_button missing")
 	if not achievements_button: print_error("achievements_button missing")
@@ -70,9 +70,8 @@ func on_continue_pressed():
 
 # Method run when user wants to open options menu (settings)
 func on_options_pressed():
-	if options_menu_scene:
-		var scene = options_menu_scene.instantiate()
-		self.add_child(scene)
+	if options_menu:
+		options_menu._show()
 
 # Method run when user wants to open achievements menu
 func on_achievements_pressed():
@@ -81,7 +80,6 @@ func on_achievements_pressed():
 # Method run when user wants to exit the game
 func on_exit_pressed():
 	get_tree().quit()
-
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
