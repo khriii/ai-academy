@@ -1,7 +1,7 @@
 class_name SettingsMenu
-extends Panel
+extends CanvasLayer
 
-@export var fullscreen_checkbox: CheckBox
+@export var fullscreen_check_button: CheckButton
 @export var volume_slider: HSlider
 @export var exit_button: Button
 
@@ -10,8 +10,8 @@ var filename: String = "settings_menu.gd"
 func _ready() -> void:
 	check_nodes()
 	
-	if fullscreen_checkbox:
-		fullscreen_checkbox.toggled.connect(_on_fullscreen_checkbox_toggled)
+	if fullscreen_check_button:
+		fullscreen_check_button.toggled.connect(_on_fullscreen_checkbox_toggled)
 	if volume_slider:
 		volume_slider.drag_ended.connect(_on_volume_slider_dragged)
 	if exit_button:
@@ -21,7 +21,7 @@ func print_error(error_message):
 	print(filename + ": " + error_message)
 
 func check_nodes():
-	if not fullscreen_checkbox: print_error("fullscreen_checkbox missing")
+	if not fullscreen_check_button: print_error("fullscreen_checkbox missing")
 	if not volume_slider: print_error("volume_slider missing")
 	if not exit_button: print_error("exit_button missing")
 

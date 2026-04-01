@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chaqddooiduww"
-path="res://.godot/imported/background.png-de7bba9969e8cec4a17fa3d1d71bb706.ctex"
+uid="uid://bqla74nvqjdau"
+path="res://.godot/imported/check_button1.png-0a17ee34366609491d9f894d73b37a48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/background.png"
-dest_files=["res://.godot/imported/background.png-de7bba9969e8cec4a17fa3d1d71bb706.ctex"]
+source_file="res://assets/sprites/ui/elements/checkbutton/check_button1.png"
+dest_files=["res://.godot/imported/check_button1.png-0a17ee34366609491d9f894d73b37a48.ctex"]
 
 [params]
 

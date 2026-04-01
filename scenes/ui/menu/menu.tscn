@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://cahgu2fcc5e06" path="res://scenes/ui/menu/menu_handler.gd" id="2_q18yf"]
 [ext_resource type="Script" uid="uid://dc2o5ljgvjscy" path="res://scripts/classes/scene_changer.gd" id="3_r4xos"]
 [ext_resource type="PackedScene" uid="uid://dby1qkve0afmi" path="res://scenes/main/main.tscn" id="4_05f3o"]
-[ext_resource type="Texture2D" uid="uid://chaqddooiduww" path="res://assets/sprites/ui/background.png" id="6_047m5"]
-[ext_resource type="Texture2D" uid="uid://bfgoxqpgxqos6" path="res://assets/sprites/ui/title.png" id="7_1316l"]
+[ext_resource type="Texture2D" uid="uid://chaqddooiduww" path="res://assets/sprites/ui/backgrounds/background.png" id="6_047m5"]
+[ext_resource type="Theme" uid="uid://g1ocbg82y04t" path="res://assets/themes/ui/menu/menu.tres" id="7_047m5"]
+[ext_resource type="Texture2D" uid="uid://bfgoxqpgxqos6" path="res://assets/sprites/ui/titles/title.png" id="7_1316l"]
 [ext_resource type="FontFile" uid="uid://brf58hjte31in" path="res://assets/fonts/PressStart2P-Regular.ttf" id="8_1316l"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1316l"]
@@ -215,9 +216,11 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.4, 0.4)
 pivot_offset = Vector2(115, 100)
+theme = ExtResource("7_047m5")
 
 [node name="NewGameButton" type="Button" parent="ButtonsContainer" unique_id=535630826]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_1316l")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1316l")
@@ -225,6 +228,7 @@ text = "NEW GAME"
 
 [node name="ContinueButton" type="Button" parent="ButtonsContainer" unique_id=689784608]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_1316l")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
@@ -232,6 +236,7 @@ text = "CONTINUE"
 
 [node name="OptionsButton" type="Button" parent="ButtonsContainer" unique_id=432543561]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_1316l")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
@@ -239,6 +244,7 @@ text = "OPTIONS"
 
 [node name="AchievementsButton" type="Button" parent="ButtonsContainer" unique_id=427757495]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_1316l")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
@@ -246,6 +252,7 @@ text = "ACHIEVEMENTS"
 
 [node name="ExitButton" type="Button" parent="ButtonsContainer" unique_id=726883405]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_1316l")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")

@@ -1,63 +1,115 @@
 [gd_scene format=3 uid="uid://1yi6eqx3s8c3"]
 
 [ext_resource type="Script" uid="uid://b42n5so2jw3is" path="res://scenes/ui/menu/pause_menu/settings_menu/settings_menu.gd" id="1_x1qsb"]
+[ext_resource type="Texture2D" uid="uid://cc33kx3ojt5ke" path="res://assets/sprites/ui/elements/menu/menu.png" id="2_ncmfy"]
+[ext_resource type="Theme" uid="uid://bk1umnho7s31p" path="res://assets/themes/ui/holo/holo.tres" id="3_3rkpm"]
+[ext_resource type="Texture2D" uid="uid://bxsbtg20dj30h" path="res://assets/sprites/ui/elements/menu/menu_2.png" id="3_prlcr"]
+[ext_resource type="Texture2D" uid="uid://c64e26nih8i0s" path="res://assets/sprites/ui/icons/audio_icon.png" id="5_csm3m"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7mpl"]
-bg_color = Color(0.18000486, 0.1800049, 0.18000478, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prlcr"]
+bg_color = Color(0, 0, 0, 0.49411765)
 
-[node name="SettingsMenu" type="Panel" unique_id=790654355 node_paths=PackedStringArray("fullscreen_checkbox", "volume_slider", "exit_button")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -85.0
-offset_top = -67.0
-offset_right = 85.0
-offset_bottom = 67.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_d7mpl")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qm7bs"]
+texture = ExtResource("2_ncmfy")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_alcku"]
+texture = ExtResource("3_prlcr")
+texture_margin_left = 11.0
+texture_margin_top = 11.0
+texture_margin_right = 11.0
+texture_margin_bottom = 11.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_alcku"]
+
+[node name="SettingsMenu" type="CanvasLayer" unique_id=2104268155 node_paths=PackedStringArray("fullscreen_check_button", "volume_slider", "exit_button")]
 script = ExtResource("1_x1qsb")
-fullscreen_checkbox = NodePath("FullscreenCheckBox")
-volume_slider = NodePath("VolumeSlider")
-exit_button = NodePath("ExitButton")
+fullscreen_check_button = NodePath("Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/FullscreenCheckButton")
+volume_slider = NodePath("Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VolumeSlider")
+exit_button = NodePath("Panel/MarginContainer/VBoxContainer/ExitButton")
 
-[node name="FullscreenCheckBox" type="CheckBox" parent="." unique_id=157001575]
-layout_mode = 1
-anchors_preset = -1
+[node name="PanelOpaque" type="Panel" parent="." unique_id=693264009]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 31.5
-offset_top = 51.5
-offset_right = -31.5
-offset_bottom = -51.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Fullscreen"
+theme_override_styles/panel = SubResource("StyleBoxFlat_prlcr")
 
-[node name="VolumeSlider" type="HSlider" parent="." unique_id=293232993]
-layout_mode = 1
-anchors_preset = -1
+[node name="Panel" type="Panel" parent="." unique_id=990824767]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 23.0
-offset_top = 23.0
-offset_right = -23.0
-offset_bottom = -95.0
+offset_left = 74.0
+offset_top = 7.0
+offset_right = -74.0
+offset_bottom = -7.0
 grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qm7bs")
 
-[node name="ExitButton" type="Button" parent="." unique_id=1979248891]
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1111774314]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -22.5
-offset_top = -40.0
-offset_right = 22.5
-offset_bottom = -9.0
 grow_horizontal = 2
-grow_vertical = 0
-text = "Exit"
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1075580554]
+layout_mode = 2
+theme = ExtResource("3_3rkpm")
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1080402425]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1323893511]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_alcku")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/PanelContainer" unique_id=1089369860]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer" unique_id=2028634368]
+layout_mode = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=562017885]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="AudioIcon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=278912751]
+layout_mode = 2
+texture = ExtResource("5_csm3m")
+stretch_mode = 4
+
+[node name="VolumeSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=293232993]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+value = 100.0
+
+[node name="FullscreenCheckButton" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1629539463]
+material = SubResource("ShaderMaterial_alcku")
+layout_mode = 2
+text = "FULLSCREEN"
+
+[node name="ExitButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1979248891]
+layout_mode = 2
+theme = ExtResource("3_3rkpm")
+text = "BACK"

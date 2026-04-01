@@ -11,6 +11,10 @@ extends Node2D
 @export var achievements_button: Button
 @export var exit_button: Button
 
+@export var options_menu_scene: PackedScene = preload("res://scenes/ui/menu/pause_menu/settings_menu/settings_menu.tscn")
+
+var first_input: bool = true
+
 var filename = "menu_handler.gd"
 
 func print_error(error_message):
@@ -66,7 +70,9 @@ func on_continue_pressed():
 
 # Method run when user wants to open options menu (settings)
 func on_options_pressed():
-	pass
+	if options_menu_scene:
+		var scene = options_menu_scene.instantiate()
+		self.add_child(scene)
 
 # Method run when user wants to open achievements menu
 func on_achievements_pressed():
@@ -80,7 +86,8 @@ func on_exit_pressed():
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.pressed and event.keycode:
-			if animation_player:
+			if animation_player and first_input:
 				if animation_player.has_animation("menu_in"):
 					animation_player.play("menu_in")
+					first_input = false
 			#get_tree().change_scene_to_packed(scene_changer.next_scene)

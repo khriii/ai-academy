@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhgyt5g5u64ob"
-path="res://.godot/imported/scientist_3.png-b970c430c0307d03bbba8e991e50c6c9.ctex"
+uid="uid://c64e26nih8i0s"
+path="res://.godot/imported/audio_icon.png-7905801972f10c4c2138410ec37923ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ui/scientist_3.png"
-dest_files=["res://.godot/imported/scientist_3.png-b970c430c0307d03bbba8e991e50c6c9.ctex"]
+source_file="res://assets/sprites/ui/icons/audio_icon.png"
+dest_files=["res://.godot/imported/audio_icon.png-7905801972f10c4c2138410ec37923ac.ctex"]
 
 [params]
 
