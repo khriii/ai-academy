@@ -17,11 +17,11 @@ func apply_animation(animation_prefix: String, facing_direction: Vector2) -> voi
 	var animation_direction: String = "down"
 	
 	if facing_direction.x > 0:
-		animation_direction = "side"
-		sprite.flip_h = false
+		animation_direction = "right"
+		#sprite.flip_h = false
 	elif facing_direction.x < 0:
-		animation_direction = "side"
-		sprite.flip_h = true
+		animation_direction = "left"
+		#sprite.flip_h = true
 	if facing_direction.y > 0 or (facing_direction.x > 0 and facing_direction.y > 0):
 		animation_direction = "down"
 	if facing_direction.y < 0 or (facing_direction.x < 0 and facing_direction.y < 0):
