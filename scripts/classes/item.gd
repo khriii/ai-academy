@@ -1,9 +1,13 @@
 class_name Item
 extends Node2D
 
-@export var item_name: String
+# Variables
+@export var id: String
+@export var _name: String
 
+# Methods
 func _ready() -> void:
 	Global.check_nodes(get_script().get_path(), {
-		"item_name": item_name,
+		"id": id,
+		"_name": _name,
 	})
