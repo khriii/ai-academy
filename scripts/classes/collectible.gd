@@ -5,11 +5,12 @@ extends Item
 
 var filename = get_script().get_path()
 
-func _ready() -> void:
-	check_nodes()
 
-func check_nodes():
-	if not collection_area: Global.print_missing(filename, "collection_area")
+func _ready() -> void:
+	Global.check_nodes(filename, {
+		"collection_area": collection_area,
+	})
+
 
 func collect():
 	Global.collected_collectibles += 1

@@ -312,8 +312,9 @@ metadata/_custom_type_script = "uid://wh76efxtjfia"
 script = ExtResource("6_8akj5")
 metadata/_custom_type_script = "uid://bbxx5wm23qiu1"
 
-[node name="InteractionComponent" type="Area2D" parent="." unique_id=108567500]
+[node name="InteractionComponent" type="Area2D" parent="." unique_id=108567500 node_paths=PackedStringArray("interaction_area")]
 script = ExtResource("7_bj7e2")
+interaction_area = NodePath("CollisionShape2D")
 metadata/_custom_type_script = "uid://cytog0q8uda8b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionComponent" unique_id=89808187]

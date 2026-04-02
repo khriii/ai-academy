@@ -11,23 +11,21 @@ extends Control
 
 @export var lang_component: LangComponent
 
-var file_name: String = "dialogue_manager.gd"
 var current_dialogue: Array
 var current_line: int = 0
 var waiting_for_input: bool = false
 
+var filename = get_script().get_path()
+
+
 func _ready() -> void:
-	
-	if not left_character:
-		print(file_name + ": left_character missing")
-	if not right_character:
-		print(file_name + ": right_character missing")
-	if not left_character_marker:
-		print(file_name + ": left_character_marker missing")
-	if not right_character_marker:
-		print(file_name + ": right_character_marker missing")
-	if not dialogue_label:
-		print(file_name + ": dialogue_label missing")
+	Global.check_nodes(filename, {
+		"left_character": left_character,
+		"right_character": right_character,
+		"left_character_marker": left_character_marker,
+		"right_character_marker": right_character_marker,
+		"dialogue_label": dialogue_label
+	})
 	
 	set_sprite_sizes()
 	
@@ -42,10 +40,12 @@ func _process(_delta: float) -> void:
 	if waiting_for_input and Input.is_action_just_pressed("continue_dialogue"):
 		show_next_line()
 
+
 func play() -> void:
 	current_dialogue = lang_component.get_dialogue(dialogue_name)
 	current_line = 0
 	show_next_line()
+
 
 func show_next_line() -> void:
 	if current_line >= current_dialogue.size():
@@ -64,6 +64,7 @@ func show_next_line() -> void:
 	
 	# Wait for input
 	waiting_for_input = true
+
 
 func _update_character_position(speaker_position: String) -> void:
 	if speaker_position.to_lower() == "left":

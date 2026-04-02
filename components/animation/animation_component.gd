@@ -6,11 +6,16 @@ extends Node
 @export var sprite : AnimatedSprite2D
 @export var movement_component : MovementComponent
 
-var prefix : String = "[AnimationComponent]"
+var filename = get_script().get_path()
+
 
 # ------------------ Methods ----------------------
 func _ready() -> void:
-	print(prefix + " loaded")
+	Global.check_nodes(filename, {
+		"entity": entity,
+		"sprite": sprite,
+		"movement_component": movement_component,
+	})
 
 
 func apply_animation(animation_prefix: String, facing_direction: Vector2) -> void:

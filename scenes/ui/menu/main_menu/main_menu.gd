@@ -16,23 +16,27 @@ var first_input: bool = true
 
 var filename = "menu_handler.gd"
 
+
 func print_error(error_message):
 	print(filename + ": " + error_message)
 
-func check_nodes():
-	if not start_message_label: print_error("start_message_label missing")
-	if not animation_player: print_error("animation_player missing")
-	if not new_game_button: print_error("new_game_button missing")
-	if not options_menu: print_error("options_menu missing")
-	if not continue_button: print_error("continue_button missing")
-	if not options_button: print_error("options_button missing")
-	if not achievements_button: print_error("achievements_button missing")
-	if not exit_button: print_error("exit_button missing")
 
 func _ready() -> void:
-	check_nodes()
+	
+	Global.check_nodes(filename, {
+		"start_message_label": start_message_label,
+		"animation_player": animation_player,
+		"new_game_button": new_game_button,
+		"options_menu": options_menu,
+		"continue_button": continue_button,
+		"options_button": options_button,
+		"achievements_button": achievements_button,
+		"exit_button": exit_button
+	})
+	
 	load_language()
 	load_click_handlers()
+
 
 func load_language():
 	if start_message_label:
@@ -48,6 +52,7 @@ func load_language():
 	if exit_button:
 		exit_button.text = Lang.get_lang_text("exit_button")
 
+
 func load_click_handlers():
 	if new_game_button:
 		new_game_button.pressed.connect(on_new_game_pressed)
@@ -60,26 +65,32 @@ func load_click_handlers():
 	if exit_button:
 		exit_button.pressed.connect(on_exit_pressed)
 
+
 # Method run when a new game should be created
 func on_new_game_pressed():
 	pass
 
+
 # Method run when a game should be resumed
 func on_continue_pressed():
 	pass
+
 
 # Method run when user wants to open options menu (settings)
 func on_options_pressed():
 	if options_menu:
 		options_menu._show()
 
+
 # Method run when user wants to open achievements menu
 func on_achievements_pressed():
 	pass
 
+
 # Method run when user wants to exit the game
 func on_exit_pressed():
 	get_tree().quit()
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
