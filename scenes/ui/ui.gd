@@ -1,7 +1,9 @@
-extends Control
+extends CanvasLayer
 
-@export var collectibles_counter: Label
+@export var collectibles_counter: CollectiblesCounter
 
+func increment_collectibles(step: int):
+	collectibles_counter.increment(step)
 
-func _process(_delta: float) -> void:
-	collectibles_counter.text = str(Global.collected_collectibles)
+func decrement_collectibles(step: int):
+	collectibles_counter.decrement(step)

@@ -1,34 +1,31 @@
 [gd_scene format=3 uid="uid://8y2umwl3jird"]
 
 [ext_resource type="Script" uid="uid://d0eeicqns57fi" path="res://scenes/ui/ui.gd" id="1_u7n8c"]
-[ext_resource type="Theme" uid="uid://g1ocbg82y04t" path="res://assets/themes/ui/menu/menu.tres" id="2_aac20"]
-[ext_resource type="Texture2D" uid="uid://byr8bkn2ba610" path="res://assets/sprites/collectibles/cube.png" id="3_g5kmx"]
+[ext_resource type="PackedScene" uid="uid://c7xmtfv51uink" path="res://scenes/ui/collectibles_counter/collectibles_counter.tscn" id="2_aac20"]
+[ext_resource type="PackedScene" uid="uid://cw20x4kyli4ga" path="res://scenes/ui/player_stats/player_stats.tscn" id="4_g5kmx"]
 
-[node name="UI" type="Control" unique_id=198059914 node_paths=PackedStringArray("collectibles_counter")]
-layout_mode = 3
-anchors_preset = 0
+[node name="UI" type="CanvasLayer" unique_id=1284890570 node_paths=PackedStringArray("collectibles_counter")]
 script = ExtResource("1_u7n8c")
-collectibles_counter = NodePath("HBoxContainer/CollectiblesCounter")
+collectibles_counter = NodePath("Container/CollectiblesCounter")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1625770013]
+[node name="Container" type="Control" parent="." unique_id=1831748581]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollectiblesCounter" parent="Container" unique_id=374832133 instance=ExtResource("2_aac20")]
 layout_mode = 0
-offset_left = 4.0
+
+[node name="PlayerStats" parent="Container" unique_id=1768202667 instance=ExtResource("4_g5kmx")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
 offset_top = 4.0
-offset_right = 44.0
-offset_bottom = 24.0
-theme = ExtResource("2_aac20")
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1927271302]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("3_g5kmx")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="CollectiblesCounter" type="Label" parent="HBoxContainer" unique_id=1596732724]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 1
-theme_override_font_sizes/font_size = 10
-text = "0"
-vertical_alignment = 1
+offset_right = -4.0
+offset_bottom = 44.0
+grow_horizontal = 0
