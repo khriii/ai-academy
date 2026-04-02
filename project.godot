@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Global="*uid://bbxrgh4rh6751"
 Lang="*uid://2p554g1othq4"
 CollectiblesManager="*uid://c5h1pappevgs4"
+NpcManager="*uid://cgo8h8vh4vo0i"
 
 [display]
 

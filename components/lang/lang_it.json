@@ -7,15 +7,27 @@
 	"achievements_button": "OBBIETTIVI",
 	"exit_button": "ESCI",
 	"dialogues": {
-		"test_1": [
+		"neura_stage_0": [
 			{
 				"speaker": "Neura",
-				"text": "Ciao, mi chiamo Neura",
+				"text": "Ciao, mi chiamo Neura. Sei nuovo da queste parti?",
 				"position": "left"
 			},
 			{
 				"speaker": "Doc. Epoch",
-				"text": "Ciao Neura",
+				"text": "Salve Neura. Sì, sono appena arrivato.",
+				"position": "right"
+			}
+		],
+		"neura_stage_1": [
+			{
+				"speaker": "Neura",
+				"text": "Bentornato Doc! Hai bisogno di qualcos'altro?",
+				"position": "left"
+			},
+			{
+				"speaker": "Doc. Epoch",
+				"text": "Per ora no, grazie. Sto solo esplorando.",
 				"position": "right"
 			}
 		]
