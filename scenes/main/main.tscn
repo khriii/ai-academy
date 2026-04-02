@@ -13,6 +13,8 @@ player = NodePath("Objects/Player")
 pause_menu = NodePath("PauseMenu")
 metadata/_edit_vertical_guides_ = [-14787.0]
 
+[node name="UI" parent="." unique_id=198059914 instance=ExtResource("4_l3cfh")]
+
 [node name="PauseMenu" parent="." unique_id=1499191766 instance=ExtResource("5_6q06x")]
 visible = false
 
@@ -24,5 +26,3 @@ position = Vector2(147, 97)
 
 [node name="Coin" parent="Objects" unique_id=1100059931 instance=ExtResource("2_iuonh")]
 position = Vector2(90, 46)
-
-[node name="UI" parent="Objects" unique_id=198059914 instance=ExtResource("4_l3cfh")]
