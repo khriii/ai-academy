@@ -18,4 +18,5 @@ func _ready() -> void:
 func onJoin(area: Area2D):
 	var parent = area.get_parent()
 	if parent is Collectible:
-		parent.collect()
+		pass
+		#parent.collect()

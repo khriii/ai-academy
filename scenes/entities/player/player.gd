@@ -2,11 +2,14 @@ class_name Player
 extends Entity
 
 @export var inventory: InventoryComponent
-
+@export var movement_component: MovementComponent
+@export var animation_component: AnimationComponent
 
 func _ready() -> void:
 	Global.check_nodes(get_script().get_path(), {
 		"inventory": inventory,
+		"movement_component": movement_component,
+		"animation_component": animation_component,
 	})
 
 

@@ -11,12 +11,6 @@ func _ready() -> void:
 		"player": player,
 		"pause_menu": pause_menu,
 	})
-	
-	var new_item = Item.new()
-	new_item.item_name = "test_item"
-	
-	player.inventory.addItem(new_item)
-
 
 func check_esc_pressed():
 	if Input.is_action_just_pressed("esc"):
