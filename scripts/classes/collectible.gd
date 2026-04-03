@@ -23,6 +23,8 @@ func _ready() -> void:
 func load_signals():
 	if collection_area:
 		collection_area.body_entered.connect(_on_collect)
+	
+	item_collected.connect(CollectiblesManager.collect)
 
 func _on_collect(body: Node):
 	if body is Player:
