@@ -1,8 +1,6 @@
 class_name Npc
 extends Entity
 
-signal interaction_triggered(id: String)
-
 # Variables
 @export var movement_component: MovementComponent
 @export var animation_component: AnimationComponent
@@ -19,7 +17,7 @@ func _ready() -> void:
 
 func interact() -> void:
 	if is_interactable:
-		interaction_triggered.emit(id)
+		NpcManager.interaction_triggered.emit(id)
 
 func walk(where: Vector2) -> void:
 	if movement_component:

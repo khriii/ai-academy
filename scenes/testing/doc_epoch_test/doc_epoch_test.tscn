@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dmkstq4hhw25u"]
+
+[ext_resource type="PackedScene" uid="uid://d3y1acs3e2eda" path="res://scenes/entities/npc/doc_epoch.tscn" id="1_1iyob"]
+[ext_resource type="Script" uid="uid://bjnqwag7fm3fc" path="res://scenes/testing/doc_epoch_test/doc_epoch_test.gd" id="1_lyo6u"]
+[ext_resource type="PackedScene" uid="uid://kuismdy5n58m" path="res://scenes/entities/player/player.tscn" id="2_ynlvl"]
+
+[node name="DocEpochTest" type="Node2D" unique_id=1845041600]
+script = ExtResource("1_lyo6u")
+
+[node name="DocEpoch" parent="." unique_id=1950257195 instance=ExtResource("1_1iyob")]
+position = Vector2(50, 50)
+
+[node name="Player" parent="." unique_id=1023106120 instance=ExtResource("2_ynlvl")]
+id = "neura"
+_name = "Neura"

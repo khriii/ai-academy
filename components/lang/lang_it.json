@@ -10,11 +10,13 @@
 		"neura_stage_0": [
 			{
 				"speaker": "Neura",
+				"speaker_id": "neura",
 				"text": "Ciao, mi chiamo Neura. Sei nuovo da queste parti?",
 				"position": "left"
 			},
 			{
 				"speaker": "Doc. Epoch",
+				"speaker_id": "doc_epoch",
 				"text": "Salve Neura. Sì, sono appena arrivato.",
 				"position": "right"
 			}
@@ -30,6 +32,26 @@
 				"text": "Per ora no, grazie. Sto solo esplorando.",
 				"position": "right"
 			}
-		]
+		],
+		"doc_epoch_stage_0": [
+			{
+				"speaker": "Doc Epoch",
+				"speaker_id": "doc_epoch",
+				"text": "Eila' come va?",
+				"position": "left"
+			},
+			{
+				"speaker": "Neura",
+				"speaker_id": "neura",
+				"text": "Tutto bene fra.",
+				"position": "right"
+			},
+			{
+				"speaker": "Doc Epoch",
+				"speaker_id": "doc_epoch",
+				"text": "Buono dai. sigma",
+				"position": "left"
+			}
+		],
 	}
 }

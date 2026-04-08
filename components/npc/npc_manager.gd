@@ -1,8 +1,13 @@
 extends Node
 
+signal interaction_triggered(npc_id: String)
+
 var dialogue_scene: PackedScene = preload("res://scenes/ui/dialogue/DialogueManager.tscn")
 
 var npc_states: Dictionary = {}
+
+func _ready() -> void:
+	interaction_triggered.connect(interacted)
 
 func interacted(npc_id: String) -> void:
 	play_dialog(npc_id)

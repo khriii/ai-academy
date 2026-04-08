@@ -16,15 +16,15 @@ func _ready() -> void:
 		"entity": entity,
 	})
 
-
 func set_facing_direction(direction: Vector2) -> void:
 	if direction.length() > 0:
 		facing_direction = direction.normalized()
 	input_direction = direction.normalized()
 
-
-func _process(_delta: float) -> void:
-	if (entity):
-		entity.velocity = input_direction * speed
-		
-		entity.move_and_slide()
+func _physics_process(_delta: float) -> void:
+	if entity:
+		if input_direction == Vector2.ZERO:
+			entity.velocity = Vector2.ZERO
+		else:
+			entity.velocity = input_direction * speed
+			entity.move_and_slide()
