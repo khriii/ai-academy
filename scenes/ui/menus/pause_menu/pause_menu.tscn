@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cqj7rh8bbjgk"]
+
+[ext_resource type="Script" uid="uid://dm3ofkrq2flxv" path="res://scenes/ui/menus/pause_menu/pause_menu.gd" id="1_d7mpl"]
+[ext_resource type="Texture2D" uid="uid://bfgoxqpgxqos6" path="res://assets/sprites/ui/titles/title.png" id="2_go30t"]
+[ext_resource type="Theme" uid="uid://g1ocbg82y04t" path="res://assets/textures/themes/menu.tres" id="3_ajc8u"]
+[ext_resource type="FontFile" uid="uid://brf58hjte31in" path="res://assets/fonts/PressStart2P-Regular.ttf" id="4_2tjv6"]
+[ext_resource type="PackedScene" uid="uid://1yi6eqx3s8c3" path="res://scenes/ui/menus/options_menu/options_menu.tscn" id="5_ajc8u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8slkm"]
+bg_color = Color(0, 0, 0, 0.49411765)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ibkr2"]
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1499191766 node_paths=PackedStringArray("continue_button", "options_button", "achievements_button", "quit_button", "options_menu")]
+process_mode = 3
+script = ExtResource("1_d7mpl")
+continue_button = NodePath("ButtonsContainer/ContinueButton")
+options_button = NodePath("ButtonsContainer/OptionsButton")
+achievements_button = NodePath("ButtonsContainer/AchievementsButton")
+quit_button = NodePath("ButtonsContainer/QuitButton")
+options_menu = NodePath("OptionsMenu")
+
+[node name="BackgroundTrasparentPanel" type="Panel" parent="." unique_id=1037599698]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8slkm")
+
+[node name="GameTitle" type="TextureRect" parent="." unique_id=1054809185]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -66.0
+offset_right = 50.00009
+offset_bottom = -7.9990616
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_go30t")
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="." unique_id=1670700539]
+self_modulate = Color(1, 1, 1, 0.54999995)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -53.000008
+offset_right = 115.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(115, 100)
+theme = ExtResource("3_ajc8u")
+
+[node name="ContinueButton" type="Button" parent="ButtonsContainer" unique_id=2056856324]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_2tjv6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ibkr2")
+text = "CONTINUE"
+
+[node name="OptionsButton" type="Button" parent="ButtonsContainer" unique_id=2014570862]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_2tjv6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ibkr2")
+text = "OPTIONS"
+
+[node name="AchievementsButton" type="Button" parent="ButtonsContainer" unique_id=2126258033]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_2tjv6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ibkr2")
+text = "ACHIEVEMENTS"
+
+[node name="QuitButton" type="Button" parent="ButtonsContainer" unique_id=1933878464]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_2tjv6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ibkr2")
+text = "QUIT"
+
+[node name="OptionsMenu" parent="." unique_id=2104268155 instance=ExtResource("5_ajc8u")]
+visible = false

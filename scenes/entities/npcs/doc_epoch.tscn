@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://d3y1acs3e2eda"]
+
+[ext_resource type="Script" uid="uid://dpvehpiwi6o51" path="res://scenes/entities/npcs/npc.gd" id="1_uh46p"]
+[ext_resource type="Texture2D" uid="uid://bgsil64v0h53u" path="res://assets/sprites/characters/doc_epoch/idle/down/doc_epochSpritesheet.png" id="2_o75vm"]
+[ext_resource type="Script" uid="uid://tda2b87jtusx" path="res://components/movement/movement_component.gd" id="3_dgv8n"]
+[ext_resource type="Script" uid="uid://wh76efxtjfia" path="res://components/animation/animation_component.gd" id="4_57osm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kimh6"]
+atlas = ExtResource("2_o75vm")
+region = Rect2(0, 0, 64, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pl67"]
+atlas = ExtResource("2_o75vm")
+region = Rect2(64, 0, 64, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68yo5"]
+atlas = ExtResource("2_o75vm")
+region = Rect2(128, 0, 64, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ess3a"]
+atlas = ExtResource("2_o75vm")
+region = Rect2(192, 0, 64, 84)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w1n4"]
+atlas = ExtResource("2_o75vm")
+region = Rect2(256, 0, 64, 84)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a3p3n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kimh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pl67")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68yo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ess3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w1n4")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uh46p"]
+size = Vector2(12, 20)
+
+[node name="DocEpoch" type="CharacterBody2D" unique_id=1950257195 node_paths=PackedStringArray("movement_component", "animation_component")]
+motion_mode = 1
+script = ExtResource("1_uh46p")
+movement_component = NodePath("MovementComponent")
+animation_component = NodePath("AnimationComponent")
+id = "doc_epoch"
+_name = "Doc Epoch"
+metadata/_custom_type_script = "uid://dpvehpiwi6o51"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=142706973]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_a3p3n")
+animation = &"idle_down"
+
+[node name="MovementComponent" type="Node" parent="." unique_id=1018590573 node_paths=PackedStringArray("entity")]
+script = ExtResource("3_dgv8n")
+entity = NodePath("..")
+speed = 100.0
+metadata/_custom_type_script = "uid://tda2b87jtusx"
+
+[node name="AnimationComponent" type="Node" parent="." unique_id=206455481 node_paths=PackedStringArray("entity", "sprite", "movement_component")]
+script = ExtResource("4_57osm")
+entity = NodePath("..")
+sprite = NodePath("../AnimatedSprite2D")
+movement_component = NodePath("../MovementComponent")
+metadata/_custom_type_script = "uid://wh76efxtjfia"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1757286117]
+shape = SubResource("RectangleShape2D_uh46p")

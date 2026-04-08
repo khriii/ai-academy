@@ -23,6 +23,7 @@ CollectiblesManager="*uid://c5h1pappevgs4"
 NpcManager="*uid://cgo8h8vh4vo0i"
 SaveManager="*uid://c1fjiq3wpi2wp"
 QuestManager="*uid://p6p84r64i1gh"
+LangComponent="*uid://2p554g1othq4"
 
 [display]
 

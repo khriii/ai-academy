@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b55awj05wlrw7"]
+
+[ext_resource type="Script" uid="uid://dpvehpiwi6o51" path="res://scenes/entities/npcs/npc.gd" id="1_av8t8"]
+
+[node name="Npc" type="CharacterBody2D" unique_id=478677992]
+motion_mode = 1
+script = ExtResource("1_av8t8")
+metadata/_custom_type_script = "uid://c1yvibcvp8yc8"

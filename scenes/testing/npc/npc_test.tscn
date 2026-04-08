@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fjeqjjoox3tc"]
 
-[ext_resource type="PackedScene" uid="uid://cyiouyu36no3s" path="res://scenes/entities/npc/npc.tscn" id="1_dt5nx"]
+[ext_resource type="PackedScene" uid="uid://cyiouyu36no3s" path="res://scenes/entities/npcs/npc.tscn" id="1_dt5nx"]
 [ext_resource type="Script" uid="uid://bdvrfey5w3bos" path="res://scenes/testing/npc/npc_test.gd" id="1_sdrvq"]
 
 [node name="NpcTest" type="Node2D" unique_id=499274335 node_paths=PackedStringArray("markers", "npc")]

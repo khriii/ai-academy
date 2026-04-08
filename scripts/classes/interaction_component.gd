@@ -12,18 +12,15 @@ func _ready() -> void:
 		"interaction_area": interaction_area,
 	})
 
-	# 1. CAMBIATO QUI: Usiamo i segnali per i Body!
 	body_entered.connect(onJoin)
 	body_exited.connect(onLeave)
 
-# 2. Il parametro in ingresso ora è Node2D (il tipo base dei body)
 func onJoin(body: Node2D) -> void:
 	print("Entrato in contatto con: ", body.name)
 	
 	if body is Collectible:
 		pass
 		
-	# 3. Ora 'body' è direttamente il tuo Npc (CharacterBody2D)!
 	elif body is Npc and body.is_interactable:
 		current_npc = body
 
@@ -32,6 +29,6 @@ func onLeave(body: Node2D) -> void:
 		current_npc = null
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact") and current_npc:
+	if event.is_action_pressed("interact") and current_npc and not Global.is_dialogue_active:
 		current_npc.interact()
 		get_viewport().set_input_as_handled()

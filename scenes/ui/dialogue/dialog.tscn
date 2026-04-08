@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://clojx2qxgecgr"]
+
+[ext_resource type="Script" uid="uid://b4q8cx61ucw6y" path="res://scenes/ui/dialogue/dialog.gd" id="1_kljh1"]
+
+[node name="Dialog" type="CanvasLayer" unique_id=1945120639 node_paths=PackedStringArray("left_talker", "right_talker", "dialog_label")]
+script = ExtResource("1_kljh1")
+left_talker = NodePath("HBoxContainer/LeftTalker")
+right_talker = NodePath("HBoxContainer/RightTalker")
+dialog_label = NodePath("HBoxContainer/MarginContainer/DialogLabel")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1632616078]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftTalker" type="TextureRect" parent="HBoxContainer" unique_id=1096116466]
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1503941406]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
+
+[node name="DialogLabel" type="Label" parent="HBoxContainer/MarginContainer" unique_id=1667477762]
+custom_minimum_size = Vector2(160, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 7
+text = "This is a sample text."
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="RightTalker" type="TextureRect" parent="HBoxContainer" unique_id=452561450]
+layout_mode = 2
+size_flags_horizontal = 4
+expand_mode = 3
+stretch_mode = 5

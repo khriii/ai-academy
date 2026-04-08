@@ -2,7 +2,7 @@ extends Node
 
 signal interaction_triggered(npc_id: String)
 
-var dialogue_scene: PackedScene = preload("res://scenes/ui/dialogue/DialogueManager.tscn")
+var dialog_scene: PackedScene = preload("res://scenes/ui/dialogue/dialog.tscn")
 
 var npc_states: Dictionary = {}
 
@@ -25,16 +25,13 @@ func play_dialog(npc_id: String) -> void:
 	
 	if not npc_states[npc_id].get("is_interactable", true):
 		return
-		
-	var target_dialogue_name: String = npc_id + "_stage_" + str(current_stage)
 	
-	var dialogue_instance = dialogue_scene.instantiate()
+	var d_instance = dialog_scene.instantiate()
+	get_tree().current_scene.add_child(d_instance)
 	
-	get_tree().current_scene.add_child(dialogue_instance)
-	
-	dialogue_instance.dialogue_finished.connect(_on_dialogue_finished.bind(npc_id))
-	
-	dialogue_instance.start_dialogue(target_dialogue_name)
+	d_instance.dialogue_finished.connect(_on_dialogue_finished.bind(npc_id))
+	d_instance.load_dialog(npc_id, current_stage)
+	d_instance.play_next_dialog()
 
 func _on_dialogue_finished(npc_id: String) -> void:
 	if npc_states.has(npc_id):

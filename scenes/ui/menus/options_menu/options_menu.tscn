@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://1yi6eqx3s8c3"]
+
+[ext_resource type="Script" uid="uid://b42n5so2jw3is" path="res://scenes/ui/menus/options_menu/options_menu.gd" id="1_agnke"]
+[ext_resource type="Texture2D" uid="uid://cc33kx3ojt5ke" path="res://assets/sprites/ui/elements/menu/menu.png" id="2_olp02"]
+[ext_resource type="Theme" uid="uid://bk1umnho7s31p" path="res://assets/textures/themes/holo.tres" id="3_xfglt"]
+[ext_resource type="Texture2D" uid="uid://bxsbtg20dj30h" path="res://assets/sprites/ui/elements/menu/menu_2.png" id="4_enjhm"]
+[ext_resource type="Texture2D" uid="uid://c64e26nih8i0s" path="res://assets/sprites/ui/icons/audio_icon.png" id="5_vs76l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prlcr"]
+bg_color = Color(0, 0, 0, 0.49411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qm7bs"]
+texture = ExtResource("2_olp02")
+texture_margin_left = 40.0
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_alcku"]
+texture = ExtResource("4_enjhm")
+texture_margin_left = 11.0
+texture_margin_top = 11.0
+texture_margin_right = 11.0
+texture_margin_bottom = 11.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_alcku"]
+
+[node name="OptionsMenu" type="CanvasLayer" unique_id=2104268155 node_paths=PackedStringArray("fullscreen_check_button", "volume_slider", "exit_button")]
+script = ExtResource("1_agnke")
+fullscreen_check_button = NodePath("Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/FullscreenCheckButton")
+volume_slider = NodePath("Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VolumeSlider")
+exit_button = NodePath("Panel/MarginContainer/VBoxContainer/ExitButton")
+
+[node name="BackgroundTrasparentPanel" type="Panel" parent="." unique_id=693264009]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_prlcr")
+
+[node name="Panel" type="Panel" parent="." unique_id=990824767]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 74.0
+offset_top = 7.0
+offset_right = -74.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qm7bs")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1111774314]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1075580554]
+layout_mode = 2
+theme = ExtResource("3_xfglt")
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1080402425]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1323893511]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_alcku")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/PanelContainer" unique_id=1089369860]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer" unique_id=2028634368]
+layout_mode = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=562017885]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="AudioIcon" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=278912751]
+layout_mode = 2
+texture = ExtResource("5_vs76l")
+stretch_mode = 4
+
+[node name="VolumeSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=293232993]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+value = 100.0
+
+[node name="FullscreenCheckButton" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1629539463]
+material = SubResource("ShaderMaterial_alcku")
+layout_mode = 2
+text = "FULLSCREEN"
+
+[node name="ExitButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1979248891]
+layout_mode = 2
+theme = ExtResource("3_xfglt")
+text = "BACK"

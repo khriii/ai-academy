@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bp860ddprrt4y"]
 
-[ext_resource type="PackedScene" uid="uid://cyiouyu36no3s" path="res://scenes/entities/npc/npc.tscn" id="1_wmqt6"]
-[ext_resource type="PackedScene" uid="uid://nquh2pgx6voy" path="res://scenes/seat/seat.tscn" id="2_8g01u"]
+[ext_resource type="PackedScene" uid="uid://cyiouyu36no3s" path="res://scenes/entities/npcs/npc.tscn" id="1_wmqt6"]
+[ext_resource type="PackedScene" path="res://scenes/seat/seat.tscn" id="2_8g01u"]
 [ext_resource type="Script" uid="uid://crpbsodix3en4" path="res://scripts/ai/customer_ai.gd" id="2_iw057"]
 
 [node name="NpcTables" type="Node2D" unique_id=1531779212]
