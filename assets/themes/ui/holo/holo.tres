@@ -1,0 +1,90 @@
+[gd_resource type="Theme" format=3 uid="uid://bk1umnho7s31p"]
+
+[ext_resource type="Texture2D" uid="uid://n4qcg1mo0n1k" path="res://assets/sprites/ui/elements/slider/slider_grabber_area_highlight.png" id="1_anw78"]
+[ext_resource type="Texture2D" uid="uid://c17k5mugr24my" path="res://assets/sprites/ui/elements/button/button.png" id="1_jaq21"]
+[ext_resource type="Texture2D" uid="uid://dx4en4gh7y12x" path="res://assets/sprites/ui/elements/checkbutton/check_button2.png" id="2_0ii80"]
+[ext_resource type="Texture2D" uid="uid://bpf0mic0ej18b" path="res://assets/sprites/ui/elements/slider/slider_grabber.png" id="2_upkg5"]
+[ext_resource type="StyleBox" uid="uid://cdkv4hndq4f5e" path="res://assets/styles/ui/slider/grabber_area.tres" id="3_0ii80"]
+[ext_resource type="Texture2D" uid="uid://bqla74nvqjdau" path="res://assets/sprites/ui/elements/checkbutton/check_button1.png" id="3_jaq21"]
+[ext_resource type="StyleBox" uid="uid://dc068eosdmi84" path="res://assets/styles/ui/slider/grabber_area_highlight.tres" id="4_jaq21"]
+[ext_resource type="StyleBox" uid="uid://cxonqwsbnoln5" path="res://assets/styles/ui/slider/slider.tres" id="5_2tojr"]
+[ext_resource type="FontFile" uid="uid://brf58hjte31in" path="res://assets/fonts/PressStart2P-Regular.ttf" id="6_q24cu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jaq21"]
+texture = ExtResource("1_jaq21")
+texture_margin_left = 11.0
+texture_margin_top = 11.0
+texture_margin_right = 11.0
+texture_margin_bottom = 11.0
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tojr"]
+texture = ExtResource("1_jaq21")
+texture_margin_left = 11.0
+texture_margin_top = 11.0
+texture_margin_right = 11.0
+texture_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q24cu"]
+content_margin_left = 1.0
+content_margin_top = 1.0
+content_margin_right = 1.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_jaq21")
+texture_margin_left = 11.0
+texture_margin_top = 11.0
+texture_margin_right = 11.0
+texture_margin_bottom = 11.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1e27l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4sb6d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0b8a5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_djxtg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1y2w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m7iiu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jaq21"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wcd14"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tojr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q24cu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjs7r"]
+
+[resource]
+default_font = ExtResource("6_q24cu")
+default_font_size = 6
+Button/font_sizes/font_size = 7
+Button/styles/hover = SubResource("StyleBoxTexture_jaq21")
+Button/styles/normal = SubResource("StyleBoxTexture_2tojr")
+Button/styles/pressed = SubResource("StyleBoxTexture_q24cu")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_1e27l")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_4sb6d")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_0b8a5")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_djxtg")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_e1y2w")
+CheckButton/font_sizes/font_size = 5
+CheckButton/fonts/font = ExtResource("6_q24cu")
+CheckButton/icons/checked = ExtResource("2_0ii80")
+CheckButton/icons/unchecked = ExtResource("3_jaq21")
+CheckButton/styles/disabled = SubResource("StyleBoxEmpty_m7iiu")
+CheckButton/styles/hover = SubResource("StyleBoxEmpty_jaq21")
+CheckButton/styles/hover_pressed = SubResource("StyleBoxEmpty_wcd14")
+CheckButton/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_2tojr")
+CheckButton/styles/normal = SubResource("StyleBoxEmpty_q24cu")
+CheckButton/styles/pressed = SubResource("StyleBoxEmpty_bjs7r")
+HSlider/icons/grabber = ExtResource("1_anw78")
+HSlider/icons/grabber_highlight = ExtResource("2_upkg5")
+HSlider/styles/grabber_area = ExtResource("3_0ii80")
+HSlider/styles/grabber_area_highlight = ExtResource("4_jaq21")
+HSlider/styles/slider = ExtResource("5_2tojr")

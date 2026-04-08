@@ -5,6 +5,7 @@ extends Node
 
 var inventory: Array[Item] = []
 
+
 func addItem(item: Item) -> bool:
 	# Check if inventory is full
 	if inventory.size() >= inventory_slots:
@@ -16,6 +17,7 @@ func addItem(item: Item) -> bool:
 	print("Added ", item.name, " to inventory. Slots used: ", inventory.size(), "/", inventory_slots)
 	return true
 
+
 func removeItem(item: Item) -> bool:
 	# Check if item exists in inventory
 	if item in inventory:
@@ -25,6 +27,7 @@ func removeItem(item: Item) -> bool:
 	else:
 		print("Item not found in inventory!")
 		return false
+
 
 func removeItemByIndex(index: int) -> bool:
 	# Check if index is valid
@@ -37,19 +40,24 @@ func removeItemByIndex(index: int) -> bool:
 		print("Invalid inventory index!")
 		return false
 
+
 func hasItem(item: Item) -> bool:
 	return item in inventory
+
 
 func getItem(index: int) -> Item:
 	if index >= 0 and index < inventory.size():
 		return inventory[index]
 	return null
 
+
 func isFull() -> bool:
 	return inventory.size() >= inventory_slots
 
+
 func isEmpty() -> bool:
 	return inventory.size() == 0
+
 
 func clear() -> void:
 	inventory.clear()

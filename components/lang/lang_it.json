@@ -1,0 +1,35 @@
+{
+	"start_message_label": "Premi un tasto.",
+	"quit_button": "Esci",
+	"new_game_button": "NUOVA PARTITA",
+	"continue_button": "CONTINUA",
+	"options_button": "OPZIONI",
+	"achievements_button": "OBBIETTIVI",
+	"exit_button": "ESCI",
+	"dialogues": {
+		"neura_stage_0": [
+			{
+				"speaker": "Neura",
+				"text": "Ciao, mi chiamo Neura. Sei nuovo da queste parti?",
+				"position": "left"
+			},
+			{
+				"speaker": "Doc. Epoch",
+				"text": "Salve Neura. Sì, sono appena arrivato.",
+				"position": "right"
+			}
+		],
+		"neura_stage_1": [
+			{
+				"speaker": "Neura",
+				"text": "Bentornato Doc! Hai bisogno di qualcos'altro?",
+				"position": "left"
+			},
+			{
+				"speaker": "Doc. Epoch",
+				"text": "Per ora no, grazie. Sto solo esplorando.",
+				"position": "right"
+			}
+		]
+	}
+}

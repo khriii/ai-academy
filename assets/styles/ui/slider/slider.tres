@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cxonqwsbnoln5"]
+
+[ext_resource type="Texture2D" uid="uid://ddqcc41vo7qjq" path="res://assets/sprites/ui/elements/slider/slider_background.png" id="1_nvi15"]
+
+[resource]
+texture = ExtResource("1_nvi15")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0

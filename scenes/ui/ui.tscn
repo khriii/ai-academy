@@ -1,15 +1,30 @@
 [gd_scene format=3 uid="uid://8y2umwl3jird"]
 
 [ext_resource type="Script" uid="uid://d0eeicqns57fi" path="res://scenes/ui/ui.gd" id="1_u7n8c"]
+[ext_resource type="PackedScene" uid="uid://c7xmtfv51uink" path="res://scenes/ui/collectibles_counter/collectibles_counter.tscn" id="2_aac20"]
+[ext_resource type="PackedScene" uid="uid://cw20x4kyli4ga" path="res://scenes/ui/player_stats/player_stats.tscn" id="4_g5kmx"]
 
-[node name="UI" type="Control" unique_id=198059914 node_paths=PackedStringArray("collectibles_counter")]
-layout_mode = 3
-anchors_preset = 0
+[node name="UI" type="CanvasLayer" unique_id=1284890570]
 script = ExtResource("1_u7n8c")
-collectibles_counter = NodePath("CollectiblesCounter")
 
-[node name="CollectiblesCounter" type="Label" parent="." unique_id=1596732724]
+[node name="Container" type="Control" parent="." unique_id=1831748581]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollectiblesCounter" parent="Container" unique_id=374832133 instance=ExtResource("2_aac20")]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "0"
+
+[node name="PlayerStats" parent="Container" unique_id=1768202667 instance=ExtResource("4_g5kmx")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 44.0
+grow_horizontal = 0

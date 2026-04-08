@@ -6,22 +6,27 @@ extends Node
 @export var sprite : AnimatedSprite2D
 @export var movement_component : MovementComponent
 
-var prefix : String = "[AnimationComponent]"
+var filename = get_script().get_path()
+
 
 # ------------------ Methods ----------------------
 func _ready() -> void:
-	print(prefix + " loaded")
+	Global.check_nodes(filename, {
+		"entity": entity,
+		"sprite": sprite,
+		"movement_component": movement_component,
+	})
 
 
 func apply_animation(animation_prefix: String, facing_direction: Vector2) -> void:
 	var animation_direction: String = "down"
 	
 	if facing_direction.x > 0:
-		animation_direction = "side"
-		sprite.flip_h = false
+		animation_direction = "right"
+		#sprite.flip_h = false
 	elif facing_direction.x < 0:
-		animation_direction = "side"
-		sprite.flip_h = true
+		animation_direction = "left"
+		#sprite.flip_h = true
 	if facing_direction.y > 0 or (facing_direction.x > 0 and facing_direction.y > 0):
 		animation_direction = "down"
 	if facing_direction.y < 0 or (facing_direction.x < 0 and facing_direction.y < 0):

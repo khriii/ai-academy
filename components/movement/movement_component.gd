@@ -7,17 +7,20 @@ extends Node
 
 var facing_direction : Vector2 = Vector2.DOWN
 var input_direction : Vector2 = Vector2.ZERO
-var prefix : String = "[MovementComponent]"
+
+var filename = get_script().get_path()
 
 # ------------------ Methods ----------------------
 func _ready() -> void:
-	print(prefix + " loaded")
+	Global.check_nodes(filename, {
+		"entity": entity,
+	})
+
 
 func set_facing_direction(direction: Vector2) -> void:
 	if direction.length() > 0:
 		facing_direction = direction.normalized()
 	input_direction = direction.normalized()
-	
 
 
 func _process(_delta: float) -> void:
