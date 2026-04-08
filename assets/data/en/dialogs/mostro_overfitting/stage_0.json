@@ -1,0 +1,38 @@
+[
+	{
+		"talker_name": "mostro_overfitting",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/mostro_overfitting/idle/down/mostro1.png",
+		"dialog": "Pssst... Neura... Look how good I am."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Whoa! Who are you? And why is your curve so... wiggly?"
+	},
+	{
+		"talker_name": "mostro_overfitting",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/mostro_overfitting/idle/down/mostro1.png",
+		"dialog": "I memorized all the points. Every single one. My accuracy on the training set is... 100%. Impressive, right?"
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "100%? That sounds amazing! But... why does your curve look so crazy?"
+	},
+	{
+		"talker_name": "mostro_overfitting",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/mostro_overfitting/idle/down/mostro1.png",
+		"dialog": "Keep training. One more epoch. One more. The curve will become perfect. It will touch every point. You'll be infallible... at least on this data."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "I don't know... Something feels wrong about this..."
+	}
+]

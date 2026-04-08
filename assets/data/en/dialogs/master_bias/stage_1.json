@@ -1,0 +1,26 @@
+[
+	{
+		"talker_name": "master_bias",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+		"dialog": "See? Your line wants to pass through the origin at all costs, but the data isn't there."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "You're right! No matter how I turn the line, it always crosses zero. The dots are all up here!"
+	},
+	{
+		"talker_name": "master_bias",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+		"dialog": "Unlock the Bias parameter and give it some freedom of movement. Sometimes rigidity isn't a virtue."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "I activated Bias! The line... it moved! It's not tied to zero anymore!"
+	}
+]

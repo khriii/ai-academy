@@ -1,14 +1,32 @@
 [
 	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Vedi questi puntini rossi e blu che volteggiano nel grafico? Il server non riesce a distinguerli. Il caos puro!"
+	},
+	{
 		"talker_name": "neura",
 		"talker_position": "left",
 		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Bro!"
+		"dialog": "Sono così mescolati! Come può qualcuno distinguerli?"
 	},
 	{
 		"talker_name": "doc_epoch",
 		"talker_position": "right",
 		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "Bella."
+		"dialog": "Il tuo compito è trovare una linea che li separi. Neura, tu hai dei pesi nella testa — dei numerini che dicono quanto vale ogni informazione che ricevi."
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "All'inizio sono casuali, per questo la tua linea è storta. Premi 'Train' e lascia che l'esperienza faccia il suo lavoro."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Pesi? Casuali? Sembra... disordinato. Ma sono pronto per imparare!"
 	}
 ]

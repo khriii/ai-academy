@@ -1,0 +1,50 @@
+[
+	{
+		"talker_name": "lady_rate",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+		"dialog": "HERE I AM! Sorry for the delay — I was running."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Wow! You're so fast! Who are you?"
+	},
+	{
+		"talker_name": "lady_rate",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+		"dialog": "My name is Lady Rate and I'll teach you the MOST IMPORTANT thing in training: the Learning Rate."
+	},
+	{
+		"talker_name": "lady_rate",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+		"dialog": "It's how 'fast' you try to learn at each step. Seems like a small thing. It's not."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "So... learning fast is bad? But Doc Epoch said more epochs are good!"
+	},
+	{
+		"talker_name": "lady_rate",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+		"dialog": "Look at that line. See how it jumps back and forth without ever stopping? That's your fault — your Learning Rate is too high!"
+	},
+	{
+		"talker_name": "lady_rate",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+		"dialog": "You're trying to learn EVERYTHING at ONCE and so you learn NOTHING. It's like trying to read a book flipping pages at 200 km/h."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Oh no! My line is shaking! What do I do?"
+	}
+]

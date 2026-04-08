@@ -1,0 +1,26 @@
+[
+	{
+		"talker_name": "master_bias",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+		"dialog": "There. It's no longer a constrained line. Now it can position itself where it's needed, not just where math forces it."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "The line fits perfectly now! It goes right through the middle of the dots!"
+	},
+	{
+		"talker_name": "master_bias",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+		"dialog": "Remember this: a model without bias is a model with its hands tied behind its back."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Bias = freedom to move. Got it! Thanks, Master Bias!"
+	}
+]

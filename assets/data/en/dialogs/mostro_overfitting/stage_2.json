@@ -1,44 +1,44 @@
 [
 	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Hello? Where am I? Everything is so... gray."
-	},
-	{
 		"talker_name": "doc_epoch",
 		"talker_position": "right",
 		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "Ah, finally you're awake! Welcome to Server 42, Neura."
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "You've just been initialized... and it shows. Look how gray you are! Don't worry, it's normal."
+		"dialog": "You see, Neura? You stopped before it was too late."
 	},
 	{
 		"talker_name": "neura",
 		"talker_position": "left",
 		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Gray? What does that mean? How do I become... not gray?"
+		"dialog": "But the monster said I could get 100% accuracy! I wanted to be perfect!"
 	},
 	{
 		"talker_name": "doc_epoch",
 		"talker_position": "right",
 		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "You know what you're missing? Experience. And how do you gain experience? By repeating. We call each repetition an Epoch."
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "More epochs you do, more you learn. Simple, right? Well... more or less."
+		"dialog": "You preferred being good enough on everything rather than perfect on a few things. That's clever."
 	},
 	{
 		"talker_name": "neura",
 		"talker_position": "left",
 		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Epochs... repetition... I think I understand. Let's try!"
+		"dialog": "So learning isn't about memorizing? It's about understanding patterns?"
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "You've learned the most important lesson, Neura. A model that memorizes doesn't truly learn."
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "It learns to generalize — to recognize patterns, not points. The real world is full of purple dots you've never seen before."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "I think I understand now. It's better to be flexible than perfect. Thank you, everyone!"
 	}
 ]

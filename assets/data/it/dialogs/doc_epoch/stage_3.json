@@ -1,0 +1,26 @@
+[
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Premerò Train ancora! E ancora! Più epoche, più apprendimento, giusto?"
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Ehi, ehi, piano! Non si impara correndo. Beh, a volte sì... ma ne parleremo con Lady Rate."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Oh... quindi c'è una velocità giusta per imparare? Chi lo decide?"
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Per ora fidati di me. Lady Rate spiegherà tutto."
+	}
+]

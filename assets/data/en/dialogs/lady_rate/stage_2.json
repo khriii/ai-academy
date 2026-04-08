@@ -1,0 +1,32 @@
+[
+	{
+		"talker_name": "lady_rate",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+		"dialog": "PERFECT! You found the right rhythm! Not too fast, not too slow."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "The line stopped shaking! It's actually learning smoothly now!"
+	},
+	{
+		"talker_name": "lady_rate",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+		"dialog": "Mathematicians call it 'convergence'. I call it 'finally getting to our destination'."
+	},
+	{
+		"talker_name": "lady_rate",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+		"dialog": "Keep this in mind: the learning rate is the first thing to fix when something goes wrong."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Got it! Learning rate = speed control. Noted!"
+	}
+]

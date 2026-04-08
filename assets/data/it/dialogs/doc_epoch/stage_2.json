@@ -1,0 +1,50 @@
+[
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Guarda! La linea si sta aggiustando! Ad ogni epoca, i pesi cambiano un pochino per avvicinarsi alla risposta giusta."
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "È come imparare ad andare in bici all'inizio cadi, poi trovi l'equilibrio."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Ehi! La linea si sta muovendo! Sta iniziando a separare i puntini!"
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Eccellente! Accuracy oltre l'80%!"
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Vedi com'è cambiato il tuo colore? Sei già meno grigio di prima. I tuoi pesi non sono più casuali — hanno imparato qualcosa."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Mi sento... diverso. Meno confuso. Più... colorato!"
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Sei ufficialmente un'Al che funziona. Un po'."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Solo 'un po''? Lo accetto! Qual è il prossimo passo?"
+	}
+]

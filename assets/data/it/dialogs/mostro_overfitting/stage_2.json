@@ -1,44 +1,44 @@
 [
 	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Hello? Where am I? Everything is so... gray."
-	},
-	{
 		"talker_name": "doc_epoch",
 		"talker_position": "right",
 		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "Ah, finally you're awake! Welcome to Server 42, Neura."
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "You've just been initialized... and it shows. Look how gray you are! Don't worry, it's normal."
+		"dialog": "Vedi, Neura? Hai smesso prima che fosse troppo tardi."
 	},
 	{
 		"talker_name": "neura",
 		"talker_position": "left",
 		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Gray? What does that mean? How do I become... not gray?"
+		"dialog": "Ma il mostro diceva che potevo ottenere il 100% di accuratezza! Volevo essere perfetto!"
 	},
 	{
 		"talker_name": "doc_epoch",
 		"talker_position": "right",
 		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "You know what you're missing? Experience. And how do you gain experience? By repeating. We call each repetition an Epoch."
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "More epochs you do, more you learn. Simple, right? Well... more or less."
+		"dialog": "Hai preferito essere abbastanza buono su tutto piuttosto che perfetto su poco. Furbo."
 	},
 	{
 		"talker_name": "neura",
 		"talker_position": "left",
 		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Epochs... repetition... I think I understand. Let's try!"
+		"dialog": "Quindi imparare non significa memorizzare? Significa capire i pattern?"
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Hai capito la lezione più importante, Neura. Un modello che impara a memoria non impara davvero."
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Impara a generalizzare — a riconoscere i pattern, non i punti. Il mondo reale è pieno di puntini viola che non hai mai visto."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Credo di aver capito ora. È meglio essere flessibili che perfetti. Grazie a tutti!"
 	}
 ]
