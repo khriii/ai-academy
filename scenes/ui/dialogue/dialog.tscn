@@ -2,17 +2,31 @@
 
 [ext_resource type="Script" uid="uid://b4q8cx61ucw6y" path="res://scenes/ui/dialogue/dialog.gd" id="1_kljh1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kljh1"]
+bg_color = Color(0, 0, 0, 0.6039216)
+
 [node name="Dialog" type="CanvasLayer" unique_id=1945120639 node_paths=PackedStringArray("left_talker", "right_talker", "dialog_label")]
 script = ExtResource("1_kljh1")
 left_talker = NodePath("HBoxContainer/LeftTalker")
 right_talker = NodePath("HBoxContainer/RightTalker")
 dialog_label = NodePath("HBoxContainer/MarginContainer/DialogLabel")
 
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=243014287]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_kljh1")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1632616078]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 85.0
+offset_top = 110.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -26,9 +40,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 30
 
 [node name="DialogLabel" type="Label" parent="HBoxContainer/MarginContainer" unique_id=1667477762]
 custom_minimum_size = Vector2(160, 50)

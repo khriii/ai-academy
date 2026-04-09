@@ -33,6 +33,7 @@ position = Vector2(90, 46)
 position = Vector2(52, 111)
 
 [node name="NameTag" parent="Objects/DocEpoch" unique_id=516189634 instance=ExtResource("7_22hfd")]
+tag = "Doc Epoch"
 y_pos = -18.0
 
 [node name="DocEpoch2" parent="Objects" unique_id=309209370 instance=ExtResource("6_ntoi8")]
