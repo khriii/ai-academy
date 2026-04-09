@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b36uyhcivtkbj"]
+
+[ext_resource type="Theme" uid="uid://g1ocbg82y04t" path="res://assets/textures/themes/menu.tres" id="1_0dkk3"]
+[ext_resource type="Script" uid="uid://bbnd7eebriayt" path="res://scenes/ui/name_tag/name_tag.gd" id="1_pte5t"]
+
+[node name="NameTag" type="Node2D" unique_id=516189634 node_paths=PackedStringArray("tag_label")]
+script = ExtResource("1_pte5t")
+tag_label = NodePath("TagLabel")
+
+[node name="TagLabel" type="Label" parent="." unique_id=352983413]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -11.5
+offset_right = 37.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0dkk3")
+theme_override_font_sizes/font_size = 4
+text = "NAMETAG"
+horizontal_alignment = 1
+vertical_alignment = 1

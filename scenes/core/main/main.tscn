@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://8y2umwl3jird" path="res://scenes/ui/ui.tscn" id="4_l3cfh"]
 [ext_resource type="PackedScene" uid="uid://cqj7rh8bbjgk" path="res://scenes/ui/menus/pause_menu/pause_menu.tscn" id="5_6q06x"]
 [ext_resource type="PackedScene" uid="uid://d3y1acs3e2eda" path="res://scenes/entities/npcs/doc_epoch.tscn" id="6_ntoi8"]
+[ext_resource type="PackedScene" uid="uid://b36uyhcivtkbj" path="res://scenes/ui/name_tag/name_tag.tscn" id="7_22hfd"]
 
 [node name="Main" type="Node2D" unique_id=1611986789 node_paths=PackedStringArray("player", "pause_menu")]
 process_mode = 3
@@ -30,6 +31,9 @@ position = Vector2(90, 46)
 
 [node name="DocEpoch" parent="Objects" unique_id=1950257195 instance=ExtResource("6_ntoi8")]
 position = Vector2(52, 111)
+
+[node name="NameTag" parent="Objects/DocEpoch" unique_id=516189634 instance=ExtResource("7_22hfd")]
+y_pos = -18.0
 
 [node name="DocEpoch2" parent="Objects" unique_id=309209370 instance=ExtResource("6_ntoi8")]
 position = Vector2(125, 141)
