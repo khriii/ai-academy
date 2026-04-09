@@ -1,0 +1,8 @@
+[
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Hai già imparato tutto da me, Neura. Vai avanti e affronta le prossime sfide!"
+	}
+]

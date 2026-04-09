@@ -1,0 +1,8 @@
+[
+	{
+		"talker_name": "lady_rate",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+		"dialog": "Aspetta, Neura! Devi prima finire con gli altri insegnanti. Non puoi saltare i passi!"
+	}
+]

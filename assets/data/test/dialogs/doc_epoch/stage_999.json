@@ -1,0 +1,8 @@
+[
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Ehi, Neura! Non ho niente di nuovo da dirti al momento. Continua la tua avventura!"
+	}
+]

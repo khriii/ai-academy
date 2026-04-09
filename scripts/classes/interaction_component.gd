@@ -30,5 +30,5 @@ func onLeave(body: Node2D) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and current_npc and not Global.is_dialogue_active:
-		current_npc.interact()
+		EventBus.npc_interacted.emit(current_npc.id)
 		get_viewport().set_input_as_handled()

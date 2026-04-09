@@ -12,12 +12,8 @@ func _ready() -> void:
 func interacted(npc_id: String) -> void:
 	play_dialog(npc_id)
 
-func play_dialog(npc_id: String) -> void:
-	var current_stage: int = 0
-	
-	if npc_states.has(npc_id):
-		current_stage = npc_states[npc_id].get("dialog_stage", 0)
-	else:
+func play_dialog(npc_id: String, force_stage: int = -1) -> void:
+	if not npc_states.has(npc_id):
 		npc_states[npc_id] = {
 			"dialog_stage": 0,
 			"is_interactable": true
@@ -26,16 +22,31 @@ func play_dialog(npc_id: String) -> void:
 	if not npc_states[npc_id].get("is_interactable", true):
 		return
 	
+	var current_stage: int
+	var use_forced_stage: bool = force_stage >= 0
+	
+	if use_forced_stage:
+		current_stage = force_stage
+	else:
+		current_stage = npc_states[npc_id].get("dialog_stage", 0)
+	
 	var d_instance = dialog_scene.instantiate()
 	get_tree().current_scene.add_child(d_instance)
 	
-	d_instance.dialogue_finished.connect(_on_dialogue_finished.bind(npc_id))
+	if use_forced_stage:
+		d_instance.dialogue_finished.connect(_on_dialogue_finished_forced.bind(npc_id))
+	else:
+		d_instance.dialogue_finished.connect(_on_dialogue_finished_normal.bind(npc_id))
+	
 	d_instance.load_dialog(npc_id, current_stage)
 	d_instance.play_next_dialog()
 
-func _on_dialogue_finished(npc_id: String) -> void:
+func _on_dialogue_finished_normal(npc_id: String) -> void:
 	if npc_states.has(npc_id):
 		npc_states[npc_id]["dialog_stage"] += 1
+
+func _on_dialogue_finished_forced(_npc_id: String) -> void:
+	pass
 
 func get_save_data() -> Dictionary:
 	return npc_states

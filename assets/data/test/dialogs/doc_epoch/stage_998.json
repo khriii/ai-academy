@@ -1,0 +1,8 @@
+[
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Neura, prima di continuare con me, devi completare alcune cose con gli altri. Torna quando sei pronto!"
+	}
+]

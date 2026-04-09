@@ -1,0 +1,44 @@
+[
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Pronto? Dove mi trovo? È tutto così... grigio."
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Ah, finalmente sei sveglio! Benvenuto su Server 42, Neura."
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Sei appena stato inizializzato... e si vede. Guarda quanto sei grigio! Non preoccuparti, è normale."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Grigio? Cosa significa? Come faccio a diventare... non grigio?"
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Sai cosa ti manca? Esperienza. E come si acquisisce l'esperienza? Ripetendo. Noi chiamiamo ogni ripetizione un'Epoca."
+	},
+	{
+		"talker_name": "doc_epoch",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+		"dialog": "Più epoche fai, più impari. Semplice, no? Beh... più o meno."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Epoche... ripetizione... Credo di capire. Proviamo!"
+	}
+]

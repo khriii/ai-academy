@@ -1,0 +1,26 @@
+[
+	{
+		"talker_name": "master_bias",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+		"dialog": "Ecco. Non è più una linea costretta. Ora può posizionarsi dove serve, non solo dove la matematica la obbliga."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "La linea ora si adatta perfettamente! Passa proprio in mezzo ai puntini!"
+	},
+	{
+		"talker_name": "master_bias",
+		"talker_position": "right",
+		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+		"dialog": "Ricordatelo: un modello senza bias è un modello con le mani legate."
+	},
+	{
+		"talker_name": "neura",
+		"talker_position": "left",
+		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+		"dialog": "Bias = libertà di movimento. Ricevuto! Grazie, Master Bias!"
+	}
+]

@@ -25,10 +25,8 @@ script = ExtResource("2_o2h74")
 [node name="GridLines" type="Node2D" parent="Graph" unique_id=1292433412]
 
 [node name="ControlPanel" type="VBoxContainer" parent="." unique_id=862089623]
-offset_left = 102.0
-offset_top = 22.0
-offset_right = 142.0
-offset_bottom = 128.0
+offset_right = 306.0
+offset_bottom = 245.0
 script = ExtResource("2_olkr4")
 
 [node name="LearningRateSlider" type="HSlider" parent="ControlPanel" unique_id=2062355022]
