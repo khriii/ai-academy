@@ -1,29 +1,56 @@
 class_name OptionsMenu
 extends CanvasLayer
 
-@export var fullscreen_check_button: CheckButton
-@export var volume_slider: HSlider
-@export var exit_button: Button
+@export var settings_title: Label
+@export var screen_title: Label
+@export var language_title: Label
+
+@export var resolution_options: OptionButton
+@export var fullscreen_checkbox: CheckBox
+@export var language_options: OptionButton
+@export var back_button: Button
 
 var filename: String = "options_menu.gd"
 
+func change_language():
+	if settings_title:
+		settings_title.text = LangComponent.get_options_menu_text("settings_title")
+	if screen_title:
+		screen_title.text = LangComponent.get_options_menu_text("screen_title")
+	if fullscreen_checkbox:
+		fullscreen_checkbox.text = LangComponent.get_options_menu_text("fullscreen_text")
+	if language_title:
+		language_title.text = LangComponent.get_options_menu_text("language_title")
+	if back_button:
+		back_button.text = LangComponent.get_options_menu_text("back_button")
 
 func _ready() -> void:
 	Global.check_nodes(filename, {
-		"fullscreen_check_button": fullscreen_check_button,
-		"volume_slider": volume_slider,
-		"exit_button": exit_button
+		"resolution_options": resolution_options,
+		"fullscreen_checkbox": fullscreen_checkbox,
+		"language_options": language_options,
+		"back_button": back_button
 	})
 	
-	if fullscreen_check_button:
-		fullscreen_check_button.toggled.connect(_on_fullscreen_checkbox_toggled)
-	if volume_slider:
-		volume_slider.drag_ended.connect(_on_volume_slider_dragged)
-	if exit_button:
-		exit_button.pressed.connect(_on_exit_button_pressed)
-
-func print_error(error_message):
-	print(filename + ": " + error_message)
+	if language_options:
+		match Global.current_language:
+			"it":
+				language_options.select(0)
+			"en":
+				language_options.select(1)
+	
+	change_language()
+	EventBus.language_changed.connect(change_language)
+	
+	
+	if resolution_options:
+		resolution_options.item_selected.connect(_on_resolution_selected)
+	if fullscreen_checkbox:
+		fullscreen_checkbox.toggled.connect(_on_fullscreen_checkbox_toggled)
+	if language_options:
+		language_options.item_selected.connect(_on_language_selected)
+	if back_button:
+		back_button.pressed.connect(_on_back_button_pressed)
 
 
 func _show():
@@ -34,6 +61,11 @@ func _hide():
 	self.visible = false
 
 
+# Signals
+func _on_resolution_selected(index: int):
+	pass
+
+
 func _on_fullscreen_checkbox_toggled(button_pressed: bool):
 	if button_pressed:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
@@ -41,9 +73,21 @@ func _on_fullscreen_checkbox_toggled(button_pressed: bool):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 
-func _on_volume_slider_dragged():
-	pass
+func _on_language_selected(index: int):
+	if language_options:
+		var language: String = language_options.get_item_text(index)
+		var new_language_short = Global.current_language
+		
+		match language:
+			"English":
+				new_language_short = "en"
+			"Italian":
+				new_language_short = "it"
+			_:
+				# TODO: handle error
+				pass
+		LangComponent.change_language(new_language_short)
 
 
-func _on_exit_button_pressed():
+func _on_back_button_pressed():
 	self._hide()

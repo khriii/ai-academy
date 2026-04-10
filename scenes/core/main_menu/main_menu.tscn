@@ -126,7 +126,7 @@ _data = {
 &"menu_in": SubResource("Animation_2nsh4")
 }
 
-[node name="MainMenu" type="Control" unique_id=1125525901 node_paths=PackedStringArray("scene_changer", "animation_player", "options_menu", "start_message_label", "new_game_button", "continue_button", "options_button", "achievements_button", "exit_button")]
+[node name="MainMenu" type="Control" unique_id=1125525901 node_paths=PackedStringArray("scene_changer", "animation_player", "options_menu", "start_message_label", "new_game_button", "continue_button", "options_button", "exit_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -141,7 +141,6 @@ start_message_label = NodePath("StartMessageLabel")
 new_game_button = NodePath("ButtonsContainer/NewGameButton")
 continue_button = NodePath("ButtonsContainer/ContinueButton")
 options_button = NodePath("ButtonsContainer/OptionsButton")
-achievements_button = NodePath("ButtonsContainer/AchievementsButton")
 exit_button = NodePath("ButtonsContainer/ExitButton")
 
 [node name="SceneChanger" type="Node2D" parent="." unique_id=1509841649]
@@ -232,6 +231,7 @@ size_flags_horizontal = 4
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_mud7k")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
+disabled = true
 text = "CONTINUE"
 
 [node name="OptionsButton" type="Button" parent="ButtonsContainer" unique_id=432543561]
@@ -241,14 +241,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_mud7k")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
 text = "OPTIONS"
-
-[node name="AchievementsButton" type="Button" parent="ButtonsContainer" unique_id=427757495]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("6_mud7k")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_2nsh4")
-text = "ACHIEVEMENTS"
 
 [node name="ExitButton" type="Button" parent="ButtonsContainer" unique_id=726883405]
 layout_mode = 2

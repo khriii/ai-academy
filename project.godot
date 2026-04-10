@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ai-academy"
-run/main_scene="uid://dby1qkve0afmi"
+run/main_scene="uid://cxy4xojvhmdil"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

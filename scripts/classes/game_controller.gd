@@ -181,4 +181,3 @@ func add_nametags():
 			name_tag.set_tag(c._name)
 			c.add_child(name_tag)
 			name_tag.global_position = Vector2(c.global_position.x, c.global_position.y - 18)
-			

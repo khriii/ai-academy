@@ -41,8 +41,10 @@ func load_quests_data() -> void:
 			var q = quests[quest_id]
 			q._name = quests_data[quest_id]["name"]
 			q.description = quests_data[quest_id]["description"]
+			
+	EventBus.quests_updated.emit()
 
-func _on_language_changed(new_language: String) -> void:
+func _on_language_changed() -> void:
 	load_quests_data()
 
 func add_quest(quest_id: String, completed: bool = false) -> bool:
@@ -60,6 +62,7 @@ func add_quest(quest_id: String, completed: bool = false) -> bool:
 	var new_quest = Quest.new(quest_id, quest_name, quest_description, completed)
 	quests[quest_id] = new_quest
 	EventBus.new_quest.emit(new_quest)
+	EventBus.quests_updated.emit()
 	return true
 
 func remove_quest(quest_id: String) -> bool:

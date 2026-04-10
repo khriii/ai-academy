@@ -13,12 +13,11 @@ bg_color = Color(0, 0, 0, 0.49411765)
 content_margin_top = 6.0
 content_margin_bottom = 6.0
 
-[node name="PauseMenu" type="CanvasLayer" unique_id=1499191766 node_paths=PackedStringArray("continue_button", "options_button", "achievements_button", "quit_button", "options_menu")]
+[node name="PauseMenu" type="CanvasLayer" unique_id=1499191766 node_paths=PackedStringArray("continue_button", "options_button", "quit_button", "options_menu")]
 process_mode = 3
 script = ExtResource("1_d7mpl")
 continue_button = NodePath("ButtonsContainer/ContinueButton")
 options_button = NodePath("ButtonsContainer/OptionsButton")
-achievements_button = NodePath("ButtonsContainer/AchievementsButton")
 quit_button = NodePath("ButtonsContainer/QuitButton")
 options_menu = NodePath("OptionsMenu")
 
@@ -76,14 +75,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_2tjv6")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ibkr2")
 text = "OPTIONS"
-
-[node name="AchievementsButton" type="Button" parent="ButtonsContainer" unique_id=2126258033]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("4_2tjv6")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ibkr2")
-text = "ACHIEVEMENTS"
 
 [node name="QuitButton" type="Button" parent="ButtonsContainer" unique_id=1933878464]
 layout_mode = 2

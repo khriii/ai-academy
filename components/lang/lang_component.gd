@@ -5,6 +5,7 @@ var _data_cache: Dictionary = {}
 const DATA_PATHS := {
 	"main_menu": "menus/main_menu.json",
 	"pause_menu": "menus/pause_menu.json",
+	"options_menu": "menus/options_menu.json",
 	"dialogs": "dialogs/{0}/stage_{1}.json",
 	"quests": "quests/{0}.json",
 	"items": "items/{0}.json"
@@ -56,10 +57,15 @@ func get_pause_menu_text(key: String) -> String:
 	var data = load_data("pause_menu")
 	return data.get(key, "ERROR_TEXT")
 
+func get_options_menu_text(key: String) -> String:
+	var data = load_data("options_menu")
+	return data.get(key, "ERROR_TEXT")
+
 
 func change_language(new_language: String) -> void:
 	Global.current_language = new_language
 	clear_cache()
+	EventBus.language_changed.emit()
 
 
 func clear_cache() -> void:

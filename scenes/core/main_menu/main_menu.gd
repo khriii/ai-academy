@@ -9,16 +9,29 @@ extends Control
 @export var new_game_button: Button
 @export var continue_button: Button
 @export var options_button: Button
-@export var achievements_button: Button
+#@export var achievements_button: Button
 @export var exit_button: Button
+
+var game_scene: PackedScene = preload("res://scenes/core/main/main.tscn")
 
 var first_input: bool = true
 
 var filename = "menu_handler.gd"
 
-
-func print_error(error_message):
-	print(filename + ": " + error_message)
+# Methods
+func change_language():
+	if start_message_label:
+		start_message_label.text = LangComponent.get_main_menu_text("start_message_label")
+	if new_game_button:
+		new_game_button.text = LangComponent.get_main_menu_text("new_game_button")
+	if continue_button:
+		continue_button.text = LangComponent.get_main_menu_text("continue_button")
+	if options_button:
+		options_button.text = LangComponent.get_main_menu_text("options_button")
+	#if achievements_button:
+		#achievements_button.text = LangComponent.get_main_menu_text("achievements_button")
+	if exit_button:
+		exit_button.text = LangComponent.get_main_menu_text("exit_button")
 
 
 func _ready() -> void:
@@ -30,27 +43,13 @@ func _ready() -> void:
 		"options_menu": options_menu,
 		"continue_button": continue_button,
 		"options_button": options_button,
-		"achievements_button": achievements_button,
+		#"achievements_button": achievements_button,
 		"exit_button": exit_button
 	})
 	
-	load_language()
+	change_language()
+	EventBus.language_changed.connect(change_language)
 	load_click_handlers()
-
-
-func load_language():
-	if start_message_label:
-		start_message_label.text = LangComponent.get_main_menu_text("start_message_label")
-	if new_game_button:
-		new_game_button.text = LangComponent.get_main_menu_text("new_game_button")
-	if continue_button:
-		continue_button.text = LangComponent.get_main_menu_text("continue_button")
-	if options_button:
-		options_button.text = LangComponent.get_main_menu_text("options_button")
-	if achievements_button:
-		achievements_button.text = LangComponent.get_main_menu_text("achievements_button")
-	if exit_button:
-		exit_button.text = LangComponent.get_main_menu_text("exit_button")
 
 
 func load_click_handlers():
@@ -60,15 +59,16 @@ func load_click_handlers():
 		continue_button.pressed.connect(on_continue_pressed)
 	if options_button:
 		options_button.pressed.connect(on_options_pressed)
-	if achievements_button:
-		achievements_button.pressed.connect(on_achievements_pressed)
+	#if achievements_button:
+		#achievements_button.pressed.connect(on_achievements_pressed)
 	if exit_button:
 		exit_button.pressed.connect(on_exit_pressed)
 
 
 # Method run when a new game should be created
 func on_new_game_pressed():
-	pass
+	scene_changer.next_scene = game_scene
+	scene_changer.change_scene()
 
 
 # Method run when a game should be resumed
