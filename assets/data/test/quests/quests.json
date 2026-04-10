@@ -1,0 +1,27 @@
+[
+	{
+		"id": "talk_with_doc_epoch",
+		"name": "Parla con Doc Epoch",
+		"description": "Trova Doc Epoch e parla con lui per iniziare il tuo viaggio nel machine learning."
+	},
+	{
+		"id": "talk_with_lady_rate",
+		"name": "Parla con Lady Rate",
+		"description": "Lady Rate ti aiuterà a capire come scegliere il giusto learning rate per il tuo modello."
+	},
+	{
+		"id": "talk_with_master_bias",
+		"name": "Parla con Master Bias",
+		"description": "Master Bias ti spiegherà come il bias aiuta il modello a fare previsioni migliori."
+	},
+	{
+		"id": "talk_with_mostro_overfitting",
+		"name": "Parla con il Mostro Overfitting",
+		"description": "Il Mostro Overfitting minaccia il tuo modello! Impara come evitare l'overfitting."
+	},
+	{
+		"id": "all_quests_completed",
+		"name": "Maestro del Machine Learning",
+		"description": "Hai completato tutte le lezioni! Ora sei pronto per addestrare il tuo modello."
+	}
+]
