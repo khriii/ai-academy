@@ -18,6 +18,10 @@ grow_vertical = 2
 
 [node name="CollectiblesCounter" parent="Container" unique_id=374832133 instance=ExtResource("2_aac20")]
 layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 34.0
+offset_bottom = 25.0
 
 [node name="PlayerStats" parent="Container" unique_id=1768202667 instance=ExtResource("4_g5kmx")]
 visible = false
@@ -35,8 +39,9 @@ grow_horizontal = 0
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
-anchor_bottom = 0.0
-offset_left = -88.0
-offset_bottom = 43.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = 45.0
 grow_horizontal = 0
-grow_vertical = 1

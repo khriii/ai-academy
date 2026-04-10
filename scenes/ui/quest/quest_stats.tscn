@@ -1,32 +1,51 @@
 [gd_scene format=3 uid="uid://c35uch1cg3vuh"]
 
+[ext_resource type="Theme" uid="uid://b0llwn50xuqf6" path="res://assets/textures/themes/quests.tres" id="1_6m3yv"]
 [ext_resource type="Script" uid="uid://crgfeb2wmpiw4" path="res://scenes/ui/quest/quest_stats.gd" id="1_qtm1n"]
+[ext_resource type="Texture2D" uid="uid://dduk1vq7q0tjn" path="res://assets/sprites/ui/icons/quests.png" id="3_75of6"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qtm1n"]
-
-[node name="QuestStats" type="PanelContainer" unique_id=1781663892 node_paths=PackedStringArray("quest_name_label", "quest_description_label")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_qtm1n")
+[node name="QuestStats" type="PanelContainer" unique_id=1781663892 node_paths=PackedStringArray("title", "quest_name_label", "quest_description_label")]
+offset_right = 80.0
+offset_bottom = 54.0
+theme = ExtResource("1_6m3yv")
 script = ExtResource("1_qtm1n")
-quest_name_label = NodePath("VBoxContainer/QuestName")
-quest_description_label = NodePath("VBoxContainer/QuestDescription")
+title = NodePath("MarginContainer/VBoxContainer/HBoxContainer/Title")
+quest_name_label = NodePath("MarginContainer/VBoxContainer/QuestName")
+quest_description_label = NodePath("MarginContainer/VBoxContainer/QuestDescription")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=447374077]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=366499447]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=447374077]
 layout_mode = 2
 theme_override_constants/separation = 1
 
-[node name="QuestName" type="Label" parent="VBoxContainer" unique_id=1540507175]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=505493270]
 layout_mode = 2
-theme_override_font_sizes/font_size = 6
-text = "quest_name"
-horizontal_alignment = 2
+alignment = 1
 
-[node name="QuestDescription" type="Label" parent="VBoxContainer" unique_id=239072017]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=915868922]
 layout_mode = 2
-theme_override_font_sizes/font_size = 4
+texture = ExtResource("3_75of6")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=997584032]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Quests"
+
+[node name="QuestName" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1540507175]
+layout_mode = 2
+theme_override_font_sizes/font_size = 5
+text = "quest_name"
+
+[node name="QuestDescription" type="Label" parent="MarginContainer/VBoxContainer" unique_id=239072017]
+layout_mode = 2
+theme_override_constants/line_spacing = 0
 text = "quest_description"
-horizontal_alignment = 2
+autowrap_mode = 3

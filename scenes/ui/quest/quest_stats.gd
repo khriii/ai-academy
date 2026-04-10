@@ -1,5 +1,6 @@
 extends Control
 
+@export var title: Label
 @export var quest_name_label: Label
 @export var quest_description_label: Label
 
@@ -7,6 +8,7 @@ var current_quest: Quest = null
 
 func _ready() -> void:
 	Global.check_nodes(get_script().get_path(), {
+		"title": title,
 		"quest_name_label": quest_name_label,
 		"quest_description_label": quest_description_label,
 	})
@@ -22,3 +24,5 @@ func change_language():
 	if current_quest and quest_name_label and quest_description_label:
 		quest_name_label.text = current_quest._name
 		quest_description_label.text = current_quest.description
+	if title:
+		title.text = LangComponent.get_pause_menu_text("quests_ui_title")

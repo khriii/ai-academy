@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://b0llwn50xuqf6"]
+
+[ext_resource type="FontFile" uid="uid://bvegi3wq4k1bs" path="res://assets/fonts/Silkscreen-Regular.ttf" id="1_3qeiw"]
+[ext_resource type="StyleBox" uid="uid://emtdhvyus6o" path="res://assets/textures/materials/button_1.tres" id="1_icy8r"]
+
+[resource]
+Label/font_sizes/font_size = 4
+Label/fonts/font = ExtResource("1_3qeiw")
+PanelContainer/styles/panel = ExtResource("1_icy8r")

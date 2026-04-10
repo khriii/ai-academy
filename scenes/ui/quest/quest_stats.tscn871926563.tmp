@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c35uch1cg3vuh"]
+
+[ext_resource type="Script" uid="uid://crgfeb2wmpiw4" path="res://scenes/ui/quest/quest_stats.gd" id="1_qtm1n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qtm1n"]
+
+[node name="QuestStats" type="PanelContainer" unique_id=1781663892 node_paths=PackedStringArray("title", "quest_name_label", "quest_description_label")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qtm1n")
+script = ExtResource("1_qtm1n")
+title = NodePath("VBoxContainer/Title")
+quest_name_label = NodePath("VBoxContainer/QuestName")
+quest_description_label = NodePath("VBoxContainer/QuestDescription")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=447374077]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=997584032]
+layout_mode = 2
+text = "Quests"
+horizontal_alignment = 2
+
+[node name="QuestName" type="Label" parent="VBoxContainer" unique_id=1540507175]
+layout_mode = 2
+theme_override_font_sizes/font_size = 6
+text = "quest_name"
+horizontal_alignment = 2
+
+[node name="QuestDescription" type="Label" parent="VBoxContainer" unique_id=239072017]
+layout_mode = 2
+theme_override_font_sizes/font_size = 4
+text = "quest_description"
+horizontal_alignment = 2
