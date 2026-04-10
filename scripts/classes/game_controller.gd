@@ -4,6 +4,8 @@ extends Node
 @export var player: Player
 @export var pause_menu: PauseMenu
 
+var name_tag_scene: PackedScene = preload("res://scenes/ui/name_tag/name_tag.tscn")
+
 var filename = get_script().get_path()
 
 enum Progression {
@@ -164,6 +166,19 @@ func check_pause_menu_pressed(key: String):
 func _ready() -> void:
 	load_events()
 	_give_start_quest()
+	add_nametags()
 
 func _physics_process(_delta: float) -> void:
 	check_pause_menu_pressed("esc")
+
+
+func add_nametags():
+	var children = get_parent().get_children()
+	
+	for c in children:
+		if c is Npc and name_tag_scene:
+			var name_tag = name_tag_scene.instantiate()
+			name_tag.set_tag(c._name)
+			c.add_child(name_tag)
+			name_tag.global_position = Vector2(c.global_position.x, c.global_position.y - 18)
+			

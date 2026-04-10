@@ -11,7 +11,10 @@ func _ready() -> void:
 		
 		self.position = new_position
 		
-		if tag_label and tag:
+
+func set_tag(tag: String):
+	self.tag = tag
+	if tag_label and tag:
 			tag_label.text = tag
 
 func _show():
