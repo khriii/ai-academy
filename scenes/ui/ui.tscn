@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d0eeicqns57fi" path="res://scenes/ui/ui.gd" id="1_u7n8c"]
 [ext_resource type="PackedScene" uid="uid://c7xmtfv51uink" path="res://scenes/ui/collectibles_counter/collectibles_counter.tscn" id="2_aac20"]
+[ext_resource type="PackedScene" uid="uid://c35uch1cg3vuh" path="res://scenes/ui/quest/quest_stats.tscn" id="4_0dwhk"]
 [ext_resource type="PackedScene" uid="uid://cw20x4kyli4ga" path="res://scenes/ui/player_stats/player_stats.tscn" id="4_g5kmx"]
 
 [node name="UI" type="CanvasLayer" unique_id=1284890570]
@@ -19,6 +20,7 @@ grow_vertical = 2
 layout_mode = 0
 
 [node name="PlayerStats" parent="Container" unique_id=1768202667 instance=ExtResource("4_g5kmx")]
+visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -28,3 +30,13 @@ offset_top = 4.0
 offset_right = -4.0
 offset_bottom = 44.0
 grow_horizontal = 0
+
+[node name="QuestStats" parent="Container" unique_id=284761395 instance=ExtResource("4_0dwhk")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -88.0
+offset_bottom = 43.0
+grow_horizontal = 0
+grow_vertical = 1
