@@ -4,15 +4,14 @@
 [ext_resource type="Script" uid="uid://vsi8326ynpr2" path="res://scenes/core/main/main.gd" id="1_k2fmo"]
 [ext_resource type="PackedScene" uid="uid://0dhqbdv8mth2" path="res://scenes/entities/collectibles/coin.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://8y2umwl3jird" path="res://scenes/ui/ui.tscn" id="4_l3cfh"]
+[ext_resource type="Script" uid="uid://qm4b743l08o6" path="res://scripts/classes/game_controller.gd" id="4_v0gij"]
 [ext_resource type="PackedScene" uid="uid://cqj7rh8bbjgk" path="res://scenes/ui/menus/pause_menu/pause_menu.tscn" id="5_6q06x"]
 [ext_resource type="PackedScene" uid="uid://d3y1acs3e2eda" path="res://scenes/entities/npcs/doc_epoch.tscn" id="6_ntoi8"]
 [ext_resource type="PackedScene" uid="uid://b36uyhcivtkbj" path="res://scenes/ui/name_tag/name_tag.tscn" id="7_22hfd"]
 
-[node name="Main" type="Node2D" unique_id=1611986789 node_paths=PackedStringArray("player", "pause_menu")]
+[node name="Main" type="Node2D" unique_id=1611986789]
 process_mode = 3
 script = ExtResource("1_k2fmo")
-player = NodePath("Objects/Player")
-pause_menu = NodePath("PauseMenu")
 metadata/_edit_vertical_guides_ = [-14787.0]
 
 [node name="UI" parent="." unique_id=198059914 instance=ExtResource("4_l3cfh")]
@@ -22,6 +21,12 @@ visible = false
 
 [node name="Objects" type="Node2D" parent="." unique_id=1777306303]
 process_mode = 1
+
+[node name="GameController" type="Node" parent="Objects" unique_id=2109495615 node_paths=PackedStringArray("player", "pause_menu")]
+script = ExtResource("4_v0gij")
+player = NodePath("../Player")
+pause_menu = NodePath("../../PauseMenu")
+metadata/_custom_type_script = "uid://qm4b743l08o6"
 
 [node name="Player" parent="Objects" unique_id=1023106120 instance=ExtResource("1_hyk8p")]
 position = Vector2(147, 97)
@@ -39,3 +44,11 @@ y_pos = -18.0
 [node name="DocEpoch2" parent="Objects" unique_id=309209370 instance=ExtResource("6_ntoi8")]
 position = Vector2(125, 141)
 id = "lady_rate"
+
+[node name="DocEpoch3" parent="Objects" unique_id=933623250 instance=ExtResource("6_ntoi8")]
+position = Vector2(206, 111)
+id = "master_bias"
+
+[node name="DocEpoch4" parent="Objects" unique_id=836844961 instance=ExtResource("6_ntoi8")]
+position = Vector2(264.81, 111)
+id = "mostro_overfitting"
