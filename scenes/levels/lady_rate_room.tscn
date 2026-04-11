@@ -1,7 +1,9 @@
-[gd_scene format=4 uid="uid://ctf05k35lldou"]
+[gd_scene format=4 uid="uid://dbis1xntblws7"]
 
 [ext_resource type="Texture2D" uid="uid://blhw0frw4uqf7" path="res://assets/sprites/environment/rooms/stanza_docEpoch.png" id="1_unese"]
 [ext_resource type="Texture2D" uid="uid://b22n88iko63l5" path="res://assets/sprites/environment/rooms/stanza_ladyRate.png" id="2_ortiy"]
+[ext_resource type="PackedScene" uid="uid://cmqruren3xcnc" path="res://scenes/entities/npcs/lady_rate.tscn" id="3_sqgdl"]
+[ext_resource type="PackedScene" uid="uid://kuismdy5n58m" path="res://scenes/entities/player/player.tscn" id="4_pptlq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sqgdl"]
 texture = ExtResource("1_unese")
@@ -1262,3 +1264,12 @@ tile_set = SubResource("TileSet_sqgdl")
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAAkAAcAAAAMAAMAAAAkAAkAAAAMAAQAAAAkAAsAAAAMAAUAAAAiAAsAAAALAAUAAAAiAAkAAAALAAQAAAAiAAcAAAALAAMAAAAgAAcAAAAKAAMAAAAgAAkAAAAKAAQAAAAgAAsAAAAKAAUAAAAEAAcAAAAKAAYAAAAGAAcAAAALAAYAAAAQAAYAAAAKAAAAAAAQAAgAAAAKAAEAAAASAAYAAAAKAAAAAAASAAgAAAAKAAEAAAAUAAYAAAAKAAAAAAAUAAgAAAAKAAEAAAAZAAcAAAAMAAEAAAAbAAcAAAAMAAEAAAAIAAcAAAAMAAYAAAAKAAcAAAANAAYAAAAMAAcAAAAOAAYAAAAMAAkAAAAOAAcAAAAKAAkAAAANAAcAAAAIAAkAAAAMAAcAAAAGAAkAAAALAAcAAAAEAAkAAAAKAAcAAAAEAAsAAAAKAAgAAAAGAAsAAAALAAgAAAA=")
 tile_set = SubResource("TileSet_sqgdl")
+
+[node name="Objects" type="Node2D" parent="." unique_id=672431051]
+
+[node name="LadyRate" parent="Objects" unique_id=1950257195 instance=ExtResource("3_sqgdl")]
+position = Vector2(82, 87)
+
+[node name="Player" parent="Objects" unique_id=1023106120 instance=ExtResource("4_pptlq")]
+position = Vector2(163, 176)
+start_facing_direction = Vector2(0, -1)

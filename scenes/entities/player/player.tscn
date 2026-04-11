@@ -323,7 +323,7 @@ z_index = 10
 position = Vector2(0, -4)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_8afob")
-animation = &"idle_up"
+animation = &"idle_down"
 
 [node name="MovementComponent" type="Node" parent="." unique_id=2074025527 node_paths=PackedStringArray("entity")]
 script = ExtResource("1_8afob")
