@@ -15,6 +15,9 @@ func _ready() -> void:
 	Global.check_nodes(filename, {
 		"entity": entity,
 	})
+	
+	if entity is Player:
+		facing_direction = entity.start_facing_direction
 
 func set_facing_direction(direction: Vector2) -> void:
 	if direction.length() > 0:

@@ -38,6 +38,7 @@ position = Vector2(52, 111)
 
 [node name="MostroOverfitting" parent="Objects" unique_id=76779530 instance=ExtResource("8_cikei")]
 position = Vector2(226, 120)
+scale = Vector2(2, 2)
 
 [node name="LadyRate" parent="Objects" unique_id=1635922995 instance=ExtResource("9_wi631")]
 position = Vector2(96, 147)

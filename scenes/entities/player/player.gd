@@ -4,6 +4,7 @@ extends Entity
 @export var inventory: InventoryComponent
 @export var movement_component: MovementComponent
 @export var animation_component: AnimationComponent
+@export var start_facing_direction: Vector2 = Vector2.DOWN
 
 func _ready() -> void:
 	Global.check_nodes(get_script().get_path(), {
