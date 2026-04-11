@@ -6,6 +6,7 @@ extends CanvasLayer
 @export var quit_button: Button
 
 @export var options_menu: OptionsMenu
+var main_menu: String = "res://scenes/core/main_menu/main_menu.tscn"
 
 var filename = self.get_script().get_path()
 
@@ -34,7 +35,7 @@ func _ready() -> void:
 		options_button.pressed.connect(on_options_button_pressed)
 	if quit_button:
 		quit_button.text = LangComponent.get_pause_menu_text("quit_button")
-		# TODO: handle button press
+		quit_button.pressed.connect(on_quit_button_pressed)
 	if options_menu:
 		options_menu._hide()
 
@@ -54,3 +55,8 @@ func on_continue_button_pressed():
 
 func on_options_button_pressed():
 	if options_menu: options_menu._show()
+
+
+func on_quit_button_pressed():
+	get_tree().paused = false
+	get_tree().change_scene_to_file(main_menu)
