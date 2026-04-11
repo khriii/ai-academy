@@ -2,7 +2,7 @@
 	{
 		"talker_name": "mostro_overfitting",
 		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/mostro_overfitting/idle/down/mostro1.png",
+		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
 		"dialog": "Yes! Yes! Look how beautiful the curve is! It follows everything! It's— wait."
 	},
 	{
@@ -14,7 +14,7 @@
 	{
 		"talker_name": "mostro_overfitting",
 		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/mostro_overfitting/idle/down/mostro1.png",
+		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
 		"dialog": "Those purple dots... the new ones... why am I getting them all wrong? I... I had never seen them before."
 	},
 	{
@@ -26,7 +26,7 @@
 	{
 		"talker_name": "mostro_overfitting",
 		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/mostro_overfitting/idle/down/mostro1.png",
+		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
 		"dialog": "I memorize, I don't understand. I'm... useless out here."
 	}
 ]

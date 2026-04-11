@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://qm4b743l08o6" path="res://scripts/classes/game_controller.gd" id="4_v0gij"]
 [ext_resource type="PackedScene" uid="uid://cqj7rh8bbjgk" path="res://scenes/ui/menus/pause_menu/pause_menu.tscn" id="5_6q06x"]
 [ext_resource type="PackedScene" uid="uid://d3y1acs3e2eda" path="res://scenes/entities/npcs/doc_epoch.tscn" id="6_ntoi8"]
+[ext_resource type="PackedScene" uid="uid://dhupawswvtb7y" path="res://scenes/entities/npcs/mostro_overfitting.tscn" id="8_cikei"]
+[ext_resource type="PackedScene" uid="uid://cmqruren3xcnc" path="res://scenes/entities/npcs/lady_rate.tscn" id="9_wi631"]
+[ext_resource type="PackedScene" uid="uid://yn4ajx05uvoh" path="res://scenes/entities/npcs/master_bias.tscn" id="10_pgbov"]
 
 [node name="Main" type="Node2D" unique_id=1611986789]
 process_mode = 3
@@ -35,3 +38,12 @@ position = Vector2(90, 46)
 
 [node name="DocEpoch" parent="Objects" unique_id=1950257195 instance=ExtResource("6_ntoi8")]
 position = Vector2(52, 111)
+
+[node name="MostroOverfitting" parent="Objects" unique_id=76779530 instance=ExtResource("8_cikei")]
+position = Vector2(226, 120)
+
+[node name="LadyRate" parent="Objects" unique_id=1635922995 instance=ExtResource("9_wi631")]
+position = Vector2(96, 147)
+
+[node name="MasterBias" parent="Objects" unique_id=1216183430 instance=ExtResource("10_pgbov")]
+position = Vector2(159, 34)

@@ -2,7 +2,7 @@
 	{
 		"talker_name": "mostro_overfitting",
 		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/mostro_overfitting/idle/down/mostro1.png",
+		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
 		"dialog": "Pssst... Neura... Guarda quanto sono bravo."
 	},
 	{
@@ -14,7 +14,7 @@
 	{
 		"talker_name": "mostro_overfitting",
 		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/mostro_overfitting/idle/down/mostro1.png",
+		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
 		"dialog": "Ho memorizzato tutti i punti. Ogni singolo uno. La mia accuracy sul training set è... 100%. Impressionante, vero?"
 	},
 	{
@@ -26,7 +26,7 @@
 	{
 		"talker_name": "mostro_overfitting",
 		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/mostro_overfitting/idle/down/mostro1.png",
+		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
 		"dialog": "Continua ad allenarti. Ancora un'epoca. Ancora. La curva diventerà perfetta. Toccherà ogni punto. Sarai infallibile... almeno su questi dati."
 	},
 	{
