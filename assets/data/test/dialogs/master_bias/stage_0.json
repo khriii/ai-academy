@@ -1,50 +1,26 @@
 [
-	{
-		"talker_name": "master_bias",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
-		"dialog": "Hmm. Vedo che stai progredendo, Neura. Bene."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Oh! Un altro maestro! E sei... inclinato. Stai bene?"
-	},
-	{
-		"talker_name": "master_bias",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
-		"dialog": "Sto perfettamente bene. Sono solo... inclinato. Ma c'è un problema che prima o poi incontrerai: i dati non passano sempre per il centro."
-	},
-	{
-		"talker_name": "master_bias",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
-		"dialog": "Non tutto nella vita parte da zero. A volte hai bisogno di uno... spostamento. Di una correzione. Di un Bias."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Bias? Come... essere ingiusti? Sembra brutto!"
-	},
-	{
-		"talker_name": "master_bias",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
-		"dialog": "No, no. Non quel tipo di bias. Immagina una bilancia che segna sempre 2 kg in più di quello che c'è davvero. Quella bilancia ha un bias."
-	},
-	{
-		"talker_name": "master_bias",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
-		"dialog": "Nel machine learning è uguale: il bias è un valore che aggiungiamo per spostare la predizione nella direzione giusta, indipendentemente dagli input."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Quindi è come una regolazione? Un offset? In realtà ha senso!"
-	}
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Buongiorno. Lady Rate mi ha mandata da lei... per il problema della 'rigidità'?"
+  },
+  {
+    "talker_name": "master_bias",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+    "dialog": "In carne ed equazioni. Senza di me la tua rete ha le mani legate e deve sempre passare per l'origine. Io sono il Bias: ti concedo libertà di scorrimento."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Quindi posso spostarmi per adattarmi meglio ai punti?"
+  },
+  {
+    "talker_name": "master_bias",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+    "dialog": "Esattamente. Vai nel Simulatore e sposta il tuo valore di Bias finché la linea non passa precisamente in mezzo ai punti, poi torna qui."
+  }
 ]

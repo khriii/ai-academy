@@ -56,28 +56,27 @@ func interact_with_doc_epoch():
 		current_progression = Progression.TALKED_WITH_DOC_EPOCH
 		
 		if not quest_given_doc_epoch:
-			QuestManager.add_quest("talk_with_doc_epoch", false)
 			quest_given_doc_epoch = true
 			QuestManager.complete_quest("talk_with_doc_epoch")
 			
 	elif doc_epoch_interactions == 1:
 		NpcManager.play_dialog("doc_epoch", 1)
 		doc_epoch_interactions += 1
-	elif doc_epoch_interactions == 2:
-		NpcManager.play_dialog("doc_epoch", 2)
-		doc_epoch_interactions += 1
-	elif doc_epoch_interactions == 3:
-		NpcManager.play_dialog("doc_epoch", 3)
-		doc_epoch_interactions += 1
-		
 		QuestManager.add_quest("talk_with_lady_rate", false)
-		QuestManager.complete_quest("talk_with_doc_epoch")
 		
+	elif doc_epoch_interactions == 2:
+		if mostro_overfitting_interactions >= 2:
+			NpcManager.play_dialog("doc_epoch", 2)
+			doc_epoch_interactions += 1
+			QuestManager.add_quest("all_quests_completed", true)
+		else:
+			NpcManager.play_dialog("doc_epoch", 998)
+			
 	else:
-		NpcManager.play_dialog("doc_epoch", 999)
+		NpcManager.play_dialog("doc_epoch", 997)
 
 func interact_with_lady_rate():
-	if doc_epoch_interactions < 4:
+	if doc_epoch_interactions < 2:
 		NpcManager.play_dialog("lady_rate", 998)
 	elif lady_rate_interactions == 0:
 		NpcManager.play_dialog("lady_rate", 0)
@@ -85,25 +84,19 @@ func interact_with_lady_rate():
 		current_progression = Progression.TALKED_WITH_LADY_RATE
 		
 		if not quest_given_lady_rate:
-			QuestManager.add_quest("talk_with_lady_rate", false)
 			quest_given_lady_rate = true
 			QuestManager.complete_quest("talk_with_lady_rate")
 			
 	elif lady_rate_interactions == 1:
 		NpcManager.play_dialog("lady_rate", 1)
 		lady_rate_interactions += 1
-	elif lady_rate_interactions == 2:
-		NpcManager.play_dialog("lady_rate", 2)
-		lady_rate_interactions += 1
-		
 		QuestManager.add_quest("talk_with_master_bias", false)
-		QuestManager.complete_quest("talk_with_lady_rate")
 		
 	else:
-		NpcManager.play_dialog("lady_rate", 999)
+		NpcManager.play_dialog("lady_rate", 997)
 
 func interact_with_master_bias():
-	if lady_rate_interactions < 3:
+	if lady_rate_interactions < 2:
 		NpcManager.play_dialog("master_bias", 998)
 	elif master_bias_interactions == 0:
 		NpcManager.play_dialog("master_bias", 0)
@@ -111,25 +104,19 @@ func interact_with_master_bias():
 		current_progression = Progression.TALKED_WITH_MASTER_BIAS
 		
 		if not quest_given_master_bias:
-			QuestManager.add_quest("talk_with_master_bias", false)
 			quest_given_master_bias = true
 			QuestManager.complete_quest("talk_with_master_bias")
 			
 	elif master_bias_interactions == 1:
 		NpcManager.play_dialog("master_bias", 1)
 		master_bias_interactions += 1
-	elif master_bias_interactions == 2:
-		NpcManager.play_dialog("master_bias", 2)
-		master_bias_interactions += 1
-		
 		QuestManager.add_quest("talk_with_mostro_overfitting", false)
-		QuestManager.complete_quest("talk_with_master_bias")
 		
 	else:
-		NpcManager.play_dialog("master_bias", 999)
+		NpcManager.play_dialog("master_bias", 997)
 
 func interact_with_mostro_overfitting():
-	if master_bias_interactions < 3:
+	if master_bias_interactions < 2:
 		NpcManager.play_dialog("mostro_overfitting", 998)
 	elif mostro_overfitting_interactions == 0:
 		NpcManager.play_dialog("mostro_overfitting", 0)
@@ -137,21 +124,16 @@ func interact_with_mostro_overfitting():
 		current_progression = Progression.TALKED_WITH_MOSTRO_OVERFITTING
 		
 		if not quest_given_mostro_overfitting:
-			QuestManager.add_quest("talk_with_mostro_overfitting", false)
 			quest_given_mostro_overfitting = true
 			QuestManager.complete_quest("talk_with_mostro_overfitting")
 			
 	elif mostro_overfitting_interactions == 1:
 		NpcManager.play_dialog("mostro_overfitting", 1)
 		mostro_overfitting_interactions += 1
-		
 		current_progression = Progression.ALL_COMPLETED
-		QuestManager.complete_quest("talk_with_mostro_overfitting")
-		
-		QuestManager.add_quest("all_quests_completed", true)
 		
 	else:
-		NpcManager.play_dialog("mostro_overfitting", 999)
+		NpcManager.play_dialog("mostro_overfitting", 997)
 
 func check_pause_menu_pressed(key: String):
 	if Input.is_action_just_pressed(key):
@@ -170,7 +152,6 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	check_pause_menu_pressed("esc")
-
 
 func add_nametags():
 	var children = get_parent().get_children()
