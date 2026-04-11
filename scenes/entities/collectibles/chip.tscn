@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://0dhqbdv8mth2"]
+
+[ext_resource type="Script" uid="uid://da01nyxeq2a7i" path="res://scenes/entities/collectibles/chip.gd" id="1_nhem5"]
+[ext_resource type="Texture2D" uid="uid://cbm3578copdwq" path="res://assets/sprites/environment/collectibles/chip2.png" id="2_6fyk4"]
+
+[sub_resource type="Animation" id="Animation_nhem5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6fyk4"]
+resource_name = "floating"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position:y")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -2.25, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmc4e"]
+_data = {
+&"RESET": SubResource("Animation_nhem5"),
+&"floating": SubResource("Animation_6fyk4")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_867vd"]
+radius = 8.0
+
+[node name="Chip" type="Node2D" unique_id=273068999 node_paths=PackedStringArray("animation_player", "collection_area")]
+script = ExtResource("1_nhem5")
+animation_player = NodePath("AnimationPlayer")
+collection_area = NodePath("Area2D")
+id = "chip"
+_name = "Chip"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=424456546]
+scale = Vector2(0.31249997, 0.3125)
+texture = ExtResource("2_6fyk4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2006963318]
+libraries/ = SubResource("AnimationLibrary_jmc4e")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1474130881]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=738019158]
+shape = SubResource("CircleShape2D_867vd")

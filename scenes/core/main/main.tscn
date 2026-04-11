@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://kuismdy5n58m" path="res://scenes/entities/player/player.tscn" id="1_hyk8p"]
 [ext_resource type="Script" uid="uid://vsi8326ynpr2" path="res://scenes/core/main/main.gd" id="1_k2fmo"]
-[ext_resource type="PackedScene" uid="uid://0dhqbdv8mth2" path="res://scenes/entities/collectibles/coin.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://0dhqbdv8mth2" path="res://scenes/entities/collectibles/chip.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://8y2umwl3jird" path="res://scenes/ui/ui.tscn" id="4_l3cfh"]
 [ext_resource type="Script" uid="uid://qm4b743l08o6" path="res://scripts/classes/game_controller.gd" id="4_v0gij"]
 [ext_resource type="PackedScene" uid="uid://cqj7rh8bbjgk" path="res://scenes/ui/menus/pause_menu/pause_menu.tscn" id="5_6q06x"]
@@ -33,9 +33,6 @@ metadata/_custom_type_script = "uid://qm4b743l08o6"
 [node name="Player" parent="Objects" unique_id=1023106120 instance=ExtResource("1_hyk8p")]
 position = Vector2(147, 97)
 
-[node name="Coin" parent="Objects" unique_id=1100059931 instance=ExtResource("2_iuonh")]
-position = Vector2(90, 46)
-
 [node name="DocEpoch" parent="Objects" unique_id=1950257195 instance=ExtResource("6_ntoi8")]
 position = Vector2(52, 111)
 
@@ -47,3 +44,6 @@ position = Vector2(96, 147)
 
 [node name="MasterBias" parent="Objects" unique_id=1216183430 instance=ExtResource("10_pgbov")]
 position = Vector2(159, 34)
+
+[node name="Chip" parent="Objects" unique_id=1100059931 instance=ExtResource("2_iuonh")]
+position = Vector2(86, 60)

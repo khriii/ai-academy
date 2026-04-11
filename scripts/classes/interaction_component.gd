@@ -12,17 +12,26 @@ func _ready() -> void:
 		"interaction_area": interaction_area,
 	})
 
-	body_entered.connect(onJoin)
+	body_entered.connect(onBodyJoin)
 	body_exited.connect(onLeave)
+	area_entered.connect(onAreaJoin)
 
-func onJoin(body: Node2D) -> void:
+func onBodyJoin(body: Node2D) -> void:
 	print("Entrato in contatto con: ", body.name)
 	
-	if body is Collectible:
-		pass
+	if body is Chip:
+		body.collect()
 		
 	elif body is Npc and body.is_interactable:
 		current_npc = body
+
+func onAreaJoin(area: Area2D) -> void:
+	var parent = area.get_parent()
+	
+	print("Entrato in contatto con l'area: ", parent.name)
+	
+	if parent is Chip:
+		parent.collect()
 
 func onLeave(body: Node2D) -> void:
 	if body == current_npc:
