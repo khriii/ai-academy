@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://kuismdy5n58m" path="res://scenes/entities/player/player.tscn" id="1_hyk8p"]
 [ext_resource type="Script" uid="uid://vsi8326ynpr2" path="res://scenes/core/main/main.gd" id="1_k2fmo"]
-[ext_resource type="PackedScene" uid="uid://0dhqbdv8mth2" path="res://scenes/entities/collectibles/chip.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://8y2umwl3jird" path="res://scenes/ui/ui.tscn" id="4_l3cfh"]
 [ext_resource type="Script" uid="uid://qm4b743l08o6" path="res://scripts/classes/game_controller.gd" id="4_v0gij"]
 [ext_resource type="PackedScene" uid="uid://cqj7rh8bbjgk" path="res://scenes/ui/menus/pause_menu/pause_menu.tscn" id="5_6q06x"]
@@ -24,10 +23,12 @@ visible = false
 [node name="Objects" type="Node2D" parent="." unique_id=1777306303]
 process_mode = 1
 
-[node name="GameController" type="Node" parent="Objects" unique_id=2109495615 node_paths=PackedStringArray("player", "pause_menu")]
+[node name="GameController" type="Node" parent="Objects" unique_id=2109495615 node_paths=PackedStringArray("player", "pause_menu", "chips_positions", "chips_container")]
 script = ExtResource("4_v0gij")
 player = NodePath("../Player")
 pause_menu = NodePath("../../PauseMenu")
+chips_positions = NodePath("../ChipsPositions")
+chips_container = NodePath("../ChipsContainer")
 metadata/_custom_type_script = "uid://qm4b743l08o6"
 
 [node name="Player" parent="Objects" unique_id=1023106120 instance=ExtResource("1_hyk8p")]
@@ -46,5 +47,31 @@ position = Vector2(96, 147)
 [node name="MasterBias" parent="Objects" unique_id=1216183430 instance=ExtResource("10_pgbov")]
 position = Vector2(159, 34)
 
-[node name="Chip" parent="Objects" unique_id=1100059931 instance=ExtResource("2_iuonh")]
-position = Vector2(86, 60)
+[node name="ChipsPositions" type="Node2D" parent="Objects" unique_id=349251465]
+
+[node name="chip_0" type="Marker2D" parent="Objects/ChipsPositions" unique_id=484427873]
+position = Vector2(50, 20)
+
+[node name="chip_1" type="Marker2D" parent="Objects/ChipsPositions" unique_id=858396494]
+position = Vector2(100, 20)
+
+[node name="chip_2" type="Marker2D" parent="Objects/ChipsPositions" unique_id=1460738169]
+position = Vector2(150, 20)
+
+[node name="chip_3" type="Marker2D" parent="Objects/ChipsPositions" unique_id=391888044]
+position = Vector2(200, 20)
+
+[node name="chip_4" type="Marker2D" parent="Objects/ChipsPositions" unique_id=632095649]
+position = Vector2(50, 50)
+
+[node name="chip_5" type="Marker2D" parent="Objects/ChipsPositions" unique_id=121973831]
+
+[node name="chip_6" type="Marker2D" parent="Objects/ChipsPositions" unique_id=1586123079]
+
+[node name="chip_7" type="Marker2D" parent="Objects/ChipsPositions" unique_id=620622619]
+
+[node name="chip_8" type="Marker2D" parent="Objects/ChipsPositions" unique_id=78498595]
+
+[node name="chip_9" type="Marker2D" parent="Objects/ChipsPositions" unique_id=1470878956]
+
+[node name="ChipsContainer" type="Node2D" parent="Objects" unique_id=316350358]

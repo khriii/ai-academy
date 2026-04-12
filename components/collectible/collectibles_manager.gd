@@ -6,12 +6,16 @@ signal counter_updated(new_value: int)
 var collected_counter: int
 var collectibles_collected: Array = []
 
+
 # Methods
 func collect(collectible_id: String) -> void:
 	if not is_already_collected(collectible_id):
 		collectibles_collected.append(collectible_id)
 		collected_counter += 1
 		counter_updated.emit(collected_counter)
+		
+		if collected_counter == 5:
+			QuestManager.complete_quest("collect_5_chips")
 
 func is_already_collected(collectible_id: String) -> bool:
 	return collectibles_collected.has(collectible_id)

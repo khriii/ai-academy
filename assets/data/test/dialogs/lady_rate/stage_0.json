@@ -21,6 +21,6 @@
     "talker_name": "lady_rate",
     "talker_position": "right",
     "talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
-    "dialog": "Poche chiacchiere! Vai nel Simulatore AI e trova una velocità in cui la linea non sfugga dal controllo. Torna da me quando la curva si assesta bene."
+    "dialog": "Poche chiacchiere! Apri il Simulatore in basso. Usa lo slider del 'Learning Rate': se il valore è troppo alto pioverà caos. Abbassalo verso 0.05 e alza le Epoche. Clicca su Start e raggiungi l'85%!"
   }
 ]

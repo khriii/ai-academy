@@ -3,7 +3,10 @@ extends Node
 
 @export var player: Player
 @export var pause_menu: PauseMenu
+@export var chips_positions: Node2D
+@export var chips_container: Node2D
 
+var chip_scene: PackedScene = preload("res://scenes/entities/collectibles/chip.tscn")
 var name_tag_scene: PackedScene = preload("res://scenes/ui/name_tag/name_tag.tscn")
 
 var filename = get_script().get_path()
@@ -58,16 +61,22 @@ func interact_with_doc_epoch():
 		if not quest_given_doc_epoch:
 			quest_given_doc_epoch = true
 			QuestManager.complete_quest("talk_with_doc_epoch")
+			QuestManager.add_quest("collect_5_chips", false)
+			spawn_chips(5)
 			
 	elif doc_epoch_interactions == 1:
-		NpcManager.play_dialog("doc_epoch", 1)
-		doc_epoch_interactions += 1
-		QuestManager.add_quest("talk_with_lady_rate", false)
+		if CollectiblesManager.collected_counter >= 5:
+			NpcManager.play_dialog("doc_epoch", 1)
+			doc_epoch_interactions += 1
+			QuestManager.add_quest("talk_with_lady_rate", false)
+		else:
+			NpcManager.play_dialog("doc_epoch", 998)
 		
 	elif doc_epoch_interactions == 2:
 		if mostro_overfitting_interactions >= 2:
 			NpcManager.play_dialog("doc_epoch", 2)
 			doc_epoch_interactions += 1
+			QuestManager.complete_quest("return_to_doc_epoch")
 			QuestManager.add_quest("all_quests_completed", true)
 		else:
 			NpcManager.play_dialog("doc_epoch", 998)
@@ -86,6 +95,7 @@ func interact_with_lady_rate():
 		if not quest_given_lady_rate:
 			quest_given_lady_rate = true
 			QuestManager.complete_quest("talk_with_lady_rate")
+			QuestManager.add_quest("simulator_learning_rate", false)
 			
 	elif lady_rate_interactions == 1:
 		NpcManager.play_dialog("lady_rate", 1)
@@ -106,6 +116,7 @@ func interact_with_master_bias():
 		if not quest_given_master_bias:
 			quest_given_master_bias = true
 			QuestManager.complete_quest("talk_with_master_bias")
+			QuestManager.add_quest("simulator_bias", false)
 			
 	elif master_bias_interactions == 1:
 		NpcManager.play_dialog("master_bias", 1)
@@ -126,10 +137,12 @@ func interact_with_mostro_overfitting():
 		if not quest_given_mostro_overfitting:
 			quest_given_mostro_overfitting = true
 			QuestManager.complete_quest("talk_with_mostro_overfitting")
+			QuestManager.add_quest("simulator_test_set", false)
 			
 	elif mostro_overfitting_interactions == 1:
 		NpcManager.play_dialog("mostro_overfitting", 1)
 		mostro_overfitting_interactions += 1
+		QuestManager.add_quest("return_to_doc_epoch", false)
 		current_progression = Progression.ALL_COMPLETED
 		
 	else:
@@ -162,3 +175,17 @@ func add_nametags():
 			name_tag.set_tag(c._name)
 			c.add_child(name_tag)
 			name_tag.global_position = Vector2(c.global_position.x, c.global_position.y - 18)
+
+
+func spawn_chips(amount: int):
+	for i in range(amount):
+		create_chip(i)
+
+func create_chip(chip_id: int):
+	if chips_positions and chips_container:
+		if chip_id < chips_positions.get_child_count():
+			var marker = chips_positions.get_child(chip_id)
+			var chip = chip_scene.instantiate()
+			chip.id = "chip_" + str(chip_id)
+			chip.global_position = marker.global_position
+			chips_container.add_child(chip)

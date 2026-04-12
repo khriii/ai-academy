@@ -6,8 +6,6 @@ var current_language = "test"
 
 var is_dialogue_active: bool = false
 
-var collected_collectibles: int = 0
-
 
 func print_error(filename, error_message):
 	print(filename + ": " + error_message)
