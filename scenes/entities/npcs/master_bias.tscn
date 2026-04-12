@@ -49,7 +49,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uh46p"]
-size = Vector2(12, 20)
+size = Vector2(12, 27)
 
 [node name="MasterBias" type="CharacterBody2D" unique_id=1950257195 node_paths=PackedStringArray("movement_component", "animation_component")]
 motion_mode = 1
@@ -79,4 +79,5 @@ movement_component = NodePath("../MovementComponent")
 metadata/_custom_type_script = "uid://wh76efxtjfia"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1757286117]
+position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_uh46p")

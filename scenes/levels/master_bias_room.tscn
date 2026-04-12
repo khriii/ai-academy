@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://kuismdy5n58m" path="res://scenes/entities/player/player.tscn" id="3_1alab"]
 [ext_resource type="PackedScene" uid="uid://yn4ajx05uvoh" path="res://scenes/entities/npcs/master_bias.tscn" id="3_mxlcy"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1alab"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mxlcy"]
 texture = ExtResource("1_unese")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -371,7 +371,7 @@ texture_region_size = Vector2i(32, 32)
 8:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_mxlcy"]
-sources/0 = SubResource("TileSetAtlasSource_1alab")
+sources/0 = SubResource("TileSetAtlasSource_mxlcy")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqvkd"]
 texture = ExtResource("2_na0va")
@@ -588,8 +588,13 @@ tile_set = SubResource("TileSet_22tcc")
 [node name="Objects" type="Node2D" parent="." unique_id=1365622101]
 
 [node name="MasterBias" parent="Objects" unique_id=1950257195 instance=ExtResource("3_mxlcy")]
-position = Vector2(164, 104)
+position = Vector2(164, 113)
 
 [node name="Player" parent="Objects" unique_id=1023106120 instance=ExtResource("3_1alab")]
 position = Vector2(165, 172)
 start_facing_direction = Vector2(0, -1)
+
+[node name="collisions" type="StaticBody2D" parent="." unique_id=1731468694]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions" unique_id=1561026178]
+polygon = PackedVector2Array(131, 212, 198, 212, 196, 167, 296, 166, 296, 92, 287, 92, 287, 76, 227, 75, 219, 76, 214, 84, 207, 83, 207, 76, 201, 76, 201, 82, 196, 86, 191, 83, 189, 76, 156, 76, 149, 83, 144, 83, 143, 77, 140, 76, 92, 76, 92, 60, 76, 60, 76, 76, 28, 76, 28, 99, 44, 105, 52, 105, 58, 106, 59, 113, 57, 121, 59, 128, 58, 136, 61, 141, 61, 146, 58, 153, 49, 156, 32, 156, 32, 168, 132, 167, 132, 211, 110, 209, -47, 206, -32, -44, 368, -36, 356, 199, 112, 240, 131, 211)
