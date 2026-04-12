@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d3y1acs3e2eda" path="res://scenes/entities/npcs/doc_epoch.tscn" id="2_4idep"]
 [ext_resource type="PackedScene" uid="uid://kuismdy5n58m" path="res://scenes/entities/player/player.tscn" id="3_2v4yg"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mnca4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2v4yg"]
 texture = ExtResource("1_unese")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -370,7 +370,7 @@ texture_region_size = Vector2i(32, 32)
 8:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_rb2if"]
-sources/0 = SubResource("TileSetAtlasSource_mnca4")
+sources/0 = SubResource("TileSetAtlasSource_2v4yg")
 
 [node name="DocEpochRoom" type="Node2D" unique_id=956605282]
 
