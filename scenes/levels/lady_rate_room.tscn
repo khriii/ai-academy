@@ -1268,13 +1268,16 @@ tile_set = SubResource("TileSet_sqgdl")
 [node name="Objects" type="Node2D" parent="." unique_id=672431051]
 
 [node name="LadyRate" parent="Objects" unique_id=1950257195 instance=ExtResource("3_sqgdl")]
+visible = false
 position = Vector2(82, 87)
 
 [node name="Player" parent="Objects" unique_id=1023106120 instance=ExtResource("4_pptlq")]
+visible = false
 position = Vector2(163, 176)
 start_facing_direction = Vector2(0, -1)
 
 [node name="collisions" type="StaticBody2D" parent="." unique_id=200857368]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions" unique_id=1282009563]
+visible = false
 polygon = PackedVector2Array(131, 212, 198, 212, 196, 167, 296, 166, 296, 90, 287, 90, 254, 85, 252, 79, 252, 60, 227, 60, 227, 75, 124, 76, 124, 60, 105, 60, 105, 80, 102, 82, 93, 82, 42, 98, 33, 90, 32, 90, 32, 168, 132, 167, 132, 211, 110, 209, -47, 206, -32, -44, 368, -36, 356, 199, 112, 240, 131, 211)
