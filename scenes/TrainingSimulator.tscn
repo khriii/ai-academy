@@ -27,9 +27,9 @@ default_color = Color(0.9, 0.9, 0.2, 1)
 
 [node name="ControlPanel" type="VBoxContainer" parent="." unique_id=862089623]
 offset_left = 160.0
-offset_top = 10.0
-offset_right = 310.0
-offset_bottom = 170.0
+offset_top = 5.0
+offset_right = 309.0
+offset_bottom = 257.0
 theme_override_constants/separation = 2
 script = ExtResource("2_olkr4")
 
@@ -49,7 +49,7 @@ layout_mode = 2
 min_value = 0.001
 max_value = 1.0
 step = 0.001
-value = 0.1
+value = 0.001
 
 [node name="ETitleLabel" type="Label" parent="ControlPanel" unique_id=1568369770]
 layout_mode = 2
@@ -66,6 +66,23 @@ text = "20"
 layout_mode = 2
 min_value = 1.0
 value = 20.0
+
+[node name="BiasTitleLabel" type="Label" parent="ControlPanel" unique_id=1927054376]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Bias:"
+
+[node name="BiasValueLabel" type="Label" parent="ControlPanel" unique_id=365748260]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 8
+text = "20"
+
+[node name="BiasSlider" type="HSlider" parent="ControlPanel" unique_id=635148775]
+layout_mode = 2
+min_value = -1.0
+max_value = 1.0
+step = 0.01
 
 [node name="HSeparator" type="HSeparator" parent="ControlPanel" unique_id=1037667517]
 layout_mode = 2
