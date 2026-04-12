@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://du7jtu7jyxppd"]
+
+[ext_resource type="Theme" uid="uid://20rj7q7g6rt1" path="res://assets/textures/themes/options.tres" id="1_avu4f"]
+[ext_resource type="Script" uid="uid://vbm17jk1arn0" path="res://scenes/ui/training_simulator/training_simulator_button.gd" id="2_gtwgh"]
+
+[node name="TrainingSimulatorButton" type="PanelContainer" unique_id=580394118 node_paths=PackedStringArray("button")]
+offset_right = 17.0
+offset_bottom = 17.0
+theme = ExtResource("1_avu4f")
+script = ExtResource("2_gtwgh")
+button = NodePath("Button")
+
+[node name="Button" type="Button" parent="." unique_id=2033386655]
+layout_mode = 2
+text = "AI"

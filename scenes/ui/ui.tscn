@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c7xmtfv51uink" path="res://scenes/ui/collectibles_counter/collectibles_counter.tscn" id="2_aac20"]
 [ext_resource type="PackedScene" uid="uid://c35uch1cg3vuh" path="res://scenes/ui/quest/quest_stats.tscn" id="4_0dwhk"]
 [ext_resource type="PackedScene" uid="uid://cw20x4kyli4ga" path="res://scenes/ui/player_stats/player_stats.tscn" id="4_g5kmx"]
+[ext_resource type="PackedScene" uid="uid://du7jtu7jyxppd" path="res://scenes/ui/training_simulator/training_simulator_button.tscn" id="5_0dwhk"]
 
 [node name="UI" type="CanvasLayer" unique_id=1284890570]
 script = ExtResource("1_u7n8c")
@@ -46,3 +47,17 @@ offset_top = 4.34
 offset_right = -2.0
 offset_bottom = 45.0
 grow_horizontal = 0
+
+[node name="TrainingSimulatorButton" parent="Container" unique_id=580394118 instance=ExtResource("5_0dwhk")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -19.0
+offset_top = -19.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
