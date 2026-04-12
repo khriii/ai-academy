@@ -4,70 +4,115 @@
 [ext_resource type="Script" uid="uid://cvy1bh2fsr35c" path="res://scripts/training/Graph.gd" id="2_o2h74"]
 [ext_resource type="Script" uid="uid://cl6es8vax7mfr" path="res://scripts/training/ControlPanel.gd" id="2_olkr4"]
 
-[node name="TrainingSimulator" type="Node2D" unique_id=226316431]
+[node name="TrainingSimulator" type="Node2D" unique_id="226316431"]
 script = ExtResource("1_m4m2p")
 
-[node name="Background" type="ColorRect" parent="." unique_id=355169033]
-offset_left = 13.0
-offset_top = 12.0
-offset_right = 53.0
-offset_bottom = 52.0
+[node name="Background" type="ColorRect" parent="." unique_id="355169033"]
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0.08, 0.08, 0.08, 1)
 
-[node name="Graph" type="Node2D" parent="." unique_id=759927066]
+[node name="Graph" type="Node2D" parent="." unique_id="759927066"]
 script = ExtResource("2_o2h74")
 
-[node name="Axes" type="Node2D" parent="Graph" unique_id=1352816575]
+[node name="Axes" type="Node2D" parent="Graph" unique_id="1352816575"]
 
-[node name="DataPointsContainer" type="Node2D" parent="Graph" unique_id=839911851]
+[node name="DataPointsContainer" type="Node2D" parent="Graph" unique_id="839911851"]
 
-[node name="PredictionLine" type="Line2D" parent="Graph" unique_id=889998661]
+[node name="PredictionLine" type="Line2D" parent="Graph" unique_id="889998661"]
+width = 2.0
+default_color = Color(0.9, 0.9, 0.2, 1)
 
-[node name="GridLines" type="Node2D" parent="Graph" unique_id=1292433412]
+[node name="GridLines" type="Node2D" parent="Graph" unique_id="1292433412"]
 
-[node name="ControlPanel" type="VBoxContainer" parent="." unique_id=862089623]
-offset_right = 306.0
-offset_bottom = 245.0
+[node name="ControlPanel" type="VBoxContainer" parent="." unique_id="862089623"]
+offset_left = 160.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 170.0
+theme_override_constants/separation = 2
 script = ExtResource("2_olkr4")
 
-[node name="LearningRateSlider" type="HSlider" parent="ControlPanel" unique_id=2062355022]
+[node name="LTitleLabel" type="Label" parent="ControlPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Learning Rate:"
+
+[node name="LRValueLabel" type="Label" parent="ControlPanel" unique_id="1168402778"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 8
+text = "0.100"
+
+[node name="LearningRateSlider" type="HSlider" parent="ControlPanel" unique_id="2062355022"]
 layout_mode = 2
 min_value = 0.001
 max_value = 1.0
 step = 0.001
 value = 0.1
 
-[node name="EpochSlider" type="HSlider" parent="ControlPanel" unique_id=797241667]
+[node name="ETitleLabel" type="Label" parent="ControlPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Epochs:"
+
+[node name="EpochValueLabel" type="Label" parent="ControlPanel" unique_id="2128591918"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 8
+text = "20"
+
+[node name="EpochSlider" type="HSlider" parent="ControlPanel" unique_id="797241667"]
 layout_mode = 2
 min_value = 1.0
 value = 20.0
 
-[node name="StartButton" type="Button" parent="ControlPanel" unique_id=1170302562]
+[node name="HSeparator" type="HSeparator" parent="ControlPanel"]
 layout_mode = 2
-text = "▶ START TRAIN"
+theme_override_constants/separation = 2
 
-[node name="StopButton" type="Button" parent="ControlPanel" unique_id=1305492130]
+[node name="StartButton" type="Button" parent="ControlPanel" unique_id="1170302562"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "▶ START"
+
+[node name="StopButton" type="Button" parent="ControlPanel" unique_id="1305492130"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
 text = "⏹ STOP"
 
-[node name="AccuracyBar" type="ProgressBar" parent="ControlPanel" unique_id=35989674]
+[node name="AccuracyBar" type="ProgressBar" parent="ControlPanel" unique_id="35989674"]
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
+theme_override_font_sizes/font_size = 8
 
-[node name="StatusLabel" type="Label" parent="ControlPanel" unique_id=1449938363]
+[node name="StatusLabel" type="Label" parent="ControlPanel" unique_id="1449938363"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="LRValueLabel" type="Label" parent="ControlPanel" unique_id=1168402778]
+[node name="HintLabel" type="Label" parent="ControlPanel" unique_id="1905710278"]
 layout_mode = 2
-text = "0.100"
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="EpochValueLabel" type="Label" parent="ControlPanel" unique_id=2128591918]
-layout_mode = 2
-text = "20"
+[node name="DialogueBox" type="Panel" parent="." unique_id="728168331"]
+visible = false
+offset_left = 10.0
+offset_top = 110.0
+offset_right = 150.0
+offset_bottom = 170.0
 
-[node name="HintLabel" type="Label" parent="ControlPanel" unique_id=1905710278]
-layout_mode = 2
-
-[node name="DialogueBox" type="Panel" parent="." unique_id=728168331]
-offset_left = 179.0
-offset_top = 10.0
-offset_right = 219.0
-offset_bottom = 50.0
+[node name="Label" type="Label" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

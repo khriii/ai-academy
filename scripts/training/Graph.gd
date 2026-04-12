@@ -2,9 +2,9 @@ extends Node2D
 class_name Graph
 
 # Dimensioni del grafico in pixel
-const GRAPH_WIDTH  : float = 600.0
-const GRAPH_HEIGHT : float = 400.0
-const ORIGIN       : Vector2 = Vector2(300.0, 200.0) # Centro grafico
+const GRAPH_WIDTH  : float = 140.0
+const GRAPH_HEIGHT : float = 120.0
+const ORIGIN       : Vector2 = Vector2(80.0, 80.0) # Centro grafico
 
 @onready var prediction_line : Line2D = $PredictionLine
 @onready var data_container  : Node2D = $DataPointsContainer
@@ -20,8 +20,8 @@ var data_points : Array[Dictionary] = []
 # -----------------------------------------------------------
 # INIZIALIZZAZIONE
 # -----------------------------------------------------------
-func setup(dataset: Array[Dictionary]) -> void:
-	data_points = dataset
+func setup(dataset: Array) -> void:
+	data_points.assign(dataset)
 	# Pesi iniziali casuali (il modello non sa niente all'inizio)
 	slope     = randf_range(-1.0, 1.0)
 	intercept = randf_range(-50.0, 50.0)
@@ -35,10 +35,10 @@ func _spawn_data_points() -> void:
 
 	for point in data_points:
 		var circle = ColorRect.new()
-		circle.size = Vector2(12, 12)
+		circle.size = Vector2(4, 4)
 		circle.color = Color.RED if point["label"] == 1 else Color.CYAN
 		# Converti coordinate dati -> coordinate schermo
-		circle.position = data_to_screen(Vector2(point["x"], point["y"])) - Vector2(6, 6)
+		circle.position = data_to_screen(Vector2(point["x"], point["y"])) - Vector2(2, 2)
 		data_container.add_child(circle)
 
 # -----------------------------------------------------------

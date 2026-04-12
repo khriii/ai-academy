@@ -3,11 +3,7 @@ class_name TrainingSimulator
 
 # --- Riferimenti nodi ---
 @onready var graph          : Graph        = $Graph
-@onready var lr_slider      : HSlider      = $ControlPanel/LearningRateSlider
-@onready var epoch_slider   : HSlider      = $ControlPanel/EpochSlider
-@onready var start_button   : Button       = $ControlPanel/StartButton
-@onready var accuracy_bar   : ProgressBar  = $ControlPanel/AccuracyBar
-@onready var status_label   : Label        = $ControlPanel/StatusLabel
+@onready var control_panel  : ControlPanel = $ControlPanel
 @onready var dialogue_box   : Panel        = $DialogueBox
 
 # --- Stato del training ---
@@ -27,34 +23,54 @@ const STEP_DELAY : float = 0.08
 # -----------------------------------------------------------
 func setup_level(data: Dictionary) -> void:
 	level_data = data
-	graph.setup(data["dataset"])
-	status_label.text = "Configura i parametri e premi START TRAIN"
-	accuracy_bar.value = 0
+	graph.setup(data.get("dataset", []))
+	control_panel.set_status("Configura i parametri e premi START TRAIN", Color.WHITE)
 
 func _ready() -> void:
-	start_button.pressed.connect(_on_start_pressed)
-	lr_slider.value_changed.connect(_on_lr_changed)
+	control_panel.train_requested.connect(_on_train_requested)
+	control_panel.training_stopped.connect(_on_training_stopped)
+	control_panel.lr_changed.connect(_on_lr_changed)
+
+	# Controllo per l'avvio in modalità standalone (DEBUG)
+	if level_data.is_empty():
+		# Dati simulati di fallback
+		setup_level({
+			"level_id": "test_level",
+			"target_slope": 1.0,
+			"target_intercept": 0.0,
+			"win_threshold": 0.85,
+			"dataset": [
+				{"x": -0.8, "y": -0.8, "label": 0},
+				{"x": 0.8, "y": 0.8, "label": 1},
+				{"x": -0.5, "y": -0.3, "label": 0},
+				{"x": 0.5, "y": 0.4, "label": 1}
+			],
+			"win_dialogue": "Ottimo, il modello si è adattato ai dati!",
+			"fail_dialogue": "Errore troppo alto. Prova a modificare i parametri."
+		})
 
 # -----------------------------------------------------------
 # AVVIO TRAINING
 # -----------------------------------------------------------
-func _on_start_pressed() -> void:
+func _on_train_requested(params: Dictionary) -> void:
 	if is_training:
 		return
 	is_training   = true
 	current_epoch = 0
-	total_epochs  = int(epoch_slider.value)
-	start_button.disabled = true
-	status_label.text = "Training in corso..."
-	_run_training_loop()
+	total_epochs  = params["epochs"]
+	
+	control_panel.set_status("Training in corso...", Color.WHITE)
+	_run_training_loop(params["learning_rate"])
+
+func _on_training_stopped() -> void:
+	is_training = false
 
 # -----------------------------------------------------------
 # LOOP DI TRAINING (asincrono con await)
 # -----------------------------------------------------------
-func _run_training_loop() -> void:
-	var learning_rate      : float = lr_slider.value
-	var target_slope       : float = level_data["target_slope"]
-	var target_intercept   : float = level_data["target_intercept"]
+func _run_training_loop(learning_rate: float) -> void:
+	var target_slope       : float = level_data.get("target_slope", 1.0)
+	var target_intercept   : float = level_data.get("target_intercept", 0.0)
 	var win_threshold      : float = level_data.get("win_threshold", 0.80)
 
 	while current_epoch < total_epochs and is_training:
@@ -68,10 +84,7 @@ func _run_training_loop() -> void:
 		current_accuracy = graph.training_step(learning_rate, target_slope, target_intercept)
 
 		# Aggiorna UI
-		accuracy_bar.value = current_accuracy * 100.0
-		status_label.text  = "Epoca %d / %d — Accuracy: %.1f%%" % [
-			current_epoch, total_epochs, current_accuracy * 100.0
-		]
+		control_panel.update_progress(current_epoch, total_epochs, current_accuracy)
 
 		# Controlla vittoria anticipata
 		if current_accuracy >= win_threshold:
@@ -81,36 +94,37 @@ func _run_training_loop() -> void:
 		# Aspetta prima del prossimo step (animazione)
 		await get_tree().create_timer(STEP_DELAY).timeout
 
-	# Fine epoche senza vittoria
-	_on_training_end()
+	if is_training:
+		# Fine epoche senza vittoria
+		_on_training_end()
 
 # -----------------------------------------------------------
 # EVENTI
 # -----------------------------------------------------------
 func _on_win() -> void:
 	is_training = false
-	start_button.disabled = false
-	status_label.text = "✅ Training completato! Accuracy: %.1f%%" % (current_accuracy * 100.0)
+	control_panel.show_result(true, current_accuracy)
 	_show_dialogue(level_data.get("win_dialogue", "Ottimo lavoro!"))
-	# Emetti segnale per l'Hub (sblocca prossima quest ecc.)
-	EventBus.emit_signal("quest_completed", level_data["level_id"])
+	
+	# Emetti segnale per l'Hub (sblocca prossima quest ecc.) se EventBus esiste
+	if ClassDB.class_exists("EventBus") and get_node_or_null("/root/EventBus"):
+		get_node("/root/EventBus").emit_signal("quest_completed", level_data.get("level_id", ""))
 
 func _on_training_end() -> void:
 	is_training = false
-	start_button.disabled = false
 	if current_accuracy < level_data.get("win_threshold", 0.80):
-		status_label.text = "❌ Non abbastanza preciso. Riprova!"
+		control_panel.show_result(false, current_accuracy)
 		_show_dialogue(level_data.get("fail_dialogue", "Riprova con parametri diversi."))
+	else:
+		_on_win()
 
 func _on_lr_changed(value: float) -> void:
-	# Feedback in tempo reale sullo slider
-	if value > 0.5:
-		status_label.text = "⚠️ Learning Rate molto alto! La linea potrebbe impazzire."
-	elif value < 0.05:
-		status_label.text = "🐌 Learning Rate molto basso. Sarà lento..."
-	else:
-		status_label.text = "✔️ Learning Rate nella norma."
+	# Gestito internamente da ControlPanel, utile se in futuro si vuol fare emit o altro da Simulator
+	pass
 
 func _show_dialogue(text: String) -> void:
-	dialogue_box.visible = true
-	dialogue_box.get_node("Label").text = text
+	if dialogue_box != null:
+		dialogue_box.visible = true
+		var label = dialogue_box.get_node_or_null("Label")
+		if label != null:
+			label.text = text

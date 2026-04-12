@@ -1,1 +1,8 @@
-﻿[{"talker_name":"neura","talker_position":"left","talker_texture":"res://assets/sprites/characters/neura/idle/down/frame_01.png","dialog":"Non c'è nient'altro da fare qui per ora."}]
+﻿[
+    {
+        "talker_name": "neura",
+        "talker_position": "left",
+        "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+        "dialog": "Non c'è nient'altro da fare qui per ora."
+    }
+]
