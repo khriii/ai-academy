@@ -1,50 +1,32 @@
-[
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "Look! The line is adjusting itself! At each epoch, the weights change a little to get closer to the right answer."
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "It's like learning to ride a bike — at first you fall, then you find balance."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Hey! The line is moving! It's starting to separate the dots!"
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "Excellent! Accuracy over 80%!"
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "See how your color changed? You're already less gray than before. Your weights are no longer random — they've learned something."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "I feel... different. Less confused. More... colorful!"
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "You are officially an AI that works. A little bit."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Just 'a little bit'? I'll take it! What's next?"
-	}
+﻿[
+  {
+    "talker_name": "doc_epoch",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+    "dialog": "See, Neura? You stopped before it was too late."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "But the monster said I could get 100% accuracy! I wanted to be perfect!"
+  },
+  {
+    "talker_name": "doc_epoch",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+    "dialog": "You preferred to be good enough at everything rather than perfect at a little. It's the smartest move for an intelligence."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "So learning doesn't mean memorising? It means understanding general patterns?"
+  },
+  {
+    "talker_name": "doc_epoch",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+    "dialog": "Exactly. The real world is full of new dots you have never seen. You have to generalize. Congratulations, you have completed your first lessons!"
+  }
 ]

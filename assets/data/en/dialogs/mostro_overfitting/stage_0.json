@@ -1,38 +1,32 @@
-[
-	{
-		"talker_name": "mostro_overfitting",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
-		"dialog": "Pssst... Neura... Look how good I am."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Whoa! Who are you? And why is your curve so... wiggly?"
-	},
-	{
-		"talker_name": "mostro_overfitting",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
-		"dialog": "I memorized all the points. Every single one. My accuracy on the training set is... 100%. Impressive, right?"
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "100%? That sounds amazing! But... why does your curve look so crazy?"
-	},
-	{
-		"talker_name": "mostro_overfitting",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
-		"dialog": "Keep training. One more epoch. One more. The curve will become perfect. It will touch every point. You'll be infallible... at least on this data."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "I don't know... Something feels wrong about this..."
-	}
+﻿[
+  {
+    "talker_name": "mostro_overfitting",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
+    "dialog": "Pssst... Neura... Look how good and high-performing I am."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Wow! Hey, why is your curve so... twisted?"
+  },
+  {
+    "talker_name": "mostro_overfitting",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
+    "dialog": "I have memorized all the points. Every single point of the Training Set! My accuracy is at 100%. No mistakes."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "100%? That sounds fantastic! I want to be perfect like you too!"
+  },
+  {
+    "talker_name": "mostro_overfitting",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
+    "dialog": "Sure! It is an enormous power. Go back to training limitlessly and extract every tiny detail of those points. You will be infallible!"
+  }
 ]

@@ -1,32 +1,26 @@
 [
-	{
-		"talker_name": "mostro_overfitting",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
-		"dialog": "Sì! Sì! Guarda com'è bella la curva! Segue tutto! È— aspetta."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Cosa c'è che non va? La linea tocca ogni puntino! Non è perfetto?"
-	},
-	{
-		"talker_name": "mostro_overfitting",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
-		"dialog": "Quei puntini viola... quelli nuovi... perché li sbaglio tutti? Non... non li avevo mai visti prima."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Oh no! Hai memorizzato i vecchi puntini, ma non capisci i nuovi!"
-	},
-	{
-		"talker_name": "mostro_overfitting",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
-		"dialog": "Io imparo a memoria, non a capire. Sono... inutile fuori da qui."
-	}
+  {
+    "talker_name": "mostro_overfitting",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
+    "dialog": "Sì! Guarda com'è bella la mia curva! Segue tutti i punti! È... aspettate..."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Cosa sta succedendo? Stanno arrivando puntini viola di test e tu li manchi tutti!"
+  },
+  {
+    "talker_name": "mostro_overfitting",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/overfit_monster/idle/down/overfit_monster1.png",
+    "dialog": "Quei puntini viola... nuovi e mai visti! La mia bellissima curva ultra-precisa è totalmente inutile qua fuori!"
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Oh no! Hai memorizzato a perfezione i vecchi punti, ma non riesci a prevedere i nuovi! È questo che intendeva il Master Bias. Torno subito da Doc Epoch!"
+  }
 ]

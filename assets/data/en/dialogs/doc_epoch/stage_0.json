@@ -1,44 +1,26 @@
-[
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Hello? Where am I? Everything is so... gray."
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "Ah, finally you're awake! Welcome to Server 42, Neura."
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "You've just been initialized... and it shows. Look how gray you are! Don't worry, it's normal."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Gray? What does that mean? How do I become... not gray?"
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "You know what you're missing? Experience. And how do you gain experience? By repeating. We call each repetition an Epoch."
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "More epochs you do, more you learn. Simple, right? Well... more or less."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Epochs... repetition... I think I understand. Let's try!"
-	}
+﻿[
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Hello. I'm Neura. I feel a bit... empty. Why am I so grey?"
+  },
+  {
+    "talker_name": "doc_epoch",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+    "dialog": "Ah, a new neural network! You are grey because you lack knowledge, my dear. You must learn to gain color."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "And how exactly do I learn? Is there an instruction manual?"
+  },
+  {
+    "talker_name": "doc_epoch",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+    "dialog": "No manual! Here we learn from experience. Start by collecting 5 Data Chips scattered around, then come back to me. That way we will start your first training Epoch."
+  }
 ]

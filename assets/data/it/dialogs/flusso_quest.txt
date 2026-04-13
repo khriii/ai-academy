@@ -1,0 +1,36 @@
+Flusso Completo delle Quest:
+
+1. **Parla con Doc Epoch (Tutorial)**
+   * **Azione:** Interagisci con *Doc Epoch* `(stage_0.json)`. Neura scopre di essere vuota.
+   * **Quest assegnata:** Trovare e raccogliere **5 Chip di Dati**.
+2. **Raccogli i Chip**
+   * **Azione:** Il giocatore gira per la mappa e colleziona i 5 Chip.
+3. **Ritorna da Doc Epoch (Prima Epoca conclusa)**
+   * **Azione:** Parla di nuovo con *Doc Epoch* `(stage_1.json)`. Spiega che l'addestramento non va semplicemente "tutto al massimo".
+   * **Quest assegnata:** Trovare e parlare con **Lady Rate**.
+4. **Parla con Lady Rate (Introduzione al Rytmo/Learning Rate)**
+   * **Azione:** Interagisci con *Lady Rate* `(stage_0.json)`. Spiega che la velocità di apprendimento deve essere proporzionata, altrimenti la linea "trema".
+   * **Quest assegnata:** Andare nel **Simulatore AI** per trovare il Learning Rate perfetto ("convergenza") in cui la curva si assesta.
+5. **Simulatore AI (Learning Rate)**
+   * **Azione:** Il giocatore imposta/gioca nel Simulatore per calibrare correttamente il "Learning Rate".
+6. **Ritorna da Lady Rate (Successo)**
+   * **Azione:** Parla con *Lady Rate* `(stage_1.json)`. È felice della conversione, ma fa notare che la linea è ancora "troppo rigida".
+   * **Quest assegnata:** Trovare e parlare con **Master Bias**.
+7. **Parla con Master Bias (Libertà e Movimento)**
+   * **Azione:** Interagisci con *Master Bias* `(stage_0.json)`. Spiega che il Bias serve a slegare la retta dall'origine e darle libertà di movimento.
+   * **Quest assegnata:** Andare nel **Simulatore AI** per spostare il Bias e passare perfettamente in mezzo ai punti.
+8. **Simulatore AI (Bias)**
+   * **Azione:** Il giocatore gioca col Bias per centrare l'allineamento.
+9. **Ritorna da Master Bias (Attenzione al Pericolo)**
+   * **Azione:** Parla con *Master Bias* `(stage_1.json)`. Il modello è perfetto, ma lui avverte dell'arroganza.
+   * **Quest assegnata:** Andare nella Zona Avanzata ad affrontare il **Mostro Overfitting** che promette il "100% di precisione".
+10. **Incontra il Mostro Overfitting (La Tentazione del 100%)**
+    * **Azione:** Parla con il *Mostro Overfitting* `(stage_0.json)`. Sfoggia una curva mostruosamente contorta che non sbaglia un colpo sul Training Set.
+    * **Quest assegnata:** Continuare ad "allenarsi/estrarre" dettagli all'infinito credendo all'illusione.
+11. **Simulatore fallimentare (Test Set)**
+    * **Azione:** Subentra la validazione. Arrivano i "puntini viola" (dati nuovi/test set). La curva del Mostro fallisce miseramente.
+12. **Ritorna dal Mostro Overfitting (Rivelazione)**
+    * **Azione:** Parlando col *Mostro Overfitting* `(stage_1.json)`, Neura capisce che memorizzare i dati perfetti impedisce di prevedere quelli futuri. Torna alla normalità per "generalizzare".
+    * **Quest finale assegnata:** Tornare da **Doc Epoch** per le conclusioni.
+13. **Ritorna da Doc Epoch (Conclusione dell'Arco)**
+    * **Azione:** Ultimo dialogo con *Doc Epoch* `(stage_2.json)`. Neura impara che "è meglio generalizzare in modo sfumato che essere perfetti a memoria".

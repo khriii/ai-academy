@@ -1,38 +1,26 @@
 [
-	{
-		"talker_name": "lady_rate",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
-		"dialog": "La linea sta tremando! TREMA! Abbassa quello slider, su!"
-	},
-	{
-		"talker_name": "lady_rate",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
-		"dialog": "Se fai passi troppo grandi, salti sopra la soluzione senza vederla. Tipo quando cerchi le chiavi di casa e le scavalchi tre volte."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Ok, ok! Lo abbasso. Ma se vado troppo lento?"
-	},
-	{
-		"talker_name": "lady_rate",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
-		"dialog": "Okay... aspettiamo... ancora un'epoca... ancora... Neura, a questo ritmo finiamo dopodomani."
-	},
-	{
-		"talker_name": "lady_rate",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
-		"dialog": "Il learning rate troppo basso non è sbagliato, è solo estenuante. Alzalo un po', dai. La perfezione non vale l'eternità."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Quindi c'è un punto perfetto? Né troppo veloce, né troppo lento?"
-	}
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "La linea ha smesso di tremare! Ha imparato senza problemi e si è stabilizzata."
+  },
+  {
+    "talker_name": "lady_rate",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+    "dialog": "PERFETTO! Hai trovato il ritmo giusto! Né troppo veloce, né troppo lento. I matematici lo chiamano 'convergenza'."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Ora sono inarrestabile. Learning Rate settato!"
+  },
+  {
+    "talker_name": "lady_rate",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+    "dialog": "Frena l'entusiasmo. La velocità va bene, ma la tua linea è ancora troppo rigida. Cerca Master Bias per sbloccare la situazione."
+  }
 ]

@@ -1,26 +1,26 @@
 [
-	{
-		"talker_name": "master_bias",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
-		"dialog": "Vedi? La tua linea vuole passare per l'origine a tutti i costi, ma i dati non stanno lì."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Hai ragione! Non importa come giro la linea, passa sempre per lo zero. I puntini sono tutti quassù!"
-	},
-	{
-		"talker_name": "master_bias",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
-		"dialog": "Sblocca il parametro Bias e dagli un po' di libertà di movimento. A volte la rigidità non è una virtù."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Ho attivato il Bias! La linea... si è mossa! Non è più legata allo zero!"
-	}
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "La linea ora si adatta perfettamente! Passa proprio in mezzo ai puntini. Grazie, Master Bias!"
+  },
+  {
+    "talker_name": "master_bias",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+    "dialog": "Hai sbloccato un potenziale straordinario. Bias = libertà di movimento. Ma fa' attenzione all'arroganza."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Quale arroganza? Sono praticamente infallibile!"
+  },
+  {
+    "talker_name": "master_bias",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/master_bias/idle/down/master_bias1.png",
+    "dialog": "Proprio quello. C'è qualcuno là fuori chiamato Mostro Overfitting. Ti prometterà il 100% di precisione memorizzando ogni dato. Non cedere alla sua tentazione!"
+  }
 ]

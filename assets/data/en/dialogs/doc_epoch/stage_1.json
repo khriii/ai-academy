@@ -1,32 +1,26 @@
-[
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "See those red and blue dots floating in the graph? The server can't distinguish them. Pure chaos!"
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "They look so mixed up! How can anyone tell them apart?"
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "Your task is to find a line that separates them. Neura, you have weights in your head — little numbers that tell how much each piece of information is worth."
-	},
-	{
-		"talker_name": "doc_epoch",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
-		"dialog": "At first they're random, that's why your line is crooked. Press 'Train' and let experience do its job."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Weights? Random? That sounds... messy. But I'm ready to learn!"
-	}
+﻿[
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "I have the 5 Chips. I must admit I feel a little less confused."
+  },
+  {
+    "talker_name": "doc_epoch",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+    "dialog": "Well done! You have just completed a full Epoch. But I see you are impatient and want to press 'Train' over and over again."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Yes! More epochs, more learning, right? Let's keep going indefinitely!"
+  },
+  {
+    "talker_name": "doc_epoch",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/doc_epoch/idle/down/doc_epoch1.png",
+    "dialog": "Hey, hey, slow down! You don't always learn just by rushing. There is a right speed for learning. Go find Lady Rate, she will explain the correct pace."
+  }
 ]

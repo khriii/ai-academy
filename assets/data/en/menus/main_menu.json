@@ -1,8 +1,8 @@
-{
+﻿{
 	"start_message_label": "Press any key.",
 	"new_game_button": "NEW GAME",
 	"continue_button": "CONTINUE",
 	"options_button": "OPTIONS",
 	"achievements_button": "ACHIEVEMENTS",
-	"exit_button": "EXIT",
+	"exit_button": "EXIT"
 }

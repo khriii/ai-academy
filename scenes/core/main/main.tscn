@@ -33,35 +33,6 @@ chips_positions = NodePath("../ChipsPositions")
 chips_container = NodePath("../ChipsContainer")
 metadata/_custom_type_script = "uid://qm4b743l08o6"
 
-[node name="ChipsPositions" type="Node2D" parent="Objects" unique_id=349251465]
-
-[node name="chip_0" type="Marker2D" parent="Objects/ChipsPositions" unique_id=484427873]
-position = Vector2(50, 20)
-
-[node name="chip_1" type="Marker2D" parent="Objects/ChipsPositions" unique_id=858396494]
-position = Vector2(100, 20)
-
-[node name="chip_2" type="Marker2D" parent="Objects/ChipsPositions" unique_id=1460738169]
-position = Vector2(150, 20)
-
-[node name="chip_3" type="Marker2D" parent="Objects/ChipsPositions" unique_id=391888044]
-position = Vector2(200, 20)
-
-[node name="chip_4" type="Marker2D" parent="Objects/ChipsPositions" unique_id=632095649]
-position = Vector2(50, 50)
-
-[node name="chip_5" type="Marker2D" parent="Objects/ChipsPositions" unique_id=121973831]
-
-[node name="chip_6" type="Marker2D" parent="Objects/ChipsPositions" unique_id=1586123079]
-
-[node name="chip_7" type="Marker2D" parent="Objects/ChipsPositions" unique_id=620622619]
-
-[node name="chip_8" type="Marker2D" parent="Objects/ChipsPositions" unique_id=78498595]
-
-[node name="chip_9" type="Marker2D" parent="Objects/ChipsPositions" unique_id=1470878956]
-
-[node name="ChipsContainer" type="Node2D" parent="Objects" unique_id=316350358]
-
 [node name="RoomPrincipale" parent="Objects" unique_id=2115836883 instance=ExtResource("10_cikei")]
 
 [node name="Player" parent="Objects" unique_id=1023106120 instance=ExtResource("1_hyk8p")]
@@ -83,3 +54,22 @@ position = Vector2(260, 58)
 [node name="MostroOverfitting" parent="Objects" unique_id=2023655289 instance=ExtResource("8_cikei")]
 position = Vector2(132, 50)
 scale = Vector2(1.5, 1.5)
+
+[node name="ChipsPositions" type="Node2D" parent="Objects" unique_id=349251465]
+
+[node name="chip_0" type="Marker2D" parent="Objects/ChipsPositions" unique_id=484427873]
+position = Vector2(52, 146)
+
+[node name="chip_1" type="Marker2D" parent="Objects/ChipsPositions" unique_id=858396494]
+position = Vector2(114, 145)
+
+[node name="chip_2" type="Marker2D" parent="Objects/ChipsPositions" unique_id=1460738169]
+position = Vector2(176, 146)
+
+[node name="chip_3" type="Marker2D" parent="Objects/ChipsPositions" unique_id=391888044]
+position = Vector2(231, 145)
+
+[node name="chip_4" type="Marker2D" parent="Objects/ChipsPositions" unique_id=632095649]
+position = Vector2(269, 140)
+
+[node name="ChipsContainer" type="Node2D" parent="Objects" unique_id=316350358]

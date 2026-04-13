@@ -1,0 +1,8 @@
+﻿[
+    {
+        "talker_name": "neura",
+        "talker_position": "left",
+        "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+        "dialog": "There is nothing else to do here for now."
+    }
+]

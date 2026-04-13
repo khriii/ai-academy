@@ -1,38 +1,26 @@
-[
-	{
-		"talker_name": "lady_rate",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
-		"dialog": "The line is trembling! It's TREMBLING! Lower that slider, come on!"
-	},
-	{
-		"talker_name": "lady_rate",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
-		"dialog": "If you take steps that are too big, you'll jump right over the solution without seeing it. Like when you're looking for your house keys and you step over them three times."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "Okay, okay! I'll lower it. But what if I go too slow?"
-	},
-	{
-		"talker_name": "lady_rate",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
-		"dialog": "Okay... waiting... one more epoch... still waiting... Neura, at this rate we'll finish the day after tomorrow."
-	},
-	{
-		"talker_name": "lady_rate",
-		"talker_position": "left",
-		"talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
-		"dialog": "A learning rate that's too low isn't wrong, it's just exhausting. Raise it a little, come on. Perfection isn't worth eternity."
-	},
-	{
-		"talker_name": "neura",
-		"talker_position": "right",
-		"talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
-		"dialog": "So there's a sweet spot? Not too fast, not too slow?"
-	}
+﻿[
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Nice to meet you, you must be Lady Rate. Doc Epoch says there is a right speed for my learning."
+  },
+  {
+    "talker_name": "lady_rate",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+    "dialog": "Exactly! I control the Learning Rate! If you run too fast, you trip and your line will shake wildly. If you go too slow, it will take centuries."
+  },
+  {
+    "talker_name": "neura",
+    "talker_position": "left",
+    "talker_texture": "res://assets/sprites/characters/neura/idle/down/frame_01.png",
+    "dialog": "Uhm, I understand... in theory. How do we test it in practice?"
+  },
+  {
+    "talker_name": "lady_rate",
+    "talker_position": "right",
+    "talker_texture": "res://assets/sprites/characters/lady_rate/idle/down/lady_rate1.png",
+    "dialog": "Enough talking! Open the Simulator below. Use the 'Learning Rate' slider: if the value is too high, chaos will rain. Lower it towards 0.05 and raise the Epochs. Click Start and reach 85%!"
+  }
 ]

@@ -2,7 +2,7 @@ extends Node
 
 signal collectibles_updated(new_total: int)
 
-var current_language = "test"
+var current_language = "it"
 
 var is_dialogue_active: bool = false
 

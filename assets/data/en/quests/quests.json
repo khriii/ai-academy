@@ -1,27 +1,52 @@
 [
 	{
 		"id": "talk_with_doc_epoch",
-		"name": "Talk with Doc Epoch",
-		"description": "Find Doc Epoch and talk to him to start your journey into machine learning."
+		"name": "Talk to Doc Epoch",
+		"description": "Find Doc Epoch and talk to him to start your machine learning journey."
+	},
+	{
+		"id": "collect_5_chips",
+		"name": "Collect 5 Data Chips",
+		"description": "Explore the area and collect 5 Data Chips. Then return to Doc Epoch."
 	},
 	{
 		"id": "talk_with_lady_rate",
-		"name": "Talk with Lady Rate",
+		"name": "Talk to Lady Rate",
 		"description": "Lady Rate will help you understand how to choose the right learning rate for your model."
 	},
 	{
+		"id": "simulator_learning_rate",
+		"name": "AI Simulator: Learning Rate",
+		"description": "Use the AI Simulator to correctly calibrate the Learning Rate so that the curve converges."
+	},
+	{
 		"id": "talk_with_master_bias",
-		"name": "Talk with Master Bias",
-		"description": "Master Bias will explain how bias helps the model make better predictions."
+		"name": "Talk to Master Bias",
+		"description": "Master Bias will explain to you how bias helps the model make better predictions."
+	},
+	{
+		"id": "simulator_bias",
+		"name": "AI Simulator: Bias",
+		"description": "Enter the AI Simulator and use the flexible Bias parameter to align everything properly."
 	},
 	{
 		"id": "talk_with_mostro_overfitting",
-		"name": "Talk with the Overfitting Monster",
+		"name": "Talk to the Overfitting Monster",
 		"description": "The Overfitting Monster threatens your model! Learn how to avoid overfitting."
+	},
+	{
+		"id": "simulator_test_set",
+		"name": "AI Simulator: The Seduction of Overfitting",
+		"description": "Train endlessly to memorize the data and be 'perfect on the Training Set', then challenge the invisible Test Set."
+	},
+	{
+		"id": "return_to_doc_epoch",
+		"name": "Return to Doc Epoch",
+		"description": "Return to Doc to report on generalizing and the true purpose of AI training."
 	},
 	{
 		"id": "all_quests_completed",
 		"name": "Machine Learning Master",
-		"description": "You have completed all the lessons! Now you are ready to train your model."
+		"description": "You have completed all lessons! Now you are ready to train your model."
 	}
 ]
