@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dwprcq33igy82" path="res://assets/sprites/environment/rooms/stanza_mostroOverfitting.png" id="3_gq6ho"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qq1l"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7y1ov"]
 texture = ExtResource("3_gq6ho")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -137,9 +137,9 @@ texture_region_size = Vector2i(32, 32)
 6:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wiqp8"]
-sources/0 = SubResource("TileSetAtlasSource_7qq1l")
+sources/0 = SubResource("TileSetAtlasSource_7y1ov")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tkxlu"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7qq1l"]
 texture = ExtResource("3_gq6ho")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -273,7 +273,7 @@ texture_region_size = Vector2i(32, 32)
 10:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_s2pde"]
-sources/0 = SubResource("TileSetAtlasSource_tkxlu")
+sources/0 = SubResource("TileSetAtlasSource_7qq1l")
 
 [node name="OverfittingMonster" type="Node2D" unique_id=1252408010]
 
