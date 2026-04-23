@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://js7jrr3maegr" path="res://scenes/core/main/camera_2d.gd" id="7_22hfd"]
 [ext_resource type="PackedScene" uid="uid://dhupawswvtb7y" path="res://scenes/entities/npcs/mostro_overfitting.tscn" id="8_cikei"]
 [ext_resource type="PackedScene" uid="uid://cmqruren3xcnc" path="res://scenes/entities/npcs/lady_rate.tscn" id="9_wi631"]
-[ext_resource type="PackedScene" uid="uid://bbpprh6vp43o0" path="res://scenes/levels/room_principale.tscn" id="10_cikei"]
+[ext_resource type="PackedScene" uid="uid://b1dt6ir8nhvey" path="res://scenes/levels/room_principale.tscn" id="10_cikei"]
 [ext_resource type="PackedScene" uid="uid://yn4ajx05uvoh" path="res://scenes/entities/npcs/master_bias.tscn" id="10_pgbov"]
 
 [node name="Main" type="Node2D" unique_id=1611986789]
@@ -39,37 +39,45 @@ metadata/_custom_type_script = "uid://qm4b743l08o6"
 position = Vector2(147, 97)
 
 [node name="PlayerCamera" type="Camera2D" parent="Objects/Player" unique_id=537531009]
+limit_left = -550
+limit_top = -300
+limit_right = 950
+limit_bottom = 250
 script = ExtResource("7_22hfd")
+left_limit = -550
+right_limit = 950
+top_limit = -300
+bottom_limit = 250
 metadata/_custom_type_script = "uid://js7jrr3maegr"
 
 [node name="DocEpoch" parent="Objects" unique_id=1950257195 instance=ExtResource("6_ntoi8")]
-position = Vector2(68, 59)
+position = Vector2(-12, -96)
 
 [node name="LadyRate" parent="Objects" unique_id=603284089 instance=ExtResource("9_wi631")]
-position = Vector2(196, 57)
+position = Vector2(-380, -96)
 
 [node name="MasterBias" parent="Objects" unique_id=15064154 instance=ExtResource("10_pgbov")]
-position = Vector2(260, 58)
+position = Vector2(357, -98)
 
 [node name="MostroOverfitting" parent="Objects" unique_id=2023655289 instance=ExtResource("8_cikei")]
-position = Vector2(132, 50)
+position = Vector2(724, -112)
 scale = Vector2(1.5, 1.5)
 
 [node name="ChipsPositions" type="Node2D" parent="Objects" unique_id=349251465]
 
 [node name="chip_0" type="Marker2D" parent="Objects/ChipsPositions" unique_id=484427873]
-position = Vector2(52, 146)
+position = Vector2(-277, -66)
 
 [node name="chip_1" type="Marker2D" parent="Objects/ChipsPositions" unique_id=858396494]
-position = Vector2(114, 145)
+position = Vector2(-132, -113)
 
 [node name="chip_2" type="Marker2D" parent="Objects/ChipsPositions" unique_id=1460738169]
-position = Vector2(176, 146)
+position = Vector2(457, -117)
 
 [node name="chip_3" type="Marker2D" parent="Objects/ChipsPositions" unique_id=391888044]
-position = Vector2(231, 145)
+position = Vector2(-9, 86)
 
 [node name="chip_4" type="Marker2D" parent="Objects/ChipsPositions" unique_id=632095649]
-position = Vector2(269, 140)
+position = Vector2(621, -111)
 
 [node name="ChipsContainer" type="Node2D" parent="Objects" unique_id=316350358]
