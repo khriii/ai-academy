@@ -4,6 +4,20 @@
 [ext_resource type="Script" uid="uid://cvy1bh2fsr35c" path="res://scripts/training/Graph.gd" id="2_o2h74"]
 [ext_resource type="Script" uid="uid://cl6es8vax7mfr" path="res://scripts/training/ControlPanel.gd" id="2_olkr4"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_olkr4"]
+bg_color = Color(0.03279187, 0.029066386, 0.023646029, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2h74"]
+bg_color = Color(0.28118682, 0.2811869, 0.28118676, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="TrainingSimulator" type="Node2D" unique_id=226316431]
 script = ExtResource("1_m4m2p")
 
@@ -133,3 +147,20 @@ theme_override_font_sizes/font_size = 8
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="CloseButton" type="Button" parent="." unique_id=1557916973]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 290.0
+offset_top = 5.0
+offset_right = 315.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_olkr4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o2h74")
+text = "x"

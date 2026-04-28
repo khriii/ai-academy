@@ -7,6 +7,7 @@ signal quest_completed(level_id: String)
 @onready var graph         : Graph         = $Graph
 @onready var control_panel : ControlPanel  = $ControlPanel
 @onready var dialogue_box  : Panel         = $DialogueBox
+@onready var close_button: Button = $CloseButton
 
 # --- Stato del training ---
 var is_training      : bool  = false
@@ -19,6 +20,8 @@ var level_data : Dictionary = {}
 
 const STEP_DELAY : float = 0.08
 
+func handle_close_button():
+	self.queue_free()
 # -----------------------------------------------------------
 # READY
 # -----------------------------------------------------------
@@ -26,6 +29,7 @@ func _ready() -> void:
 	control_panel.train_requested.connect(_on_train_requested)
 	control_panel.training_stopped.connect(_on_training_stopped)
 	control_panel.lr_changed.connect(_on_lr_changed)
+	close_button.pressed.connect(handle_close_button)
 
 	if level_data.is_empty():
 		setup_level(LevelData.get_level("level_2"))

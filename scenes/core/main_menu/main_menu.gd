@@ -67,6 +67,7 @@ func load_click_handlers():
 
 # Method run when a new game should be created
 func on_new_game_pressed():
+	QuestManager.reset()
 	scene_changer.next_scene = game_scene
 	scene_changer.change_scene()
 

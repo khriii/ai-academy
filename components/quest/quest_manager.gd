@@ -47,6 +47,11 @@ func load_quests_data() -> void:
 func _on_language_changed() -> void:
 	load_quests_data()
 
+func reset() -> void:
+	quests.clear()
+	load_quests_data()
+	EventBus.quests_updated.emit()
+
 func add_quest(quest_id: String, completed: bool = false) -> bool:
 	if quests.has(quest_id):
 		Global.print_error(filename, "A quest with that id already exists (" + quest_id + ")")
